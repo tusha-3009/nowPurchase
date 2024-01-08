@@ -1,0 +1,115 @@
+.section1 {
+    width: 100%;
+    display: flex;
+    transition: 2s;
+    align-items: center;
+    justify-content: center;
+        /* padding-top: 120px; */
+        padding: 120px 0px 150px;
+}
+.scrollSection {
+    width: 100%;
+    /* height: calc(100vh - 120px); */
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}.cultureSectionWrap .cultureRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cultureSectionWrap .imgBox {
+    width: 672px;
+}
+
+.cultureSectionWrap .contBox {
+width: calc(100% - 672px);
+    padding-left: 35px;
+    border-radius: 10px;
+    margin-left: -70px;
+}
+.section.ltr .contBox h2 {
+    opacity: 1;
+    animation: none;
+}
+.cultureSectionWrap .contBox p {
+    font-size: 24px;
+    line-height: 44px;
+    font-weight: 500;
+    color:#606060;
+    margin-top: 0;
+        margin-bottom: 16px;
+}
+.cultureSectionWrap ul {
+    margin-bottom: 35px;
+}
+ul.noList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cultureSectionWrap .contBox ul li:not(:last-child) {
+    margin-bottom: 24px;
+}
+.cultureSectionWrap .contBox ul li {
+    display: flex;
+    align-items: center;
+}
+.cultureSectionWrap .contBox ul li img {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.knowMoreBtn.gradientBtn {
+    background: linear-gradient(90deg, #1579BE 0%, rgba(21, 121, 190, 0.6) 100%);
+    
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  
+    font-weight: 700;
+font-size: 20px;
+    line-height: 35px;
+}
+.knowMoreBtn {
+    display: inline-block;
+    
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.cultureSectionWrap .contBox ul li strong {
+    font-weight: 500;
+    font-size: 24px;
+}
+.knowMoreBtn.gradientBtn:after {
+    background-image: url(../../../assets/images//icons/rgt_arrow_vector_bl.png);
+}
+.cultureSectionWrap ul {
+    margin-bottom: 35px;
+}
+.knowMoreBtn:after {
+    content: '';
+    display: inline-block;
+    transition: 0.6s;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    position: relative;
+    right: 0;
+    top: 2px;
+}
+.knowMoreBtn.gradientBtn {
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    line-height: 35px;
+}
+.cultureSectionWrap ul {
+    margin-bottom: 35px;
+}

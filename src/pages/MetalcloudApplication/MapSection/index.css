@@ -1,0 +1,126 @@
+.mapSec {
+  padding-top: 130px;
+  padding-bottom: 170px !important;
+  background-color: #e8f2f8;
+}
+.mapRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section.ltr .mapleft {
+  width: calc(100% - 760px);
+  padding-right: 30px;
+  opacity: 0;
+  animation: fade-slide-in-ltr 0.8s linear forwards;
+}
+.mapleft {
+    width: calc(100% - 760px);
+    padding-right: 30px;
+}
+.mapSec.aosAnim h3 {
+  opacity: 1;
+  animation: none;
+  margin-bottom: 8px;
+}
+.stateWrap {
+  margin-bottom: 40px;
+}
+.eachstate h4 {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.eachstate h4 span {
+  font-size: 40px !important;
+  line-height: 50px;
+  font-weight: 700;
+}
+.section.ltr .mapRight {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
+}
+.mapRight {
+  width: 730px;
+}
+.indMapWrap {
+  position: relative;
+}
+.indMapWrap .mapPointers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.eachPointer {
+  position: absolute;
+  z-index: 3;
+  transition: 0.6s;
+}
+.ep_1 {
+  left: 32%;
+  top: 22%;
+}
+.ep_2 {
+
+  left: 32%;
+  top: 30%;
+}
+.ep_3 {
+  
+  left: 40%;
+  top: 35%;
+}
+.ep_4 {
+ 
+  left: 13%;
+  top: 36%;
+}
+.ep_5 {
+
+  left: 62%;
+  top: 44%;
+}.ep_6 {
+  
+    left: 58%;
+    top: 49%;
+}.ep_7 {
+  
+    left: 2%;
+    top: 45%;
+}
+.ep_8 {
+   
+    left: 8%;
+    top: 50%;
+}.ep_9 {
+  
+    left: 18%;
+    top: 58%;
+}.ep_10 {
+ 
+    left: 29%;
+    top: 56%;
+}.ep_11 {
+    
+    left: 40%;
+    top: 54%;
+}.ep_12 {
+    
+    left: 19%;
+    top: 64%;
+}.ep_13 {
+   
+    left: 22%;
+    top: 71%;
+}.ep_14 {
+   
+    left: 23%;
+    top: 77%;
+}.ep_15 {
+   
+    left: 30%;
+    top: 85%;
+}

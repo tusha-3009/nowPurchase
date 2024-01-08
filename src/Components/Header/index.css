@@ -1,0 +1,137 @@
+.headerNew {
+  padding: 30px 0;
+  transition: 0.6s;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  position: fixed;
+}
+.headerWrapNew {
+  justify-content: space-between;
+}
+
+.logoWrapNew {
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  max-width: 160px;
+  padding-right: 20px;
+  padding-left: 15px;
+  height: 40px;
+}
+
+.navigationWrapNew {
+  -ms-flex: 0 0 calc(100% - (160px + 25%));
+  flex: 0 0 calc(100% - (160px + 25%));
+  max-width: calc(100% - (160px + 25%));
+}
+.navigationWrapNew > .row {
+  justify-content: flex-end;
+}
+.headerWrapNew ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* flex-wrap: wrap; */
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerWrapNew ul li:not(:last-child) {
+  margin-right: 40px;
+}
+nav ul li .services {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #606060;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+nav ul li .culture {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #606060;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: flex;
+}
+nav ul li .careers {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #606060;
+  text-transform: capitalize;
+  cursor: pointer;
+  display: flex;
+}
+.toggleBtn {
+  display: inline-block;
+  margin-left: 12px;
+  transition: 0.6s;
+}
+.toggleBtn>.invertedArrow {
+  transform: rotate(180deg);
+filter: brightness(1);
+}
+.toggleBtn > img {
+  filter: brightness(0) invert(0);
+    transition: all 300ms linear;
+}
+.btnWrapNew a.getInTouch {
+  width: 148px;
+  height: 40px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  line-height: 24px;
+  display: inline-block;
+  background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
+}
+.btnWrapNew a {
+  display: block;
+  text-align: center;
+}
+.btnWrapNew a.getInTouch {
+  font-size: 16px;
+}
+.btnWrapNew a.gotoApp {
+  font-size: 14px;
+}
+
+.btnWrapNew a.gotoApp {
+  color: #1579be;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.btnWrapNew a {
+  display: block;
+  text-align: center;
+}
+.btnWrapNew a.gotoApp .gotoTopPart {
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.btnWrapNew a.gotoApp {
+  font-size: 14px;
+}
+.btnWrapNew a.gotoApp .gotoTopPart span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+}
+.col-lg-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}

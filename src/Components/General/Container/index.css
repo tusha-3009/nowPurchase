@@ -1,0 +1,32 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1520px;
+  padding: 0 15px;
+}
+@media (max-width: 1600px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1366px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 389px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
