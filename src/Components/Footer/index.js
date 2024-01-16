@@ -7,10 +7,12 @@ import fa from "../../assets/images/icons/social-icons/social_fa.png";
 import inn from "../../assets/images/icons/social-icons/social_in.png";
 import tw from "../../assets/images/icons/social-icons/social_tw.png";
 import ti from "../../assets/images/icons/footer_tiger.png";
+import "../../assets/css/style-responsive.css";
+import Container from "../General/Container";
 function Footer() {
   return (
     <footer className="footerSection animated-section sectionf" id="">
-      <div className="container">
+      <Container>
         <div className="row">
           <div className="col-lg-8 footerBlock footerBlockLeft aosAnim ltr">
             <h2 className="footerTitleText">
@@ -132,7 +134,10 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/companyAnnualReport" id="Footer_CompanyAnnualReports">
+                  <a
+                    href="/companyAnnualReport"
+                    id="Footer_CompanyAnnualReports"
+                  >
                     Company Annual Reports
                   </a>
                 </li>
@@ -174,7 +179,7 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

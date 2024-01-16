@@ -1,0 +1,58 @@
+.teamCulture .scrollSection {
+  /* height: 150vh; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 2s;
+}
+.teamEachC {
+  display: block;
+  margin-bottom: 40px;
+}
+.teamEachC img {
+  width: 100%;
+}
+.col-md-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.teamEachC img {
+  width: 100%;
+}
+.lastGal {
+  border-radius: 20px;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.lastGal svg {
+  margin-bottom: 15px;
+}
+.lastGal h4 {
+  color: #fff;
+  font-size: 18px;
+}
+.lastGal h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.lastEachteam {
+  position: relative;
+}

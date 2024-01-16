@@ -1,77 +1,87 @@
 .solutionSec {
-    padding-top: 120px;
+  padding-top: 120px;
 }
 .solutionSec .scrollSection {
-    /* height: 150vh; */
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
-    transition: 2s;
-}.solutionHead {
-    margin-bottom: 44px;
-}.align-items-center {
-   
-    align-items: center !important;
-}.justify-content-between {
-   
-    justify-content: space-between !important;
-}.d-flex {
-    
-    display: flex !important;
-}.mb-8 {
-    margin-bottom: 8px;
-}.sechead {
-    
-    position: relative;
-    /* transform: translateX(-100%); */
-}.ltr.sechead h3{
-        opacity: 0;
-        animation: fade-slide-in-ltr 0.8s linear forwards;
-    }
-                .sechead h3{
-            font-size: 50px !important;
-            line-height: 74px;
-            font-weight: 400;
-        }
-        .solutionHead h3{
-            margin-bottom: 8px;
-        }
-        .section.ltr .sechead p{
-            margin-bottom: 8px;
-                opacity: 0;
-                animation: fade-slide-in-ltr 0.8s linear forwards;
-            }
-          .solutionSec .ltr.npButton  {
-            opacity: 0;
-            animation: from-right-in 0.8s linear forwards;
-        }
-                   .section.ltr .sollutionWrap    {
-                    opacity: 0;
-                    animation: up 0.8s linear forwards;
-                }.sollutionWrap {
-                    /* display: flex; */
-                    flex-wrap: wrap;
-                }.sollutionWrap .eachSol {
-                    width: calc(25% - 30px);
-                    margin-right: 40px;margin-bottom: 40px;
-                }.solImg {
-                    margin-bottom: 15px;
-                    height: 180px;
-                    background-color: #f5f5f5;
-                    /* padding: 10px; */
-                }.eachSol img {
-                    width: 100%;
-                    height: 100%;
-                        display: block;
-                        object-fit: cover
-                }.sollutionWrap h5 {
-                    font-size: 24px;
-                    font-weight: 700;
-                    line-height: 30px;
-                    letter-spacing: 0em;
-                    margin-bottom: 8px;
-                }.sollutionWrap .eachSol:nth-child(4n) {
-                    margin-right: 0;
-                }
+  /* height: 150vh; */
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  transition: 2s;
+}
+.solutionHead {
+  margin-bottom: 44px;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.sechead {
+  position: relative;
+  /* transform: translateX(-100%); */
+}
+.ltr.sechead h3 {
+  opacity: 0;
+  animation: fade-slide-in-ltr 0.8s linear forwards;
+}
+.sechead h3 {
+  font-size: 50px !important;
+  line-height: 74px;
+  font-weight: 400;
+}
+.solutionHead h3 {
+  margin-bottom: 8px;
+}
+.section.ltr .sechead p {
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fade-slide-in-ltr 0.8s linear forwards;
+}
+.solutionSec .ltr.npButton {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
+}
+.section.ltr .sollutionWrap {
+  opacity: 0;
+  animation: up 0.8s linear forwards;
+}
+.sollutionWrap {
+  /* display: flex; */
+  flex-wrap: wrap;
+}
+.sollutionWrap .eachSol {
+  width: calc(25% - 30px);
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+.solImg {
+  margin-bottom: 15px;
+  height: 180px;
+  background-color: #f5f5f5;
+  /* padding: 10px; */
+}
+.eachSol img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.sollutionWrap h5 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  margin-bottom: 8px;
+}
+.sollutionWrap .eachSol:nth-child(4n) {
+  margin-right: 0;
+}

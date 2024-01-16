@@ -8,6 +8,7 @@ import trf5 from "../../../assets/images/application/trf-5.png";
 import trf6 from "../../../assets/images/application/trf-6.png";
 import trf7 from "../../../assets/images/application/trf-7.png";
 import trf8 from "../../../assets/images/application/trf-8.png";
+import Container from "../../../Components/General/Container";
 function TransformingMeltingCards() {
   return (
     <div
@@ -15,7 +16,7 @@ function TransformingMeltingCards() {
       id="sec23"
     >
       <div class="overflowSection">
-        <div class="container">
+        <Container>
           <div class="sechead keyHead aosAnim">
             <h3>
               <span>Transforming</span> your melting process
@@ -114,7 +115,7 @@ function TransformingMeltingCards() {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

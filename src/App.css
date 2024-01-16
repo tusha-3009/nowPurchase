@@ -3,7 +3,7 @@
     font-size: 20px;
     line-height: 38px;
     overflow-x: hidden;
-        font-weight: 400;
+ font-weight: 400;
 }
 
   .row {
@@ -14,3 +14,25 @@
       margin-right: -15px;
       margin-left: -15px;
     }
+.bannerContent.aosAnim .leftBannerCont,
+.aosAnim.ltr h2,
+.keyNumber .aosAnim.ltr h3,
+.ltr.sechead h3,
+.section.ltr .sechead p,
+.section.ltr .cultureRow .imgBox,
+.addr.aosAnim.ltr,
+.aosAnim.titleText,
+.testSec.ltr .titleText,
+.footerSection .footerBlockLeft.aosAnim.ltr,
+.section.ltr .mapleft,
+.titleText.aosAnim,
+.aosAnim.ltr .founderCont,
+.exploreSectionWrap .listWrap.ltr .listMenuWrap,
+.testSec.ltr .sechead h3,
+.detailsRow.aosAnim .detailsMain,
+.detailsRow.aosAnim h2,
+.eventHead.ltr,
+.tabheadC.ltr {
+  opacity: 0;
+  animation: fade-slide-in-ltr 0.8s linear forwards;
+}

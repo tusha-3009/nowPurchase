@@ -9,11 +9,12 @@ import employee_mc2 from "../../../assets/images/application/employee_mc2.png";
 import company_mc3 from "../../../assets/images/application/company_mc3.png";
 import employee_mc1 from "../../../assets/images/application/employee_mc1.png";
 import company_mc1 from "../../../assets/images/application/company_mc1.png";
+import Container from "../../../Components/General/Container";
 function CustomerCards() {
   return (
     <div className="testSec animated-section section aosAnim ltr" id="sec26">
       <div className="overflowSection">
-        <div className="container">
+        <Container>
           <div className="testSecWrap">
             <div className="testmain d-flex justify-content-between align-items-end">
               <div className="sechead keyHead aosAnim mb-0 ltr">
@@ -157,7 +158,7 @@ function CustomerCards() {
               ></span>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

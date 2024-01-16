@@ -1,0 +1,253 @@
+.event1 .titleText {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 84px;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 250px;
+}
+@media (max-width:1366px) {
+    .event1 .titleText {
+            font-size: 50px;
+        }
+}
+@media (max-width:1280px) {
+ .careerDetails,
+ .addressDetails,
+ .sitemapDetails,
+ .event1 {
+     padding-top: 80px !important;
+ }}
+
+
+ @media (max-width:1200px) {.event1 .titleText {
+        font-size: 50px;
+        line-height: 65px;
+    }}
+ @media (max-width:768px){
+ .event1 {
+     padding: 50px 0;
+ }}
+
+@media only screen and  (max-width:768px){
+    .event1 .titleText {
+            margin-bottom: 8px;
+            font-size: 30px !important;
+            font-weight: 700;
+            line-height: 48px;
+        }.eventHead p {
+            font-size: 16px;
+            line-height: 26px;
+        } .careerDetails,
+         .addressDetails,
+         .sitemapDetails,
+         .event1 {
+             padding-top: 20px !important;
+         }
+}
+@media (max-width:575px) {
+.event1 .tabContBox .mainBox {
+        align-items: center;
+    }
+
+    .event1 .tabContBox .topBar {
+        margin-bottom: 10px;
+    }
+
+    .event1 .tabContBox .shareBtn {
+        margin-bottom: 0;
+    }.event1 {
+        padding-bottom: 0 !important;
+    } .event2 {
+         padding-top: 0 !important;
+     }
+    
+     .event1.csrSec {
+         padding: 20px 0 80px !important;
+     }
+}
+.eventHead p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+}
+
+.eventHead {
+    margin-bottom: 60px;
+}.csrSec .eventHead h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+}.eventHead.ltr,
+.tabheadC.ltr {
+    opacity: 0;
+    animation: fade-slide-in-ltr 0.8s linear forwards;
+}.eventHead.aosAnim.ltr h3,
+.mapSec.aosAnim h3 {
+    opacity: 1;
+    animation: none;
+}.eventMWrap .tabContBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid #aaaaaa;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}.tabContBox .topBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabContBox h4 {
+   margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 54px;
+}
+
+.tabContBox .mainBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.tabContBox:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.tabContBox {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.tabContBox ul {
+    padding: 0;
+    margin: 0;
+}
+
+.tabContBox ul li {
+    list-style-type: none;
+}
+
+.tabContBox ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tabContBox ul li img {
+    margin-right: 20px;
+}
+
+.tabContBox ul li a {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    color: #606060;
+}@media (max-width: 1920px) {
+    .tabContBox .shareBtn {
+            font-size: 24px;
+            line-height: 30px;
+        }.eventMWrap .tabContBox {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .event2 .tabContBox .mainBox {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        } 
+    }@media (max-width: 1920px) {
+        .tabContBox h4 {
+                font-size: 28px;
+            }
+    }@media (max-width: 1200px) {
+        .tabContBox h4 {
+            font-size: 28px;
+        }
+    }
+        @media (max-width: 991px) {
+            .tabContBox ul li img {
+                    width: 16px;
+                    margin-right: 5px;
+                }
+        }
+@media (max-width: 1280px) {.careerDetails,
+.addressDetails,
+.sitemapDetails,
+.event1 {
+    padding-top: 80px !important;
+}}.tabContBox .topBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabContBox h4 {
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.tabContBox .mainBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.tabContBox:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.tabContBox {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.tabContBox ul {
+    padding: 0;
+    margin: 0;
+}
+
+.tabContBox ul li {
+    list-style-type: none;
+}
+
+.tabContBox ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tabContBox ul li img {
+    margin-right: 20px;
+}
+
+.tabContBox ul li a {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    color:#606060;
+}.eventMWrap .tabContBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid #aaaaaa;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}.eventFull .tabContBox {
+    padding: 80px;
+}.exploreWrap .tabContBox {
+    display: flex;
+    justify-content: space-between;
+}.tabContBox .topBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabContBox .mainBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}.tabContBox .topBar {
+    display: flex;
+    justify-content: space-between;
+}

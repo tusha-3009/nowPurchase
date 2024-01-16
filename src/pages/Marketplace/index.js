@@ -14,7 +14,7 @@ function Marketplace() {
       <TransformingIdeas />
       <OneStopSolutions />
       <CustomerCards />
-      <Certificate/>
+      <Certificate />
     </>
   );
 }

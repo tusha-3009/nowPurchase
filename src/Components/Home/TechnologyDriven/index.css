@@ -33,13 +33,7 @@
   flex-direction: column;
   transition: 2s;
 }
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1520px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
+
 .row {
   display: flex;
 

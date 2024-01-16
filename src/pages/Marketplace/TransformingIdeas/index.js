@@ -3,12 +3,13 @@ import "./index.css"
 import trans1 from "../../../assets/images/marketplace/trans-1.png"
 import trans2 from "../../../assets/images/marketplace/trans-2.png";
 import logoWh from "../../../assets/images/logo_wh.png"
+import Container from '../../../Components/General/Container';
 
 function TransformingIdeas() {
   return (
     <div className="ideaSec animated-section section pb-0" id="sec35">
       <div className="scrollSection">
-        <div className="container">
+        <Container>
           <div className="sechead keyHead aosAnim ltr">
             <h3>
               <span>Transforming</span> ideas <br />
@@ -261,7 +262,7 @@ function TransformingIdeas() {
               </h5>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

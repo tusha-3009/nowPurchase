@@ -1,9 +1,10 @@
-import React from 'react'
-import bnrpoly from "../../../assets/images/marketplace/bnrPoly.png"
+import React from "react";
+import bnrpoly from "../../../assets/images/marketplace/bnrPoly.png";
 import "./index.css";
-  import loca from "../../../assets/images/marketplace/loc.png";
-  import dummy from "../../../assets/images/dummy.mp4";
-  import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
+import loca from "../../../assets/images/marketplace/loc.png";
+import dummy from "../../../assets/images/dummy.mp4";
+import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
+import Container from "../../../Components/General/Container";
 function Hero() {
   return (
     <div
@@ -11,7 +12,7 @@ function Hero() {
       id="sec31"
     >
       <div className="overflowSection">
-        <div className="container">
+        <Container>
           <div className="row bannerContent aosAnim ltr">
             <div className="col-md-7 leftBannerCont">
               <div className="bannerLeft">
@@ -36,11 +37,7 @@ function Hero() {
             <div className="col-md-5 rightBannerImg">
               <div className="bannerRight">
                 <div className="bannerPoly bannerPoly1">
-                  <img
-                    loading="lazy"
-                    src={bnrpoly}
-                    alt=""
-                  />
+                  <img loading="lazy" src={bnrpoly} alt="" />
 
                   <video
                     className="video"
@@ -57,26 +54,18 @@ function Hero() {
                     className="bnrPlay"
                     data-fancybox=""
                   >
-                    <img
-                      loading="lazy"
-                      src={bnrPlay}
-                      alt=""
-                    />
+                    <img loading="lazy" src={bnrPlay} alt="" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
         <div className="addr aosAnim ltr">
           <div className="container">
             <div className="locWrap d-flex align-items-center">
               <div className="locIcon">
-                <img
-                  loading="lazy"
-                  src={loca}
-                  alt=""
-                />
+                <img loading="lazy" src={loca} alt="" />
               </div>
               <div className="locAddr d-flex align-items-center">
                 <div className="eachLoc">
@@ -97,7 +86,7 @@ function Hero() {
         </div>
 
         <section className="keyNumber triangleTopLeftBg" id="">
-          <div className="container">
+          <Container>
             <div className="row">
               <div className="col-lg-12 aosAnim ltr">
                 <div className="sechead keyHead aosAnim ltr">
@@ -136,11 +125,11 @@ function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </Container>
         </section>
       </div>
     </div>
   );
 }
 
-export default Hero
+export default Hero;

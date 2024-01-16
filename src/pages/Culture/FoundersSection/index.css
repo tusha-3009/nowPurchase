@@ -1,0 +1,42 @@
+.teamManagementC {
+  background-color: #e8f2f8;
+}
+.cManagement.aosAnim.ltr {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
+}
+.eachCM {
+  width: calc(33.33%);
+  margin-right: 80px;
+}
+.cManagement .eachCM:last-child {
+  margin-right: 0;
+}
+.mImageWrap {
+  background-color: #a1c9e5;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.mImageWrap img {
+  width: 100%;
+}
+.mngDetails h4 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.mngDetails h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 38px;
+  margin-bottom: 0;
+}
+
+.mngDetails a:hover {
+  opacity: 1;
+}
+
+.mngDetails a {
+  opacity: 0.4;
+}

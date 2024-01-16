@@ -17,13 +17,7 @@ transform-origin: center top 0;
    
     background-color: transparent;
 }
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1520px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
+
 .megaMenuNew .container {
     height: 100% !important;
 }.megaMenuWrap {

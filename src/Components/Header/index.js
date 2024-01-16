@@ -57,7 +57,7 @@ function Header() {
                 <ul>
                   <li>
                     <a
-                      href="#getInTouchForm"
+                      href="/getInTouchForm"
                       class="getInTouch"
                       id="Header_GetInTouch"
                     >

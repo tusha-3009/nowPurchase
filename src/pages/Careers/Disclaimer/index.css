@@ -1,0 +1,29 @@
+.disclaimerSectionWrap {
+    background-color: #E8F2F8;
+}
+
+.disclaimerSectionWrap .npButton {
+    margin-top: 60px;
+}
+
+.disclaimerWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .disclaimerWrap .founderCont{width: 930px; padding-right: 80px;} */
+.disclaimerWrap .founderContBox {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px;
+}
+
+/* .disclaimerWrap .founderImg{ border-radius: 20px; width: calc(100% - 930px)} */
+.disclaimerWrap .founderImg img {
+    width: 100%;
+    display: block;
+}
+
+.disclaimerWrap .founderImg figure {
+    margin-bottom: 0;
+}

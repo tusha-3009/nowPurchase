@@ -1,0 +1,32 @@
+.privilegeSectionWrap.procureSectionWrap .eachBoxWrap .eachBox {
+    width: calc(33.33% - 30px);
+
+}
+         .privilegeSectionWrap{
+background-color: #add8e6;
+         } 
+.procureSectionWrap {
+    padding-bottom: 120px;
+
+}
+
+.procureSectionWrap .eachBoxWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.procureSectionWrap .eachBoxWrap .eachBox {
+    margin-bottom: 80px;
+    width: calc(25% - 30px);
+}
+
+.procureSectionWrap .eachBoxWrap .eachBox img {
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+.procureSectionWrap .eachBoxWrap .eachBox h4 {
+    margin-bottom: 15px;
+    color: var(--thm-black-main);
+}

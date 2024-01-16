@@ -1,0 +1,66 @@
+.testCulture .testSlider {
+  padding: 75px 0;
+}
+.testmain {
+  margin-bottom: 25px;
+}
+.test-nav {
+  display: flex;
+  align-items: center;
+}
+
+.test-prev {
+  margin-right: 20px;
+}
+.test-add {
+  background: #d0e4f2 !important;
+}
+.test-add img {
+  filter: none !important;
+}
+.section.ltr .testSlider {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
+}
+.testCulture .testSlider {
+  padding: 75px 0;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.testSec .swiper-slide {
+  transition: 0.4s;
+  opacity: 0.5;
+}
+.swiper-slide {
+  flex-shrink: 0;
+
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.testCulture .testCard {
+  padding-top: 120px;
+}
+.testCulture .testCard .cTestImage {
+  position: absolute;
+  top: -70px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 160px;
+  width: 160px;
+}
+.testCulture .testCard .cTestImage img {
+  background-color: #a1c9e5;
+}
+.testCard p {
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 48px;
+}

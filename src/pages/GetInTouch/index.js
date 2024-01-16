@@ -1,8 +1,10 @@
 import React from 'react'
 import "./index.css";
+
 function GetInTouch() {
   return (
     <div id="getInTouchForm" className="getInTouchForm">
+  
       <div className="getInTouchFormWrap">
         <h3>Enquiry Form</h3>
         <div className="formBox">

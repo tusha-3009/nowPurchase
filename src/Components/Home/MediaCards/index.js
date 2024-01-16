@@ -13,7 +13,7 @@ function MediaCards() {
       <div className="scrollSection">
         <div className="container">
           <div className="mediaRow">
-            <h2 className="titleText">
+            <h2 className="titleText" style={{lineHeight:"1.2"}}>
               Our <span className="skyText">Media</span> Moments!
             </h2>
             <div className="mediaWrap mediaSlider">

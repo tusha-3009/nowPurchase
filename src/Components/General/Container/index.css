@@ -26,7 +26,6 @@
 }
 @media (max-width: 389px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
   }
 }

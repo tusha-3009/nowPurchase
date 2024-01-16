@@ -3,13 +3,14 @@ import "./index.css";
 import marketPlacePic from "../../../assets/images/marketplace/bnrPlay.png"
 import locationLogo from "../../../assets/images/marketplace/loc.png";
 import applPoly from "../../../assets/images/application/applPoly.png";
+import Container from '../../../Components/General/Container';
 function MeltingProcessMadeReliable() {
   return (
     <div
         class="marketbnr animated-section section serviceSec pb-0"
         id="sec21">
         <div class="overflowSection">
-          <div class="container">
+          <Container>
             <div class="row bannerContent aosAnim">
               <div class="col-md-7 leftBannerCont">
                 <div class="bannerLeft">
@@ -53,9 +54,9 @@ function MeltingProcessMadeReliable() {
                 </div>
               </div>
             </div>
-          </div>
+          </Container>
           <div class="addr aosAnim">
-            <div class="container">
+            <Container>
               <div class="locWrap d-flex align-items-center">
                 <div class="locIcon">
                   <img
@@ -69,11 +70,11 @@ function MeltingProcessMadeReliable() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Container>
           </div>
           <div class="keyNumber triangleTopLeftBg" id="">
            
-            <div class="container">
+            <Container>
               <div class="row">
                 <div class="col-lg-12 aosAnim">
                   <div class="sechead keyHead">
@@ -103,7 +104,7 @@ function MeltingProcessMadeReliable() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Container>
 
            
           </div>

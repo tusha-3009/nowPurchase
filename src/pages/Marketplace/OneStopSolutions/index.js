@@ -8,6 +8,7 @@ import sol5 from "../../../assets/images/marketplace/sol-5.png";
 import sol6 from "../../../assets/images/marketplace/sol-6.png";
 import sol7 from "../../../assets/images/marketplace/sol-7.png";
 import sol8 from "../../../assets/images/marketplace/sol-8.png";
+import Container from '../../../Components/General/Container';
 function OneStopSolutions() {
   return (
     <div
@@ -15,7 +16,7 @@ function OneStopSolutions() {
       id="sec36"
     >
       <div className="scrollSection">
-        <div className="container">
+        <Container>
           <div className="solutionHead d-flex align-items-center justify-content-between">
             <div className="sechead keyHead mb-8 aosAnim ltr">
               <h3>
@@ -86,7 +87,7 @@ function OneStopSolutions() {
               <h5>Sand &amp; Other Essentials</h5>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-
 import MeltingProcessMadeReliable from "./Hero";
 import TransformingMeltingCards from "./TransformingMeltingCards";
 import MapSection from "./MapSection";
