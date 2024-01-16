@@ -775,12 +775,23 @@ nav ul li a {
   border-radius: 20px;
   padding: 25px 20px;
 }
+.eachMediaBoxAcc {
+  width: calc(25% - 40px);
+  border: 1px solid #aaaaaa;
+  border-radius: 20px;
+}
 .mediaSectionWrap .mediaWrap .eachMediaBox figure {
   margin-bottom: 25px;
+}
+.eachMediaBoxAcc figure {
+  margin-bottom: 12px;
 }
 .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
   height: 310px;
   margin-bottom: 25px;
+}
+.mediaTextAcc {
+  padding: 20px;
 }
 
 .investorSectionWrap {

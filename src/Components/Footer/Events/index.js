@@ -1,12 +1,12 @@
 import React from "react";
-import "./index.css"
+import "./index.css";
 import mapIcon from "../../../assets/images/career/mapIcon.svg";
 import timerIcon from "../../../assets/images/career/timerIcon.svg";
-// import eventIFEX5 from "../../../assets/images/events/eventIFEX5.png";
-// import eventIFEX3 from "../../../assets/images/events/eventIFEX3.png";
-// import eventIFEX4 from "../../../assets/images/events/eventIFEX4.png";
-// import eventIFEX2 from "../../../assets/images/events/eventIFEX2.png";
-// import eventBg from "../../../assets/images/events/eventBg.png";
+import eventIFEX5 from "../../../assets/images/events/eventIFEX5.png";
+import eventIFEX3 from "../../../assets/images/events/eventIFEX3.png";
+import eventIFEX4 from "../../../assets/images/events/eventIFEX4.png";
+import eventIFEX2 from "../../../assets/images/events/eventIFEX2.png";
+import eventBg from "../../../assets/images/events/eventBg.png";
 function EventsPage() {
   return (
     <>
@@ -107,21 +107,21 @@ function EventsPage() {
           </div>
         </div>
       </div>
-      {/* <div className="event1 event2 pt-0">
-        <div className="container">
-          <div className="eventHead aosAnim">
-            <h3 className="titleText">Previous Events</h3>
+      <section class="event1 event2 pt-0">
+        <div class="container">
+          <div class="eventHead aosAnim">
+            <h3 class="titleText">Previous Events</h3>
             <p>
               Listed are events that NowPurchase is going to be a part of. These
               are tentative and can change at any time without prior notice.
             </p>
           </div>
 
-          <div className="eventMWrap aosAnim">
-            <div className="tabContBox">
-              <div className="topBar">
+          <div class="eventMWrap aosAnim">
+            <div class="tabContBox">
+              <div class="topBar">
                 <h4>ISSE 2023</h4>
-                <div className="listBox">
+                <div class="listBox">
                   <ul>
                     <li>
                       <img loading="lazy" src={mapIcon} alt="" />
@@ -136,12 +136,12 @@ function EventsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="mainBox"></div>
+              <div class="mainBox"></div>
             </div>
-            <div className="tabContBox">
-              <div className="topBar">
+            <div class="tabContBox">
+              <div class="topBar">
                 <h4>IIM-ATM 2023</h4>
-                <div className="listBox">
+                <div class="listBox">
                   <ul>
                     <li>
                       <img loading="lazy" src={mapIcon} alt="" />
@@ -154,12 +154,12 @@ function EventsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="mainBox"></div>
+              <div class="mainBox"></div>
             </div>
-            <div className="tabContBox">
-              <div className="topBar">
+            <div class="tabContBox">
+              <div class="topBar">
                 <h4>ISME 2023</h4>
-                <div className="listBox">
+                <div class="listBox">
                   <ul>
                     <li>
                       <img loading="lazy" src={mapIcon} alt="" />
@@ -172,12 +172,12 @@ function EventsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="mainBox"></div>
+              <div class="mainBox"></div>
             </div>
-            <div className="tabContBox">
-              <div className="topBar">
+            <div class="tabContBox">
+              <div class="topBar">
                 <h4>Bureau of Middle East Recycling (BMR)</h4>
-                <div className="listBox">
+                <div class="listBox">
                   <ul>
                     <li>
                       <img loading="lazy" src={mapIcon} alt="" />
@@ -190,16 +190,16 @@ function EventsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="mainBox"></div>
+              <div class="mainBox"></div>
             </div>
           </div>
-          <div className="eventFull aosAnim">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="eventImgM">
+          <div class="eventFull aosAnim">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="eventImgM">
                   <img
                     loading="lazy"
-                    styles={{
+                    style={{
                       borderTopLeftRadius: "20px",
                       borderBottomLeftRadius: "20px",
                     }}
@@ -208,13 +208,13 @@ function EventsPage() {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="tabContBox">
-                  <div className="topBar">
+              <div class="col-md-6">
+                <div class="tabContBox">
+                  <div class="topBar">
                     <h4>MAKH Annual General Meeting</h4>
                   </div>
-                  <div className="mainBox">
-                    <div className="listBox">
+                  <div class="mainBox">
+                    <div class="listBox">
                       <ul>
                         <li>
                           <img loading="lazy" src={mapIcon} alt="" />
@@ -231,11 +231,11 @@ function EventsPage() {
               </div>
             </div>
           </div>
-          <div className="eventMWrap aosAnim">
-            <div className="tabContBox">
-              <div className="topBar">
+          <div class="eventMWrap aosAnim">
+            <div class="tabContBox">
+              <div class="topBar">
                 <h4>GIFA (SOUTH-EAST ASIA)</h4>
-                <div className="listBox">
+                <div class="listBox">
                   <ul>
                     <li>
                       <img loading="lazy" src={mapIcon} alt="" />
@@ -248,17 +248,17 @@ function EventsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="mainBox"></div>
+              <div class="mainBox"></div>
             </div>
           </div>
 
-          <div className="eventFull aosAnim">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="eventImgM">
+          <div class="eventFull aosAnim">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="eventImgM">
                   <img
                     loading="lazy"
-                    styles={{
+                    style={{
                       borderTopLeftRadius: "20px",
                       borderBottomLeftRadius: "20px",
                     }}
@@ -267,13 +267,13 @@ function EventsPage() {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="tabContBox">
-                  <div className="topBar">
+              <div class="col-md-6">
+                <div class="tabContBox">
+                  <div class="topBar">
                     <h4>Goshima Annual General Meeting</h4>
                   </div>
-                  <div className="mainBox">
-                    <div className="listBox">
+                  <div class="mainBox">
+                    <div class="listBox">
                       <ul>
                         <li>
                           <img loading="lazy" src={mapIcon} alt="" />
@@ -290,13 +290,13 @@ function EventsPage() {
               </div>
             </div>
           </div>
-          <div className="eventFull aosAnim">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="eventImgM">
+          <div class="eventFull aosAnim">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="eventImgM">
                   <img
                     loading="lazy"
-                    styles={{
+                    style={{
                       borderTopLeftRadius: "20px",
                       borderBottomLeftRadius: "20px",
                     }}
@@ -305,13 +305,13 @@ function EventsPage() {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="tabContBox">
-                  <div className="topBar">
+              <div class="col-md-6">
+                <div class="tabContBox">
+                  <div class="topBar">
                     <h4>EO Tech Expo</h4>
                   </div>
-                  <div className="mainBox">
-                    <div className="listBox">
+                  <div class="mainBox">
+                    <div class="listBox">
                       <ul>
                         <li>
                           <img loading="lazy" src={mapIcon} alt="" />
@@ -329,20 +329,20 @@ function EventsPage() {
             </div>
           </div>
 
-          <div className="eventFull aosAnim">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="eventImgM">
+          <div class="eventFull aosAnim">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="eventImgM">
                   <img loading="lazy" src={eventBg} alt="" />
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="tabContBox">
-                  <div className="topBar">
+              <div class="col-md-6">
+                <div class="tabContBox">
+                  <div class="topBar">
                     <h4>All India Steel Conclave</h4>
                   </div>
-                  <div className="mainBox">
-                    <div className="listBox">
+                  <div class="mainBox">
+                    <div class="listBox">
                       <ul>
                         <li>
                           <img loading="lazy" src={mapIcon} alt="" />
@@ -359,13 +359,13 @@ function EventsPage() {
               </div>
             </div>
           </div>
-          <div className="eventFull aosAnim">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="eventImgM">
+          <div class="eventFull aosAnim">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="eventImgM">
                   <img
                     loading="lazy"
-                    styles={{
+                    style={{
                       borderTopLeftRadius: "20px",
                       borderBottomLeftRadius: "20px",
                     }}
@@ -374,13 +374,13 @@ function EventsPage() {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="tabContBox">
-                  <div className="topBar">
-                    <h4>Indian Foundry Congress &amp; IFEX 2023</h4>
+              <div class="col-md-6">
+                <div class="tabContBox">
+                  <div class="topBar">
+                    <h4>Indian Foundry Congress & IFEX 2023</h4>
                   </div>
-                  <div className="mainBox">
-                    <div className="listBox">
+                  <div class="mainBox">
+                    <div class="listBox">
                       <ul>
                         <li>
                           <img loading="lazy" src={mapIcon} alt="" />
@@ -388,7 +388,7 @@ function EventsPage() {
                         </li>
                         <li>
                           <img loading="lazy" src={timerIcon} alt="" />
-                          <span>Febr/uary 8–10, 2023</span>
+                          <span>February 8–10, 2023</span>
                         </li>
                       </ul>
                     </div>
@@ -398,7 +398,7 @@ function EventsPage() {
             </div>
           </div>
         </div>
-      </div> */}
+      </section>
     </>
   );
 }

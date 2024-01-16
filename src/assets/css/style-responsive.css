@@ -361,6 +361,9 @@
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 300px;
   }
+  .mediaTextAcc {
+    height: unset;
+  }
 
   .footerSection .footerTitleText {
     font-size: 35px;
@@ -477,6 +480,9 @@
 
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 340px;
+  }
+  .mediaTextAcc {
+    height: unset;
   }
 
   .trustanimeWrap {
@@ -862,6 +868,9 @@
 
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 190px;
+  }
+  .mediaTextAcc {
+    height: unset;
   }
 
   .eachMediaBox img {
@@ -1365,6 +1374,9 @@
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 340px;
   }
+  .mediaTextAcc {
+    height: unset;
+  }
 
   .testCard {
     height: 370px;
@@ -1383,6 +1395,9 @@
 
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 240px;
+  }
+  .mediaTextAcc {
+    height: unset;
   }
 
   .footerSection {
@@ -1596,12 +1611,20 @@
     width: calc(50% - 20px);
     margin-bottom: 40px;
   }
+  .eachMediaBoxAcc {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
 
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: auto;
     overflow-y: auto;
     padding-right: 10px;
     margin-bottom: 25px;
+  }
+  .mediaTextAcc {
+    height: auto;
+    overflow-y: auto;
   }
 
   .investorWrap ul li figure {
@@ -3644,6 +3667,9 @@
   .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 220px;
   }
+  .mediaTextAcc {
+    height: unset;
+  }
 
   .investorRow {
     flex-wrap: wrap;
@@ -4234,11 +4260,17 @@
     padding-bottom: 40px;
   }
 
-  .mediaSectionWrap .mediaWrap .eachMediaBox {
+  .mediaSectionWrap .mediaWrap .eachMediaBox,
+  .eachMediaBoxAcc {
     width: 100%;
   }
 
-  .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+  .mediaSectionWrap
+    .mediaWrap
+    .eachMediaBox
+    .eachMediaBoxAcc
+    .mediaText
+    .mediaTextAcc {
     height: auto;
     overflow-y: visible;
   }
