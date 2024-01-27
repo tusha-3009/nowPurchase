@@ -1,0 +1,37 @@
+@media (max-width: 1600px){
+section .event1{
+        padding: 120px 0;
+    }
+} 
+.event1 .titleText {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 84px;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 0px ;
+   
+}
+           .csrBigimg {
+               border-radius: 30px;
+               overflow: hidden;
+               margin-bottom: 60px;
+               /* padding: 0; */
+           }.csrSec {
+            padding: 220px 0 120px;
+        }.eventHead.ltr,
+        .tabheadC.ltr {
+            opacity: 0;
+            animation: fade-slide-in-ltr 0.8s linear forwards;
+        }
+        @keyframes fade-slide-in-ltr {
+        0% {
+                opacity: 0;
+                transform: translateX(-300px);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }

@@ -1,5 +1,6 @@
-import React from 'react'
-import "./index.css"
+import React, { useState } from "react";
+import "./index.css";
+import "../../../../assets/css/swiper.min.css";
 import arrow from "../../../../assets/images/marketplace/test-arrow.png";
 import e1 from "../../../../assets/images/marketplace/employee_mp1.png";
 import c1 from "../../../../assets/images/marketplace/company_mp2.png";
@@ -10,6 +11,16 @@ import c3 from "../../../../assets/images/marketplace/company_mp3.png";
 import c4 from "../../../../assets/images/marketplace/company_mp1.png";
 import e4 from "../../../../assets/images/marketplace/employee_mp3.png";
 function CustomerCards() {
+  const [transformVal, setTransformVal] = useState(0);
+  function Prev() {
+    if (transformVal !== 0) 
+    setTransformVal((currValue) => currValue + 675);
+  }
+  function Next() {
+    if(transformVal!==-1350)
+    setTransformVal((currValue) => currValue - 675);
+  }
+
   return (
     <div
       className="testSec animated-section section sectionCards aosAnim ltr"
@@ -30,19 +41,19 @@ function CustomerCards() {
                   tabindex="0"
                   role="button"
                   aria-label="Previous slide"
-                  aria-disabled="false"
+                  // aria-disabled="false"
                 >
-                  <img loading="lazy" src={arrow} alt="" />
+                  <img loading="lazy" src={arrow} alt="" onClick={Prev} />
                 </div>
                 <div
-                  className="test_arrow test-next next swiper-button-disabled"
+                  className="test_arrow test-next next "
                   id="Home_Section6_Testimonials_ArrowRight"
                   tabindex="-1"
                   role="button"
                   aria-label="Next slide"
-                  aria-disabled="true"
+                  // aria-disabled="true"
                 >
-                  <img loading="lazy" src={arrow} alt="" />
+                  <img loading="lazy" src={arrow} alt="" onClick={Next} />
                 </div>
               </div>
             </div>
@@ -50,12 +61,12 @@ function CustomerCards() {
               <div
                 class="swiper-wrapper"
                 style={{
-                  transform: "translate3d(-1347.46px, 0px, 0px)",
+                  transform: `translate3d(${transformVal}px, 0px, 0px)`,
                   transitionDuration: "0ms",
                 }}
               >
                 <div
-                  class="swiper-slide swiper-slide-prev"
+                  class="swiper-slide "
                   style={{ width: "627.114px", marginRight: "50px" }}
                 >
                   <div class="testCard">
@@ -80,7 +91,7 @@ function CustomerCards() {
                   </div>
                 </div>
                 <div
-                  class="swiper-slide swiper-slide-active"
+                  class="swiper-slide "
                   style={{ width: "627.114px", marginRight: "50px" }}
                 >
                   <div class="testCard">
@@ -91,26 +102,20 @@ function CustomerCards() {
                     </p>
                     <div class="testDetail">
                       <div class="testIc">
-                        <img
-                          src={e2}
-                          alt=""
-                        />
+                        <img src={e2} alt="" />
                         <div class="testName">
                           <h4>Pradeep Bera</h4>
                           <h5>Foundry Head</h5>
                         </div>
                       </div>
                       <div class="testCompany">
-                        <img
-                          src={c2}
-                          alt=""
-                        />
+                        <img src={c2} alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="swiper-slide swiper-slide-next"
+                  class="swiper-slide "
                   style={{ width: "627.114px", marginRight: "50px" }}
                 >
                   <div class="testCard">
@@ -122,20 +127,14 @@ function CustomerCards() {
                     </p>
                     <div class="testDetail">
                       <div class="testIc">
-                        <img
-                          src={e3}
-                          alt=""
-                        />
+                        <img src={e3} alt="" />
                         <div class="testName">
                           <h4>Yogesh Joshi</h4>
                           <h5>CEO</h5>
                         </div>
                       </div>
                       <div class="testCompany">
-                        <img
-                          src={c3}
-                          alt=""
-                        />
+                        <img src={c3} alt="" />
                       </div>
                     </div>
                   </div>
@@ -153,30 +152,19 @@ function CustomerCards() {
                     </p>
                     <div class="testDetail">
                       <div class="testIc">
-                        <img
-                          src={e4}
-                          alt=""
-                        />
+                        <img src={e4} alt="" />
                         <div class="testName">
                           <h4>Sikhar Jaiswal</h4>
                           <h5>Owner</h5>
                         </div>
                       </div>
                       <div class="testCompany">
-                        <img
-                          src={c4}
-                          alt=""
-                        />
+                        <img src={c4} alt="" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <span
-                className="swiper-notification"
-                aria-live="assertive"
-                aria-atomic="true"
-              ></span>
             </div>
           </div>
         </div>
@@ -185,4 +173,4 @@ function CustomerCards() {
   );
 }
 
-export default CustomerCards
+export default CustomerCards;

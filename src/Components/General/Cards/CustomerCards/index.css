@@ -11,6 +11,24 @@
     position: relative;
     overflow-x: hidden;
     background-color: #e8f2f8;
+}.testSec .testSlider {
+    overflow-x: hidden;
+    margin-right: -200px;
+    padding-top: 75px;
+}
+
+.testSec .swiper-slide {
+    transition: 0.4s;
+    opacity: 0.5;
+}
+
+.testSec .swiper-slide:last-child {
+    opacity: 1;
+}
+
+.testSec .swiper-slide-next,
+.testSec .swiper-slide-active {
+    opacity: 1;
 }
 .overflowSection {
     /* height: 200vh; */
@@ -26,13 +44,27 @@
     display: flex;
     align-items: center;
 }
+.testSec .swiper-slide {
+    transition: 0.4s;
+    opacity: 0.5;
+}
 
+.keyNumber .eachkey {
+    min-height: 210px;
+}
+
+.testSec .swiper-slide:last-child {
+    opacity: 1;
+}
+
+.testSec .swiper-slide-next,
+.testSec .swiper-slide-active {
+    opacity: 1;
+}
 .testSecWrap {
     width: 100%;
 }
-.testmain {
-    margin-bottom: 25px;
-}
+
 .align-items-end {
    
     align-items: flex-end !important;
@@ -110,6 +142,19 @@
 .testSec .swiper-slide {
     transition: 0.4s;
     opacity: 0.5;
+}
+.testSec .swiper-slide {
+    transition: 0.4s;
+    opacity: 0.5;
+}
+
+.testSec .swiper-slide:last-child {
+    opacity: 1;
+}
+
+.testSec .swiper-slide-next,
+.testSec .swiper-slide-active {
+    opacity: 1;
 }
 .swiper-slide {
     flex-shrink: 0;
@@ -200,6 +245,6 @@ font-weight: 400;
     justify-content: space-between;
 }
        .sectionCards h3{
-            line-height: 74px;
+            line-height: 60px;
                 margin-bottom: 8px;
        } 

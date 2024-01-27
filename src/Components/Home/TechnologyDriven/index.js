@@ -2,6 +2,8 @@ import React from "react";
 import "./index.css";
 import Container from "../../General/Container";
 import TechnologyPic from "../../../assets/images/home/bannerImg.svg";
+
+import CarouselCompanyCards from "../../General/Carousel";
 function TechnologyDriven() {
   return (
     <div
@@ -51,9 +53,7 @@ function TechnologyDriven() {
                   <br />
                   everywhere{" "}
                 </h2>
-                <div className="imgBoxWrap imgBoxlider slick-initialized slick-slider">
-                  <div className="slick-list"></div>
-                </div>
+              <CarouselCompanyCards/>
               </div>
             </div>
           </Container>

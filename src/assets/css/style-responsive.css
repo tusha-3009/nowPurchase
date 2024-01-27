@@ -1638,6 +1638,12 @@
 }
 
 @media (max-width: 1280px) {
+
+
+.mainBanner {
+    padding-top: 170px !important;
+  }
+
   .footerSection {
     height: 500px;
   }
@@ -2088,6 +2094,10 @@
 }
 
 @media (max-width: 1200px) {
+
+
+
+  
   .footerSection {
     height: auto;
   }

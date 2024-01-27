@@ -8,7 +8,7 @@ function TermsConditions() {
             <h3 class="titleText">Terms & Conditions</h3>
             <h5>Last Updated on : 1st May, 2023</h5>
           </div>
-          <div class="csrContent aosAnim">
+          <div class="csrContent aosAnim ltr">
             <div class="csrP">
               <p>
                 <strong>Use of the Software</strong><br />
@@ -81,7 +81,7 @@ function TermsConditions() {
                 <strong>Contact Us</strong><br />
                 If you have any questions or concerns regarding these Terms of
                 Use, please contact us at
-                <a mailto="foundry@nowpurchase.com">foundry@nowpurchase.com</a>.
+                <a mailto="foundry@nowpurchase.com"> foundry@nowpurchase.com</a>.
               </p>
             </div>
           </div>

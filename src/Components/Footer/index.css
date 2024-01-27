@@ -3,13 +3,13 @@
   padding: 80px 0 40px;
   height: 658px;
 }
+
 .footerSection .sectionf {
   width: 100%;
   display: flex;
   transition: 2s;
   align-items: center;
   justify-content: center;
-  /* padding: 120px 0 50px; */
 }
 
 .row {
@@ -19,6 +19,7 @@
   margin-right: -15px;
   margin-left: -15px;
 }
+
 .footerSection .footerTitleText {
   font-size: 35px;
   font-weight: 500;
@@ -26,11 +27,13 @@
   line-height: 90px;
   margin-bottom: 130px;
 }
+
 .footerTitleText strong {
   font-size: 55px;
   font-weight: 700;
   color: #fff;
 }
+
 .row {
   display: flex;
 
@@ -38,14 +41,17 @@
   margin-right: -15px;
   margin-left: -15px;
 }
+
 .footerSection .footerBlockLeft.aosAnim.ltr {
   opacity: 0;
   animation: fade-slide-in-ltr 0.8s linear forwards;
 }
+
 .footerBlock.aosAnim.ltr h2 {
   opacity: 1;
   animation: none;
 }
+
 @keyframes fade-slide-in-ltr {
   0% {
     opacity: 0;
@@ -57,6 +63,7 @@
     transform: translateX(0%);
   }
 }
+
 .col-lg-8 {
   flex: 0 0 66.666667%;
   max-width: 66.666667%;
@@ -66,6 +73,7 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+
 .footerSection .footerTitleText {
   font-size: 35px;
   line-height: 90px;
@@ -74,51 +82,62 @@
   line-height: 90px;
   margin-bottom: 130px;
 }
+
 .footerSection .footerTitleText strong {
   font-size: 55px;
   font-weight: 700;
   color: #fff;
 }
+
 .footerSection .footerTitleText {
   font-weight: 500;
   color: #fff;
   line-height: 90px;
   margin-bottom: 130px;
 }
+
 .footerSection .socialShare {
   margin-bottom: 100px;
 }
+
 .footerSection .socialShare ul {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
 ul.noList {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 li:not(:last-child) {
   margin-right: 32px;
 }
+
 .footerSection .socialShare ul li a {
   font-size: 20px;
   line-height: 20px;
   display: block;
 }
+
 a {
   transition: 0.6s;
   color: #303030;
   text-decoration: none !important;
 }
+
 .footerSection .socialShare ul li a figure {
   display: block;
 
   text-align: center;
 }
+
 figure {
   margin: 0 0 1rem;
 }
+
 .footerSection .socialShare ul li a figure img {
   display: inline-block;
   max-height: 24px;
@@ -128,6 +147,7 @@ figure {
   text-align: center;
   border-style: none;
 }
+
 .footerSection .socialShare ul li a figure figcaption {
   display: block;
   color: #fff;
@@ -140,6 +160,7 @@ figure {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 4px;
 }
+
 .footerSection .copyrightBlock .tredText {
   font-weight: 400;
   font-size: 12px;
@@ -157,10 +178,12 @@ figure {
 p:last-child {
   margin-bottom: 0 !important;
 }
+
 .footerSection .footerBlockRight.aosAnim.ltr {
   opacity: 0;
   animation: from-right-in 0.8s linear forwards;
 }
+
 @keyframes from-right-in {
   0% {
     opacity: 0;
@@ -172,26 +195,29 @@ p:last-child {
     transform: translateX(0%);
   }
 }
+
 .footerSection .footerBlockRight {
   text-align: right;
 }
+
 .col-lg-4 {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
 }
+
 .footerSection .footerLinkList {
   margin-bottom: 55px;
   height: 220px;
   overflow-y: auto;
   padding-right: 10px;
 }
+
 .footerSection .footerLinkList ul li:not(:last-child) {
   margin-bottom: 15px;
 }
+
 .footerSection .footerLinkList ul li a {
   font-weight: 600;
   font-size: 16px;
@@ -201,24 +227,29 @@ p:last-child {
   color: #fff;
   text-decoration: none !important;
 }
+
 .footerSection .footerLinkList ul li:not(:last-child) {
   margin-bottom: 15px;
 }
+
 .footerSection .makeInIndiaImg {
   margin-bottom: 90px;
   position: absolute;
   right: 15px;
   bottom: 40px;
 }
+
 .footerSection .makeInIndiaImg figure {
   margin-bottom: 0;
 }
+
 .footerInfo {
   position: absolute;
   right: 15px;
   bottom: 0px;
   margin-bottom: 16px;
 }
+
 .footerSection .footerInfo .dippText {
   font-weight: 500;
   font-size: 12px;
@@ -226,18 +257,21 @@ p:last-child {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 4px;
 }
+
 .footerSection .footerInfo .designText {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.4);
 }
+
 .teamHover {
   text-decoration: underline;
   cursor: pointer;
   font-size: 16px;
   line-height: 16px;
 }
+
 .ul {
   right: 20px;
   bottom: 50px;
@@ -252,11 +286,13 @@ p:last-child {
   transform-origin: bottom center;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .ul ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
+
 .ul ul li:not(:last-child) {
   margin-bottom: 3px;
 }
@@ -269,6 +305,7 @@ p:last-child {
   font-size: 12px;
   line-height: 16px;
 }
+
 .ul ul li:before {
   position: absolute;
   width: 3px;
@@ -279,6 +316,7 @@ p:last-child {
   border-radius: 50%;
   background-color: #fff;
 }
+
 .ul:after {
   border-top: 10px solid rgba(0, 0, 0, 0.75);
   border-left: 10px solid transparent;
@@ -293,9 +331,11 @@ p:last-child {
   z-index: -1;
   height: 24px;
 }
+
 .footerSection .footerBlockRight .copyrightBlock {
   display: none;
 }
+
 .footerSection .copyrightBlock .copyText {
   font-size: 16px;
   font-weight: 600;
@@ -303,6 +343,7 @@ p:last-child {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 4px;
 }
+
 .footerSection .copyrightBlock .tredText {
   font-weight: 400;
   font-size: 12px;
@@ -320,40 +361,467 @@ p:last-child {
   overflow-y: auto;
   padding-right: 10px;
 }
+
 .footerSection .footerBlockRight {
   text-align: right;
 }
+
 .footerSection .socialShare ul li a figure figcaption {
   display: block;
   color: #fff;
   font-size: 20px;
   line-height: 20px;
 }
+
 .footerSection .footerLinkList ul li:not(:last-child) {
   margin-bottom: 15px;
 }
+
 .footerSection .footerInfo .designText {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.4);
 }
+
 .footerSection .footerBlockRight li:not(:last-child) {
   margin-right: 0px;
 }
+
 .footerSection .socialShare ul li a figure {
   display: block;
   text-align: center;
   margin-bottom: 16px;
 }
+
 .footerSection .socialShare ul li a {
   font-size: 20px;
   line-height: 20px;
   display: block;
 }
+
 .footerSection .socialShare ul li a figure figcaption {
   display: block;
   color: #fff;
   font-size: 20px;
   line-height: 16px;
 }
+/*new*/
+.footerSection {
+  background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
+  padding: 80px 0 40px;
+  height: 658px;
+}
+
+@keyframes fade-slide-in-ltr {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .footerSection {
+    padding: 90px 0 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .footerSection {
+    height: 500px;
+  }
+  .footerSection {
+    padding: 60px 0 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .footerSection {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footerSection {
+    padding: 80px 0 50px;
+  }
+}
+
+/**left*/
+.col-lg-8 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 992px) {
+  .col-lg-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+@media (max-width: 1440px) {
+  .footerSection .footerTitleText {
+    margin-bottom: 70px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .footerSection .footerTitleText {
+    line-height: 50px;
+  }
+}
+@media (max-width: 1365px) {
+  .footerSection .footerTitleText {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footerSection .footerTitleText {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footerSection .footerTitleText {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footerSection .footerTitleText {
+    font-weight: 500;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .footerSection .footerTitleText {
+    font-size: 16px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 400px) {
+  .footerSection .footerTitleText {
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+}@media (max-width: 1600px){
+.footerSection .footerTitleText strong {
+    font-size: 55px;
+    font-weight: 700;
+  }
+} 
+@media (max-width: 1440px) {.footerSection .footerTitleText strong {
+  font-size: 40px;
+}}
+@media only screen and (max-width: 1024px) {.footerSection .footerTitleText strong {
+  font-size: 45px;
+}}
+@media (min-width: 768px) and (max-width: 990px) {
+  .footerSection .footerTitleText strong {
+      font-size: 32px;
+    }
+}
+@media only screen and (max-width: 1024px){
+.footerSection .footerTitleText strong {
+    font-size: 45px;
+  }
+} 
+@media only screen and (max-width: 768px){ .footerSection .footerTitleText strong {
+  display: block;
+}}
+@media (max-width: 575px) {
+  .footerSection .footerTitleText strong {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.footerSection .socialShare {
+  margin-bottom: 100px;
+}
+
+ @media (max-width: 1365px) {
+.footerSection .socialShare {
+    margin-bottom: 50px;
+  }
+}@media only screen and (max-width: 768px) {
+  .footerSection .socialShare {
+    margin-bottom: 70px;
+  }
+}@media (max-width: 400px) {
+  .footerSection .socialShare {
+    margin-bottom: 50px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1024px){
+.footerSection .socialShare ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+} 
+@media only screen and (max-width: 991px) {
+
+.footerSection .socialShare ul li {
+  width: 33.33%;
+  padding: 15px 0;
+margin-bottom: 35px;
+}}@media only screen and (max-width: 991px) {
+.footerSection .socialShare ul li:not(:last-child) {
+    margin-right: 0;
+    /* margin-bottom: 35px; */
+  }
+}
+
+@media only screen and (max-width: 768px){
+.footerSection .socialShare ul li:not(:last-child) {
+    margin-right: 0;
+  }
+} 
+@media (max-width: 575px) {
+.footerSection .socialShare ul li:not(:last-child) {
+    padding: 15px 0;
+  }
+}@media only screen and (max-width: 768px) {
+.footerSection .socialShare {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 575px) {
+
+.footerSection .socialShare {
+  margin-bottom: 30px;
+}}
+@media (max-width: 400px) {
+.footerSection .socialShare {
+    margin-bottom: 50px;
+  }
+}.footerSection .socialShare ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}.footerSection .socialShare ul li:not(:last-child) {
+  margin-right: 32px;
+}@media only screen and (max-width: 991px) {
+.footerSection .footerBlockLeft .copyrightBlock {
+    display: none;
+  }
+}.footerSection .copyrightBlock .copyText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}@media (max-width: 400px){
+.footerSection .copyrightBlock .copyText {
+    font-size: 10px;
+  }
+} .footerSection .socialShare ul li a {
+  font-size: 20px;
+  line-height: 20px;
+  display: block;
+}@media only screen and (max-width: 991px) {
+.footerSection .socialShare ul li a {
+    display: inline-block;
+  }
+}.footerSection .socialShare ul li a figure {
+  display: block;
+  flex-wrap: wrap;
+  text-align: center;
+}@media (max-width: 575px){
+.footerSection .socialShare ul li a figure {
+    margin-bottom: 0;
+  }
+} .footerSection .socialShare ul li a figure img {
+  display: inline-block;
+  max-height: 24px;
+  width: auto;
+  margin: 0px 0px 10px;
+}@media (max-width: 1200px) {
+.footerSection .socialShare ul li a figure img {
+    transform: scale(1.1);
+  }
+}@media only screen and (max-width: 1024px){
+.footerSection .socialShare ul li a figure img {
+    transform: scale(1);
+  }
+} @media only screen and (max-width: 768px) {
+
+.footerSection .socialShare ul li a figure img {
+  margin-bottom: 6px;
+  width: 16px;
+  transform: scale(1);
+}}
+@media only screen and (max-width: 768px){ .footerSection .socialShare ul li:not(:last-child) {
+  margin-right: 0;
+}}
+.footerSection .socialShare ul li a figure figcaption {
+  display: block;
+  color: rgb(255, 255, 255);
+}@media (max-width: 1200px){
+.footerSection .socialShare ul li a figure figcaption {
+    font-size: 14px;
+  }
+} @media only screen and (max-width: 1024px){
+.footerSection .socialShare ul li a figure figcaption {
+    font-size: 12px;
+  }
+} @media (max-width: 575px){ .footerSection .socialShare ul li a figure figcaption {
+  font-size: 12px;
+  line-height: 12px;
+}}@media (max-width: 400px) {
+.footerSection .socialShare ul li a figure figcaption {
+    font-size: 12px;
+  }
+}
+
+/**right**/
+
+
+.footerSection .footerBlockRight.aosAnim.ltr {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
+}
+
+.footerSection .footerBlockRight {
+  text-align: right;
+}
+@keyframes from-right-in {
+  0% {
+      opacity: 0;
+      transform: translateX(20%);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}@media only screen and (max-width: 991px) {
+.footerSection .footerLinkList {
+    margin-bottom: 55px;
+    height: 220px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+.footerSection .footerBlockRight {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+.footerSection .footerLinkList {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1365px) {
+.footerSection .footerLinkList {
+    margin-bottom: 105px;
+  }
+}@media (max-width: 1280px){
+.footerSection .footerLinkList {
+    height: 180px;
+  }
+} @media (max-width: 1200px){
+.footerSection .footerLinkList {
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0px;
+  }
+} .footerSection .footerLinkList::-webkit-scrollbar {
+  width: 5px;
+}.footerSection .footerLinkList::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 64, 108);
+  border-radius: 10px;
+}.footerLinkList::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.footerSection .footerLinkList {
+  margin-bottom: 55px;
+  height: 220px;
+  overflow-y: auto;
+  padding-right: 10px;
+}.footerSection .footerBlockRight {
+  text-align: right;
+}@media only screen and (max-width: 991px){
+.footerSection .footerLinkList {
+    margin-bottom: 100px;
+  }
+} @media (max-width: 575px) {.footerSection .footerLinkList {
+  margin-bottom: 40px;
+}}@media (max-width: 400px) {.footerSection .footerLinkList {
+  margin-bottom: 60px;
+}}
+.footerSection .makeInIndiaImg {
+  margin-bottom: 90px;
+  position: absolute;
+  right: 15px;
+  bottom: 40px;
+}@media (max-width: 1365px){ .footerSection .makeInIndiaImg {
+  margin-bottom: 40px;}
+}@media only screen and (max-width: 991px) {.footerSection .makeInIndiaImg {
+  margin-bottom: 0;}
+}@media (max-width: 575px) {.footerSection .makeInIndiaImg {
+  width: 160px;
+  margin-bottom: 50px;}
+}@media (max-width: 400px) {.footerSection .makeInIndiaImg {
+  margin-bottom: 60px;}
+}
+.footerSection .makeInIndiaImg figure {
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 768px){ .footerSection .makeInIndiaImg figure {
+  width: 162px;
+  margin-bottom: 0;
+}
+}@media (max-width: 1440px){
+.footerSection .makeInIndiaImg img {
+    max-width: 180px;
+  }
+} @media only screen and (max-width: 768px) {
+.footerSection .makeInIndiaImg img {
+    width: 100%;
+    max-width: 162px;
+  }
+}.footerSection .footerLinkList ul li a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+}@media (max-width: 575px) {.footerSection .footerLinkList ul li a {
+  font-size: 12px;
+}}@media only screen and (max-width: 991px){ .footerSection .footerBlockRight .copyrightBlock {
+  display: block;
+  margin-bottom: 40px;
+}}.footerSection .copyrightBlock .copyText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}@media (max-width: 400px){
+.footerSection .copyrightBlock .copyText {
+    font-size: 10px;
+  }
+} @media only screen and (max-width: 991px) {
+  .footerSection .footerBlockRight {
+      text-align: left;
+}
+}@media (min-width: 992px) {.col-lg-4 {
+  max-width: 33.3333%;
+  flex: 0 0 33.3333%;
+}}

@@ -1,11 +1,11 @@
-import React from 'react'
-import "./index.css"
+import React from "react";
+import "./index.css";
 import csrBg from "../../../assets/images/csr/csrBg.png";
 function Csr() {
   return (
-    <section class="event1 csrSec">
+    <div class="event1 csrSec">
       <div class="container">
-        <div class="eventHead aosAnim">
+        <div class="eventHead aosAnim ltr">
           <h3 class="titleText">Corporate Social Responsibility</h3>
         </div>
         <div class="row csrContent aosAnim">
@@ -40,8 +40,8 @@ function Csr() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
-export default Csr
+export default Csr;

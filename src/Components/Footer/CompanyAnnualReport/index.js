@@ -2,7 +2,7 @@ import React from 'react'
 import "./index.css"
 function CompanyAnnualReport() {
   return (
-    <div class="addressDetails">
+    <div class="addressDetails car">
       <div class="container">
         <div class="addressRow">
           <h2 class="titleText aosAnim boldText">Company Annual Reports</h2>
@@ -10,7 +10,7 @@ function CompanyAnnualReport() {
             <div class="eachAddressBox">
               <div>
                 <h4>
-                  1. Annual Report Financial Year <bold>2021 - 2022</bold>
+                  1. Annual Report Financial Year 2021 - 2022
                 </h4>
               </div>
               <div class="btnBox">
@@ -27,7 +27,7 @@ function CompanyAnnualReport() {
             <div class="eachAddressBox">
               <div>
                 <h4>
-                  2. Annual Report Financial Year <bold>2022 - 2023</bold>
+                  2. Annual Report Financial Year 2022 - 2023
                 </h4>
               </div>
               <div class="btnBox">

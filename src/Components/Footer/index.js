@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import "../../assets/css/style-responsive.css";
 import wa from "../../assets/images/icons/social-icons/social_wa.png";
 import ma from "../../assets/images/icons/social-icons/social_ma.png";
 import li from "../../assets/images/icons/social-icons/social_li.png";
@@ -7,7 +8,7 @@ import fa from "../../assets/images/icons/social-icons/social_fa.png";
 import inn from "../../assets/images/icons/social-icons/social_in.png";
 import tw from "../../assets/images/icons/social-icons/social_tw.png";
 import ti from "../../assets/images/icons/footer_tiger.png";
-import "../../assets/css/style-responsive.css";
+
 import Container from "../General/Container";
 function Footer() {
   return (

@@ -4,7 +4,7 @@ function PrivacySection() {
   return (
     <section class="event1 csrSec">
       <div class="container">
-        <div class="eventHead aosAnim">
+        <div class="eventHead aosAnim ltr">
           <h3 class="titleText">Privacy Policy</h3>
           <h5>Last Updated on : 1st May, 2023</h5>
         </div>

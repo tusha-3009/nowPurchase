@@ -1,0 +1,16 @@
+.eventHead.ltr,
+.tabheadC.ltr {
+    opacity: 0;
+    animation: fade-slide-in-ltr 0.8s linear forwards;
+}
+@keyframes fade-slide-in-ltr {
+0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}

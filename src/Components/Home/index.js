@@ -7,6 +7,7 @@ import CultureSection from "./CultureSection";
 import CustomerCards from "../General/Cards/CustomerCards";
 import MediaCards from "./MediaCards";
 import InvestorSection from "./InvestorSection";
+import AccoladesAssociations from "./AccoladesAssociations";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <CultureSection />
       <CustomerCards />
       <MediaCards />
+      <AccoladesAssociations/>
       <InvestorSection />
     </>
   );

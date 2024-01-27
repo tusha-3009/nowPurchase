@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes  } from "react-router-dom";
 import "./App.css";
 import "../src/assets/css/style-responsive.css";
+import "rsuite/dist/rsuite.min.css";
 import Home from "./Components/Home";
 import Culture from "./pages/Culture";
 import Careers from "./pages/Careers";
@@ -29,7 +30,10 @@ function App() {
           <Route path="/our-address" element={<AddressSection />} />
           <Route path="/privacy" element={<PrivacySection />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/companyAnnualReport"element={<CompanyAnnualReport />} />
+          <Route
+            path="/companyAnnualReport"
+            element={<CompanyAnnualReport />}
+          />
           <Route path="/csr" element={<Csr />} />
         </Routes>
       </BrowserRouter>
