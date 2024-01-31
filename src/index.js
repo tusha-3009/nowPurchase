@@ -8,11 +8,11 @@ import "../src/assets/css/style-responsive.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <Layout>
       <App />
     </Layout>
-  </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
