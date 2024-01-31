@@ -3,7 +3,7 @@ import "./index.css";
 import csrBg from "../../../assets/images/csr/csrBg.png";
 function Csr() {
   return (
-    <div class="event1 csrSec">
+    <div class="event1 event2 csrSec">
       <div class="container">
         <div class="eventHead aosAnim ltr">
           <h3 class="titleText">Corporate Social Responsibility</h3>

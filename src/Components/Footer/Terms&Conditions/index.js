@@ -2,7 +2,7 @@ import React from 'react'
 import "./index.css"
 function TermsConditions() {
   return (
-    <section class="event1 csrSec">
+    <section class="event1 event2 csrSec">
         <div class="container">
           <div class="eventHead aosAnim">
             <h3 class="titleText">Terms & Conditions</h3>

@@ -60,7 +60,7 @@
     display: inline-block;
 }
 
-/*  */
+
 .eachAddressBox:not(:last-child) {
     margin-bottom: 60px;
 }
@@ -106,3 +106,57 @@
 .eachAddressBox .btnBox a {
     display: inline-block;
 }
+/* responsive */
+
+@media only screen and (max-width: 768px){ .addressDetails {
+    padding-top: 70px;}
+}@media (max-width: 1280px) {
+.addressDetails {
+    padding-top: 80px !important;}
+}@media only screen and (max-width: 768px){
+.addressDetails{
+    padding-top: 70px !important;}
+}@media (max-width: 1280px){ .titleText {
+    font-size: 40px;
+    line-height: 65px;}
+}@media only screen and (max-width: 1024px){ .bannerLeft h2,
+.titleText,
+.titleText .skyText {
+    font-size: 36px;
+    line-height: 50px;}
+}@media (max-width: 575px){ .titleText.boldText {
+    margin-bottom: 16px;}
+}@media (max-width: 575px) {.eachAddressBox:not(:last-child) {
+    margin-bottom: 40px;}
+}@media (max-width: 575px){ .eachAddressBox .imgBox {
+    width: 100%;
+    margin: 0 0 24px;}
+}@media (max-width: 575px) {.eachAddressBox .contactBox {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;}
+}@media (max-width: 575px){ .eachAddressBox .contactBox h4 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;}
+}@media (max-width: 575px) {.eachAddressBox .contactBox p {
+    font-size: 12px;
+    line-height: 23px;}
+}@media (max-width: 575px) {.eachAddressBox .btnBox {
+    width: 100%;
+    text-align: left;}
+    margin-top: 15px;
+}@media (max-width: 1366px) and (max-height: 768px){ .npButton {
+    font-size: 18px;
+    padding: 13px 25px;}
+}@media only screen and (max-width: 768px){ .npButton {
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 16px;}
+}.eachAddressBox .btnBox a {
+    display: inline-block;
+}
+
+@media (max-width: 575px) {.eachAddressBox .npButton {
+    padding: 8px 20px;
+}}

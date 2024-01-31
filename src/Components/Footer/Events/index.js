@@ -10,7 +10,7 @@ import eventBg from "../../../assets/images/events/eventBg.png";
 function EventsPage() {
   return (
     <>
-      <div className="event1" style={{paddingTop:"250px"}}>
+      <div className="event1">
         <div className="container">
           <div className="eventHead aosAnim">
             <h3 className="titleText">Upcoming Events</h3>

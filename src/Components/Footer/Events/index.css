@@ -414,3 +414,117 @@ flex-direction: row;}
     font-size: 24px;
     line-height: 38px;}
 }}
+
+/*responsive*/
+@media (max-width: 1366px){ .event1 .titleText {
+    font-size: 50px;
+}
+}@media (max-width: 1200px){ .event1 .titleText {
+    font-size: 50px;padding-top: 100px;
+    line-height: 65px;}
+}@media only screen and (max-width: 768px) {.event1 .titleText {
+    margin-bottom: 8px;
+    font-size: 30px !important;
+    font-weight: 700;
+    line-height: 48px;}
+}.eventHead p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+}@media (max-width: 1200px){ .eventHead p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;}
+}@media only screen and (max-width: 768px) {.eventHead p {
+    font-size: 16px;
+    line-height: 26px;}
+}@media (max-width: 1920px) {.eventMWrap .tabContBox {
+    display: flex;
+    justify-content: space-between;}
+}@media only screen and (max-width: 768px) {.eventMWrap .tabContBox {
+    display: block;}
+}@media (max-width: 575px) {.tabContBox:not(:last-child) {
+    margin-bottom: 12px;}
+}@media (max-width: 575px) {.event1 .tabContBox .topBar {
+    margin-bottom: 10px;}
+}.tabContBox h4 {
+    color: #000;
+    font-size: 32px;
+    line-height: 54px;
+}@media (max-width: 1366px){ .tabContBox h4 {
+    font-size: 28px;}
+}@media only screen and (max-width: 768px) {.tabContBox h4 {
+    font-size: 20px;
+    line-height: 25px;}
+}@media only screen and (max-width: 991px) {.tabContBox ul li img {
+    width: 16px;
+    margin-right: 5px;}
+}@media only screen and (max-width: 768px) {.tabContBox ul li img {
+    width: 14px;
+    margin-right: 0;}
+}@media (max-width: 1920px) {.listBox span {
+    font-size: 24px;
+    line-height: 38px;}
+}@media (max-width: 1280px) {.listBox span {
+    font-size: 18px;
+    line-height: 30px;}
+}@media only screen and (max-width: 991px) {.listBox span {
+    font-size: 16px;}
+}@media (max-width: 575px) {.listBox span {
+    font-size: 12px;
+    line-height: 23px;}
+}
+
+@media (max-width: 575px) {.listBox span {
+   
+    display: inline-block;}
+}@media only screen and (max-width: 768px){ .tabContBox .mainBox {
+    flex-direction: row;}
+}@media (max-width: 575px){ .event1 .tabContBox .mainBox {
+    align-items: center;}
+}@media (max-width: 1440px) {.knowMoreBtn.gradientBtn {
+    font-size: 20px;}
+}@media only screen and (max-width: 1023px) {.knowMoreBtn.gradientBtn {
+    font-size: 14px !important;}
+}@media (max-width: 575px) {.tabContBox .knowMoreBtn.gradientBtn {
+    font-size: 12px !important;
+    line-height: 15px;}
+}@media (max-width: 1920px) {.eventMWrap .tabContBox {
+    display: flex;
+    justify-content: space-between;}
+}@media only screen and (max-width: 768px) {.eventMWrap .tabContBox {
+    display: block;}
+}@media (max-width: 575px) {.tabContBox:not(:last-child) {
+    margin-bottom: 12px;
+}}
+
+/**event2**/
+@media (max-width: 1280px) 
+{.event1 {
+    padding-top: 80px !important;}
+}@media only screen and (max-width: 768px) {.careerDetails,
+.addressDetails,
+.sitemapDetails,
+.event1 {
+    padding-top: 20px !important;}
+}@media (max-width: 575px){ .event2 {
+    padding-top: 0 !important;
+}}
+
+@media (max-width: 575px) {.event1 {
+    padding-bottom: 0 !important;}
+}@media only screen and (max-width: 768px) {.eventHead {
+    margin-bottom: 24px;}
+}@media (max-width: 1366px) {.event1 .titleText {
+    font-size: 50px;padding-top: 100px;}
+}@media (max-width: 1200px){ .event1 .titleText {
+    font-size: 50px;
+        padding-top: 100px;
+    line-height: 65px;}
+}@media only screen and (max-width: 768px) {.event1 .titleText {
+    margin-bottom: 8px;
+    font-size: 30px !important;
+    font-weight: 700;
+    line-height: 48px;
+    padding-top: 70px;
+}}
