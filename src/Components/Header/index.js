@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { useParams, useSearchParams } from "react-router-dom";
 import "./index.css";
 import Container from "../General/Container";
@@ -31,7 +31,11 @@ function Header() {
   const headerTitle = headerTitleJSON.find(
     ({ url }) => url === window.location.pathname
   );
-
+ useEffect(() => {
+   if (headerTitle?.text) {
+     document.title = "NowPurchase || "+ headerTitle.text;
+   }
+ }, [headerTitle]);
   const [isOpen, setIsOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   function openMenu() {
