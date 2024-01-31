@@ -5,7 +5,7 @@
 }
 
 .mediaSectionWrap .mediaWrap .eachMediaBox {
-    width: calc(25% - 30px);
+   
     border: 1px solid #aaaaaa;
     border-radius: 20px;
     padding: 25px 20px;
@@ -25,10 +25,10 @@
     margin-bottom: 12px;
 }
 
-.mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+/* .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
     height: 310px;
     margin-bottom: 25px;
-}
+} */
 
 .mediaTextAcc {
     padding: 20px;

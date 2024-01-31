@@ -48,10 +48,10 @@ function TechnologyDriven() {
             <div className="row">
               <div className="col-lg-12 aosAnim ltr">
                 <h2 class="titleText">
-                  {" "}
-                  <span class="skyText">Loved </span>by businesses
+                
+                  <span class="skyText">Loved </span>by businesses 
                   <br />
-                  everywhere{" "}
+                   {" "}everywhere
                 </h2>
               <CarouselCompanyCards/>
               </div>

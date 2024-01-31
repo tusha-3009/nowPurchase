@@ -38,3 +38,37 @@
     margin-top: 0;
     margin-bottom: 16px;
 }
+
+/*responsive*/
+@media (min-width: 992px) {.col-lg-7 {
+   
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;}
+}@media only screen and (max-width: 991px){ .founderCont {
+    margin-bottom: 20px;}
+}@media (max-height: 705px) {p {
+    font-size: 14px;}
+}@media (max-width: 575px) {p {
+    font-size: 16px;
+    line-height: 26px;}
+}@media (min-width: 992px){ .col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;}
+}@media only screen and (max-width: 991px) {.founderSectionWrap .founderImg {
+    margin: 0 auto 30px;
+    max-width: 60%;}
+}@media only screen and (max-width: 640px) {.founderSectionWrap .founderImg {
+    margin: 0 auto;
+    max-width: 90%;}
+}@media only screen and (max-width: 640px) {.founderSectionWrap .founderImg figure {
+    margin: 0 0 12px;}
+}@media (max-width: 1366px) and (max-height: 768px) {.founderSectionWrap .founderImg .name {
+    font-size: 26px;}
+}@media only screen and (max-width: 640px) {.founderSectionWrap .founderImg .name {
+    font-size: 32px;}
+}@media (max-width: 1366px) and (max-height: 768px) {.founderSectionWrap .founderImg .desg {
+    font-size: 16px;}
+}@media only screen and (max-width: 640px) {.founderSectionWrap .founderImg .desg {
+    font-size: 20px;
+}}

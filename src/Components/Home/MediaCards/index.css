@@ -130,3 +130,37 @@ figure {
   line-height: 38px;
   color: #606060;
 }
+/*responsive*/
+@media (max-width: 1365px){ .mediaSectionWrap .mediaWrap .eachMediaBox {
+  width: calc(50% - 20px);
+  margin-bottom: 40px;}
+}@media only screen and (max-width: 768px){ .mediaSectionWrap .mediaWrap .eachMediaBox,
+.eachMediaBoxAcc {
+  width: 100%;
+}}@media (max-width: 1365px) {.mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+  height: auto;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 25px;}
+}@media (min-width: 768px) and (max-width: 990px) {.mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+  height: 220px;}
+}@media (max-width: 1365px){ .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+  height: auto;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 25px;
+}}@media (max-width: 1365px) {.mediaSectionWrap {
+  padding-bottom: 110px;}
+}@media (max-width: 1440px) {.cultureSectionWrap,
+.mediaSectionWrap {
+  padding-top: 90px;}
+}@media (max-width: 1280px){ .mediaSectionWrap {
+  padding-bottom: 40px;
+}}
+
+@media (max-width: 1280px) {.cultureSectionWrap,
+.mediaSectionWrap {
+  padding-top: 60px;}
+}@media only screen and (max-width: 768px) {.mediaSectionWrap {
+  padding-bottom: 40px;
+}}

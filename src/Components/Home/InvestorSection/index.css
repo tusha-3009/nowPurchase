@@ -83,4 +83,40 @@ list-style: none;
 }
 .investorWrap ul li:not(:last-child) {
     margin-bottom: 20px;
+}/* responsive*/
+@media (max-width: 1365px) {section {
+    padding: 80px 0;}
+}@media only screen and (max-width: 1024px) {section {
+    padding: 80px 0;}
+}@media only screen and (max-width: 768px){ section {
+    padding: 60px 0;}
+}@media only screen and (max-width: 640px) {section {
+    padding: 80px 0;}
+}@media (max-width: 1440px){ .investorWrap ul li figure {
+    width: 320px;
+    height: 140px;}
+}@media (max-width: 1365px){ .investorWrap ul li figure {
+    width: 337px;
+    height: 126px;}
+}@media (max-width: 1200px) {.investorWrap ul li figure {
+    width: 254px;
+    height: 110px;}
+}@media only screen and (max-width: 991px) {.investorWrap ul li figure {
+    padding: 30px;}
+}@media only screen and (max-width: 640px){ .investorWrap ul li figure {
+    display: inline-block;}
+}@media only screen and (max-width: 640px){ .investorSectionWrap .titleText {
+    width: 100%;}
+}@media only screen and (max-width: 1024px){ .investorSectionWrap .titleText {
+    margin-bottom: 35px;}
+}@media (max-width: 1280px){ .titleText {
+    font-size: 40px;
+    line-height: 65px;}
+}@media only screen and (max-width: 1023px) {.investorWrap ul li:nth-child(2) {
+    margin-left: 140px;}
+}@media only screen and (max-width: 768px) {.investorWrap ul li:nth-child(2) {
+    margin-left: 60px;}
+}@media only screen and (max-width: 640px) {.investorWrap ul li:nth-child(2) {
+    text-align: right;
+    left: auto;}
 }

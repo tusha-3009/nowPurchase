@@ -361,3 +361,36 @@ figcaption {
   margin: 34% 0 0;
   max-width: 60%;
 }
+
+/**responsive**/
+@media (max-width: 1440px) {.offeringSectionWrap {
+  padding-top: 90px;}
+}@media (max-width: 1280px) {.offeringSectionWrap {
+  padding-top: 60px;}
+}@media only screen and (max-width: 1024px) {.offeringSectionWrap {
+  padding-bottom: 0 !important;}
+}@media (max-width: 575px) {.offeringSectionWrap {
+  padding-top: 80px;}
+}@media (max-width: 1440px){ .offeringSectionWrap .scrollSection {
+  height: 100%;}
+}@media only screen and (max-width: 1024px){ .scrollSection,
+.mapSec .scrollSection {
+  height: auto !important;}
+}@media (max-width: 575px) {.offeringWrap {
+  height: 360px;
+}}.offeringSectionWrap .titleText {
+  position: absolute;
+  left: 15px;
+}@media (max-width: 1280px) {.titleText {
+  font-size: 40px;
+  line-height: 65px;left: 0;}
+}@media only screen and (max-width: 991px) {.offeringSectionWrap .titleText {
+  position: static;}
+}@media only screen and (max-width: 1024px) {.bannerLeft h2,
+.titleText,
+.titleText .skyText {
+  font-size: 36px;
+  line-height: 50px;}}
+@media (max-width: 420px) {.offeringSectionWrap .titleText {
+  margin: 0 0 35px;
+}}

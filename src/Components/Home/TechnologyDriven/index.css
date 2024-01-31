@@ -161,4 +161,72 @@ h2 .titleText {
 }
 .slick-slider .slick-list {
   transform: translate3d(0, 0, 0);
+}@media (min-width: 768px) and (max-width: 990px) {.col-md-6 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}}@media (max-width: 1440px) {
+  .triangleTopLeftBg {
+    padding-top: 200px;
+    padding-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .triangleTopLeftBg {
+    padding-top: 170px;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .triangleTopLeftBg {
+    padding-top: 110px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .triangleTopLeftBg:before {
+    height: 330px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .triangleTopLeftBg:before {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .triangleTopLeftBg:before {
+    height: 110px;
+  }
+}@media (max-width: 1600px) {.titleText {
+  font-size: 50px;
+  margin: 0 0 35px;}
+}@media (max-width: 1440px) {.titleText,
+ {
+  font-size: 40px;
+  line-height: 1.5;}
+}@media (max-width: 1366px) and (max-height: 768px) {.titleText,
+.titleText .skyText,
+.bannerLeft h2 {
+  line-height: 1.2;}
+}@media (max-width: 1280px) {.titleText{
+  font-size: 40px;
+  line-height: 65px;}
+}@media only screen and (max-width: 1024px) {.bannerLeft h2,
+.titleText,
+{
+  font-size: 36px;
+  line-height: 50px;}
+}@media (max-width: 575px){ .titleText,
+.titleText .skyText {
+  font-size: 28px !important;
+  line-height: 40px;}
+}@media (max-width: 575px) {.titleText ,.titleText .skyText{
+  margin: 0 0 20px;
+}}@media only screen and (max-width: 768px) {.triangleTopLeftBg {
+  padding-top: 110px;
+ }
 }

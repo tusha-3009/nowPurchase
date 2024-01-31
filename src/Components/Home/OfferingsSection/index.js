@@ -9,7 +9,7 @@ function OfferingsSection() {
   return (
     <div
       className="offeringSectionWrap pb-0 animated-section  section"
-      id="sec14" style={{paddingTop:"120px"}}
+      id="sec14" 
     >
       <div className="scrollSection">
         <div className="container">
