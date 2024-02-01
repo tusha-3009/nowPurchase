@@ -8,7 +8,7 @@
 
 .trBox {
   margin-bottom: 80px;
-  width: calc(25% - 30px);
+  /* width: calc(25% - 30px); */
 }
 
 .trWrap.ltr .trBox:nth-child(1) {

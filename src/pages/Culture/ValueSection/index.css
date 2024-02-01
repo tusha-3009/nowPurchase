@@ -1,0 +1,89 @@
+/* responsive*/.trBox {
+    margin-bottom: 80px;
+    width: calc(25% - 30px);
+}
+@media (max-width: 1600px){ .trust {
+    padding-bottom: 90px;}
+}@media (max-width: 1280px) {.trust {
+    padding-bottom: 60px;}
+}@media (max-width: 575px){ .trust {
+    padding-bottom: 30px;}
+}@media (max-width: 1366px) and (max-height: 768px){ .sechead {
+    margin-bottom: 40px;}
+}@media only screen and (max-width: 768px){ .sechead {
+    margin-bottom: 16px;}
+}@media (max-width: 1440px){ .sechead h3,
+.sechead h3 span {
+    font-size: 40px !important;
+    line-height: 1.4;}
+}@media only screen and (max-width: 1024px){ .sechead h3,
+.sechead h3 span {
+    font-size: 36px !important;}
+}@media (min-width: 768px) and (max-width: 990px){ .sechead h3,
+.sechead h3 span {
+    font-size: 28px !important;}
+}@media only screen and (max-width: 768px){ .sechead h3 {
+    font-size: 28px !important;
+    line-height: 40px;}
+}@media (max-width: 1200px){ .trust .trBox {
+    margin-bottom: 40px;}
+}
+
+@media (max-width: 1200px) {.trBox {
+    width: calc(50% - 30px);}
+}@media (max-width: 1200px) {.trust .trBox {
+    margin-bottom: 40px;}
+}@media only screen and (max-width: 768px){ .trBox {
+    width: calc(52% - 20px);}
+   
+}@media only screen and (max-width: 768px) {.trBox img {
+    width: 40px;
+    margin-bottom: 16px;}
+}@media (max-width: 1440px) {.trBox h5 {
+    font-size: 24px;}
+}
+
+@media (max-width: 1440px) {.trBox h5 {
+    font-size: 24px;
+    line-height: 32px;}
+}@media (min-width: 768px) and (max-width: 990px) {.trBox h5 {
+    font-size: 20px;}
+}@media only screen and (max-width: 768px) {.trBox h5 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    margin-bottom: 4px;}
+}@media (max-height: 705px) {p {
+    font-size: 14px;}
+}@media (min-width: 768px) and (max-width: 990px){ .trBox p {
+    font-size: 16px;
+    line-height: 32px;}
+}@media only screen and (max-width: 768px){ .trBox p {
+    font-size: 12px;
+    line-height: 23px;}
+}@media (max-width: 1600px) {.trust {
+    padding-bottom: 90px;}
+}@media (max-width: 1365px) {.section {
+    padding: 80px 0;}
+}@media only screen and (max-width: 1024px) {.section {
+    padding: 80px 0;}
+}@media only screen and (max-width: 768px){ .section {
+    padding: 60px 0;}
+}@media (max-width: 1280px) {.trust {
+    padding-bottom: 60px;}
+}@media (max-width: 575px) {.trust {
+    padding-bottom: 30px;}
+}@media (max-width: 1440px) {.sechead h3,
+.sechead h3 span {
+    font-size: 40px !important;
+    line-height: 1.4;}
+}@media only screen and (max-width: 1024px) {.sechead h3,
+.sechead h3 span {
+    font-size: 36px !important;}
+}@media (min-width: 768px) and (max-width: 990px) {.sechead h3,
+.sechead h3 span {
+    font-size: 28px !important;}
+}@media only screen and (max-width: 768px){ .sechead h3 {
+    font-size: 28px !important;
+    line-height: 40px;
+}}
