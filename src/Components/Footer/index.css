@@ -662,7 +662,7 @@ p:last-child {
 
 @media only screen and (max-width: 991px) {
   .footerSection .socialShare ul li a {
-    display: inline-block;
+    /* display: inline-block; */
   }
 }
 
@@ -677,13 +677,13 @@ p:last-child {
     margin-bottom: 0;
   }
 }
-
+/* 
 .footerSection .socialShare ul li a figure img {
   display: inline-block;
   max-height: 24px;
   width: auto;
   margin: 0px 0px 10px;
-}
+} */
 
 @media (max-width: 1200px) {
   .footerSection .socialShare ul li a figure img {
