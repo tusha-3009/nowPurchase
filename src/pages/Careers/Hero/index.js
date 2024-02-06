@@ -57,6 +57,7 @@ function HeroCareers() {
           </Container>
         </div>
       </div>
+
       <div className=" animated-section  teamSectionWrap triangleTopLeftBg ">
         <Container>
           <div className="row">
@@ -65,105 +66,150 @@ function HeroCareers() {
                 Check out our
                 <span className="gradientText skyText"> NowPlayers!</span>
               </h2>
-              <div className="teamBoxWrap teamBoxlider aosAnim">
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">June 2022</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t1}
-                        alt=""
-                      />
+              <div class="teamBoxWrap teamBoxlider aosAnim slick-initialized slick-slider ltr">
+                <div
+                  class="slick-list draggable"
+                  style={{ padding: "0px 15px" }}
+                >
+                  <div
+                    class="slick-track"
+                    style={{
+                      opacity: 1,
+                      width: "1296px",
+                      transform: "translate3d(0px, 0px, 0px)",
+                    }}
+                  >
+                    <div
+                      class="imgBoxHolder slick-slide"
+                      style={{ width: "216px" }}
+                      data-slick-index="0"
+                      aria-hidden="true"
+                      tabindex="-1"
+                    >
+                      <span class="yearTitle">June 2022</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t1}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Debraj Dutta</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="imgCont">
-                      <p>Debraj Dutta</p>
+                    <div
+                      class="imgBoxHolder slick-slide"
+                      style={{ width: "216px" }}
+                      data-slick-index="1"
+                      aria-hidden="true"
+                      tabindex="-1"
+                    >
+                      <span class="yearTitle">October 2022</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t2}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Rainark Saha</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">October 2022</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t2}
-                        alt=""
-                      />
+                    <div
+                      class="imgBoxHolder slick-slide"
+                      style={{ width: "216px" }}
+                      data-slick-index="2"
+                      aria-hidden="true"
+                      tabindex="-1"
+                    >
+                      <span class="yearTitle">November 2022</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t3}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Tanumoy Saha</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="imgCont">
-                      <p>Rainark Saha</p>
+                    <div
+                      class="imgBoxHolder slick-slide"
+                      style={{ width: "216px" }}
+                      data-slick-index="3"
+                      aria-hidden="true"
+                      tabindex="-1"
+                    >
+                      <span class="yearTitle">December 2022</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t4}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Debopam Ghosh</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">November 2022</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t3}
-                        alt=""
-                      />
+                    <div
+                      class="imgBoxHolder slick-slide slick-current slick-center"
+                      style={{ width: "216px" }}
+                      data-slick-index="4"
+                      aria-hidden="true"
+                      tabindex="0"
+                    >
+                      <span class="yearTitle">January 2023</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t5}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Anish Kumar</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="imgCont">
-                      <p>Tanumoy Saha</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">December 2022</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t4}
-                        alt=""
-                      />
-                    </div>
-                    <div className="imgCont">
-                      <p>Debopam Ghosh</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">January 2023</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t5}
-                        alt=""
-                      />
-                    </div>
-                    <div className="imgCont">
-                      <p>Anish Kumar</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="imgBoxHolder">
-                  <span className="yearTitle">February 2023</span>
-                  <div className="imgBoxEach">
-                    <div className="imgBox">
-                      <img
-                        style={{ height: "100%" }}
-                        loading="lazy"
-                        src={t6}
-                        alt=""
-                      />
-                    </div>
-                    <div className="imgCont">
-                      <p>Arya Vikram Singh</p>
+                    <div
+                      class="imgBoxHolder slick-slide"
+                      style={{ width: "216px" }}
+                      data-slick-index="5"
+                      aria-hidden="true"
+                      tabindex="-1"
+                    >
+                      <span class="yearTitle">February 2023</span>
+                      <div class="imgBoxEach">
+                        <div class="imgBox">
+                          <img
+                            style={{ height: "100%" }}
+                            loading="lazy"
+                            src={t6}
+                            alt=""
+                          />
+                        </div>
+                        <div class="imgCont">
+                          <p>Arya Vikram Singh</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
