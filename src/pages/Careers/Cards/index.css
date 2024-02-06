@@ -1,10 +1,10 @@
 .privilegeSectionWrap.procureSectionWrap .eachBoxWrap .eachBox {
     width: calc(33.33% - 30px);
-
 }
+/* 
          .privilegeSectionWrap{
 background-color: #add8e6;
-         } 
+         }  */
 .procureSectionWrap {
     padding-bottom: 120px;
 

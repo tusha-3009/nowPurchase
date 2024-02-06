@@ -97,8 +97,8 @@ img {
   background-color: #d0e4f2;
 }
 .col-lg-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
+  /* flex: 0 0 100%;
+  max-width: 100%; */
   width: 100%;
 }
 h2 .titleText {

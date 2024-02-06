@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { useParams, useSearchParams } from "react-router-dom";
 import "./index.css";
 import Container from "../General/Container";
 import Logo from "../../assets/images/logo.png";
@@ -57,9 +56,9 @@ function Header() {
 
   const toggleDrawer = () => {
     setIsVisible(!isVisible);
-    console.log(isVisible);
+    // console.log(isVisible);
   };
-  // console.log(modalOpen, "kkk");
+  // console.log(modalOpen);
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -153,69 +152,11 @@ function Header() {
               </div>
             )}
 
-            {/* <div className="col-lg-2 navigationWrapNew">
-              <div className="row">
-                <div className="col-lg-7 navWrapNew">
-                  <nav>
-                    <ul>
-                      <li>
-                        <div className="services" onClick={openMenu}>
-                          Services{" "}
-                          <span class="toggleBtn">
-                            <img
-                              className={isOpen && "invertedArrow"}
-                              loading="lazy"
-                              src={ArrowDown}
-                              alt="ArrowDown"
-                            />
-                          </span>
-                          {isOpen && <ServicesMenu />}
-                        </div>
-                        <div className="megaMenuNew"></div>
-                      </li>
-                      <li>
-                        <a href="/culture" className="culture">
-                          Culture
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/careers" className="careers">
-                          Careers
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col-lg-5 btnWrapNew">
-                  <ul>
-                    <li>
-                      <a onClick={() => setModalOpen(true)} class="getInTouch">
-                        Get in touch
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://app.nowpurchase.com/login"
-                        target="_blank"
-                        class="gotoApp"
-                        id="Header_GoToMetalCloud"
-                      >
-                        <span class="gotoTopPart">
-                          <span>Go to</span>
-                          <img loading="lazy" src={VectorIcon} alt="" />
-                        </span>
-                        NP MetalCloud
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div> */}
-
+           
             <div class="btnWrapNew mobBtnWrapNew">
               <ul>
                 <li onClick={() => setModalOpen(true)}>
-                  <a href="#getInTouchForm" class="getInTouch">
+                  <a  class="getInTouch">
                     Get in touch
                   </a>
                 </li>
@@ -298,7 +239,7 @@ function Header() {
                                       <p>
                                         Your Melting Process, <br />
                                         Now Made
-                                        <strong>Reliable!</strong>
+                                        <strong> Reliable!</strong>
                                       </p>
                                       <a
                                         href="/application"
@@ -320,7 +261,7 @@ function Header() {
                           </a>
                         </li>
                         <li>
-                          <a href="/career" id="Header_Careers">
+                          <a href="/careers" id="Header_Careers">
                             Careers
                           </a>
                         </li>
@@ -329,9 +270,9 @@ function Header() {
                   </div>
                   <div class="col-lg-5 btnWrapNew">
                     <ul>
-                      <li>
+                      <li onClick={()=>setModalOpen(true)}>
                         <a
-                          href="/getInTouchForm"
+                         
                           class="getInTouch"
                           id="Header_GetInTouch"
                         >

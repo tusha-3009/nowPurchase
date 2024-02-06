@@ -29,6 +29,10 @@
 .tabheadC.ltr {
     opacity: 0;
     animation: fade-slide-in-ltr 0.8s linear forwards;
+}
+.teamBoxWrap.ltr {
+    opacity: 0;
+    animation: from-right-in 0.8s linear forwards;
 }.bannerLeft .newDiv {
     color: #303030;
     margin-top: 12px;
@@ -64,8 +68,8 @@
 width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 100%;
-    max-width: 100%;
+    /* flex: 0 0 100%;
+    max-width: 100%; */
     position: relative;
 }.teamBoxWrap.ltr {
     opacity: 0;
@@ -162,8 +166,8 @@ width: 100%;
     background-color: #d0e4f2;
    
 }.col-lg-12 {
- flex: 0 0 100%;
-    max-width: 100%;position: relative;
+ /* flex: 0 0 100%;
+    max-width: 100%;position: relative; */
         width: 100%;
         padding-right: 15px;
         padding-left: 15px
@@ -301,3 +305,9 @@ width: 100%;
     clear: both;display: table;
         content: '';
 }
+
+@media (min-width: 992px) {.col-lg-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}}
