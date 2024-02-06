@@ -4,7 +4,8 @@ import trans1 from "../../../assets/images/marketplace/trans-1.png"
 import trans2 from "../../../assets/images/marketplace/trans-2.png";
 import logoWh from "../../../assets/images/logo_wh.png"
 import Container from '../../../Components/General/Container';
-
+import MarketTabImage from "../../../assets/images/marketplace/marketTabImage.jpg"
+import marketMobImage from "../../../assets/images/marketplace/marketMobImage.jpg"
 function TransformingIdeas() {
   return (
     <div className="ideaSec animated-section section pb-0" id="sec35">
@@ -262,6 +263,12 @@ function TransformingIdeas() {
               </h5>
             </div>
           </div>
+          <div class="tabTimelineBox">
+              <img loading="lazy" src={MarketTabImage} alt=""/>
+            </div>
+            <div class="mobTimelineBox">
+              <img loading="lazy" src={marketMobImage} alt=""/>
+            </div>
         </Container>
       </div>
     </div>
