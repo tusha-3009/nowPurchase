@@ -33,10 +33,43 @@
   opacity: 0;
   animation: fade-slide-in-ltr 0.8s linear forwards;
 }
-.sechead h3 {
+@media (max-width: 1600px) {.bannerLeft h2,
+.sechead h3,
+.sechead h3 span {
   font-size: 50px !important;
   line-height: 74px;
-  font-weight: 400;
+}}@media (max-width: 1440px) {
+
+  .sechead h3,
+  .sechead h3 span {
+    font-size: 40px !important;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .sechead h3,
+  .sechead h3 span {
+    font-size: 36px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+
+  .sechead h3,
+  .sechead h3 span {
+    font-size: 28px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .sechead h3,
+  .sechead h3 span {
+    font-size: 28px !important;
+    line-height: 40px;
+  }
 }
 .solutionHead h3 {
   margin-bottom: 8px;
@@ -84,4 +117,22 @@
 }
 .sollutionWrap .eachSol:nth-child(4n) {
   margin-right: 0;
-}
+}@media (max-width: 1200px) {.solutionHead {
+  flex-direction: column;
+  align-items: start !important;
+}}
+@media only screen and (max-width: 768px) {.solutionHead {
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin-bottom: 40px;
+}}@media (max-width: 1200px) {.solutionSec .eachSol {
+  margin-right: 20px;
+  width: calc(33.33% - 20px);}
+}@media only screen and (max-width: 768px) {.solutionSec .eachSol {
+  width: calc(50% - 12px);}
+}@media (max-width: 575px){ .solutionSec .eachSol {
+  width: calc(50% - 10px);
+}}@media only screen and (max-width: 768px) {.eachSol h5 {
+  font-size: 16px;
+  line-height: 20px;
+}}

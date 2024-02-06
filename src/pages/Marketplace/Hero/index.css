@@ -262,12 +262,12 @@
     flex-direction: column;
     justify-content: center;
 }
-.keyNumber .eachkey h4,.eachkey h4 span {
+/* .keyNumber .eachkey h4,.eachkey h4 span {
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
     margin-bottom: 8px;
-}
+} */
 .eachkey h6 {
     font-size: 24px;
     font-weight: 500;
@@ -284,4 +284,88 @@
 .sechead h3 span {
     font-size: 50px !important;
     line-height: 74px;
-}
+}@media only screen and (max-width: 768px) {.addr::before {
+  position: absolute;
+  content: "";
+  left: -50%;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #d0e4f2;
+}}@media only screen and (max-width: 768px) {.locIcon img {
+  width: 28px;
+}}@media only screen and (max-width: 768px) {.serviceSec {
+  display: none;}
+  }
+/*responsiveness*/
+
+@media (min-width: 992px) {.col-lg-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+
+}}@media (max-width: 1440px) {.sechead h3,
+.sechead h3 span {
+  font-size: 40px !important;
+  line-height: 1.4;}
+}@media only screen and (max-width: 1024px) {.sechead h3,
+.sechead h3 span {
+  font-size: 36px !important;}
+}@media (min-width: 768px) and (max-width: 990px) {.sechead h3,
+.sechead h3 span {
+  font-size: 28px !important;}
+}@media only screen and (max-width: 768px) {.sechead h3,.sechead h3 span {
+  font-size: 28px !important;
+  line-height: 40px;
+}}
+@media (max-width: 1920px) {.keyNumber .eachkey {
+  width: calc(25% - 20px);
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 32px 20px;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}}@media (max-width: 2800px) {.keyNumber .eachkey {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 32px 20px;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;}
+}@media (max-width: 1600px) {.keyNumber .eachkey {
+  margin-bottom: 30px;}
+}@media (max-width: 1200px){ .eachkey,
+.keyNumber .eachkey {
+  width: calc(50% - 20px);}
+}@media only screen and (max-width: 768px) {.keyNumber .eachkey {
+  width: calc(50% - 13px);
+  padding: 10px;
+  min-height: inherit;
+  margin-bottom: 12px;
+  border-radius: 7px;}
+}@media (max-width: 575px){ .keyNumber .eachkey {
+  width: calc(50% - 7px);
+}}@media (max-width: 1440px){ .eachkey h4,
+.keyNumber .eachkey h4 {
+  font-size: 24px;
+  line-height: 32px;
+}}
+
+@media (max-width: 1600px) {.keyNumber .eachkey h4, .keyNumber .eachkey h4 span{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;}
+}@media only screen and (max-width: 1024px) {.keyNumber .eachkey h4,
+  .keyNumber .eachkey h4 span {
+  font-size: 28px;}
+}@media only screen and (max-width: 768px){ .keyNumber .eachkey h4 ,
+  .keyNumber .eachkey h4 span{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 800;
+}}
