@@ -215,4 +215,19 @@ flex-wrap: nowrap;
     flex: 0 0 100%;
     max-width: 100%;
   }
+}.tabTimelineBox,
+.mobTimelineBox {
+  display: none;
+}@media (max-width: 575px) {
+  .mobTimelineBox {
+    display: block;
+  }
 }
+
+
+@media only screen and (max-width: 1024px) {.tabTimelineBox {
+  display: block;
+}}
+@media (max-width: 575px){ .tabTimelineBox {
+  display: none;
+}}
