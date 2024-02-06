@@ -1,5 +1,5 @@
-import React from 'react'
-import "./index.css"
+import React from "react";
+import "./index.css";
 import careerBannerNew from "../../../assets/images/career/careerBannerNew.png";
 import clr1 from "../../../assets/images/culture/clr-1.png";
 import clr4 from "../../../assets/images/culture/clr-4.png";
@@ -10,20 +10,17 @@ import clr6 from "../../../assets/images/culture/clr-6.png";
 import tabTimeline from "../../../assets/images/culture/tabTimeline.jpg";
 import mobTimeline from "../../../assets/images/culture/mobTimeline.jpg";
 import carPic from "../../../assets/images/culture/car-1.png";
-import  Container  from '../../../Components/General/Container';
+import Container from "../../../Components/General/Container";
 function HeroPageCulture() {
   return (
     <div
       className="innerBanner  marketbnr  animated-section section pb-0"
       id="sec41"
-      style={{ overflow: "hidden"}}
+      style={{ overflow: "hidden" }}
     >
       <div className="overflowSection1">
         <Container>
-          <div
-            className="row bannerContent aosAnim"
-            style={{ flexWrap: "nowrap" }}
-          >
+          <div className="row bannerContent aosAnim cultur">
             <div className="col-md-8 leftBannerCont">
               <div className="bannerLeft">
                 <h2>
@@ -213,4 +210,4 @@ function HeroPageCulture() {
   );
 }
 
-export default HeroPageCulture
+export default HeroPageCulture;

@@ -310,4 +310,6 @@ width: 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+}}@media only screen and (max-width: 768px) {.innerBanner {
+    padding: 50px 0 50px;
 }}

@@ -356,7 +356,10 @@ justify-content: flex-end;}
 
   flex: 0 0 265px;
   max-width: 265px;}
-}
+}@media only screen and (max-width: 1024px){ .navigationWrapNew.slide .btnWrapNew {
+  flex: 0 0 100%;
+  max-width: 100%;
+}}
 @media (max-width: 1280px) {.navigationWrapNew>.row>.navWrapNew {
   
   flex: 0 0 calc(100% - 295px);
@@ -756,9 +759,6 @@ justify-content: flex-end;}
 
 @media (max-width: 1280px) {.navigationWrapNew>.row {
   justify-content: flex-end;
-}}@media only screen and (max-width: 1024px) {.mobBtnWrapNew>ul>li:first-child {
-  opacity: 0;
-  visibility: hidden;
 }}@media only screen and (max-width: 1024px){ .navWrapNew ul li {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 4px;

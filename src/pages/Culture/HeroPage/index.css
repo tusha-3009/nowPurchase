@@ -193,3 +193,26 @@
   transition: 0.4s;
   transform: translateY(50px);
 }
+@media (max-width: 575px) {.bannerLeft h2,
+.bannerLeft h2.titleText,
+.bannerLeft .skyText {
+  font-size: 30px !important;
+  line-height: 48px;
+}}
+
+@media (max-width: 575px) {.bannerLeft h2 {
+  margin-bottom: 15px;
+}}
+@media (min-width:768px){
+  .cultur{
+flex-wrap: nowrap;
+
+  }
+}@media (max-width:767px) {
+  .cultur {
+    flex-wrap: wrap;
+  }.col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

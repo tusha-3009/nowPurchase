@@ -223,3 +223,11 @@ nav ul li a {
   color: #606060;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 1023px){ .navigationWrapNew>.row>.navWrapNew {
+  -ms-flex: 0 0 100% !important;
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}}@media only screen and (max-width: 1024px) {.navigationWrapNew.slide .btnWrapNew {
+  flex: 0 0 100%;
+  max-width: 100%;
+}}

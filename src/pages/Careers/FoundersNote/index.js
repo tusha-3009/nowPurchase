@@ -18,18 +18,18 @@ function FoundersNote() {
                   </h2>
                   <p>
                     We believe that manufactures deserve the same level of
-                    convenience as consumers when it comes to <br/>procurement.
+                    convenience as consumers when it comes to procurement.
                   </p>
                   <p>
                     Metal forms the backbone of the economy and we believe
-                    transforming procurement for metal manufacturers is<br/> going to
+                    transforming procurement for metal manufacturers is going to
                     be a key pillar in driving efficient growth for the economy.
                   </p>
                   <p>
                     NowPurchase is being built by a diverse set of people who
-                    are the foundation of our ethos & culture. We are <br/>excited to
+                    are the foundation of our ethos & culture. We are excited to
                     have you be a part of this journey that will be full of fun,
-                    hard work, and challenges. Most of all we want<br/> you to bring
+                    hard work, and challenges. Most of all we want you to bring
                     your unique identity to this squad and voice your opinion
                     while being empathetic to our greater vision.
                   </p>
