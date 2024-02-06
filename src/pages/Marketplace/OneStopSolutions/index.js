@@ -30,7 +30,7 @@ function OneStopSolutions() {
               </p>
             </div>
             <a
-              href="#getInTouchForm"
+              href="/getInTouchForm"
               className="npButton getInTouch aosAnim ltr"
             >
               Enquire Now
