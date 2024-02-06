@@ -5,7 +5,7 @@
         padding: 160px 0 200px;
     }.pricewrap {
         
-        padding: 40px;
+       
         border-radius: 20px;
         border: 1px solid #aaaaaa;
     }.priceHead {
@@ -68,4 +68,57 @@
         justify-content: flex-end;
     }.list-grey {
         color: #aaaaaa;
-    }
+    }@media(min-width:576px)
+{.pricewrap {
+    
+        padding: 40px;}}
+    @media (max-width: 575px) {.prBodyWrap {
+        padding-top: 20px;}
+    }@media only screen and (max-width: 768px) {.sechead {
+        margin-bottom: 16px;
+    }}
+    
+    @media (max-width: 1366px) and (max-height: 768px){ .sechead {
+        margin-bottom: 40px;}
+    }@media (max-width: 400px) {.priceHead {
+        padding-bottom: 10px;}
+    }@media only screen and (max-width: 768px) {.priceIc {
+        padding: 6px;
+    }}
+    
+    @media only screen and (max-width: 1024px) {.priceIc {
+        height: 30px;}
+    }@media only screen and (max-width: 768px) {.priceImg {
+        margin-right: 5px;
+    }}
+    
+    @media only screen and (max-width: 768px) {.priceImg {
+        width: 12px;}
+    }@media only screen and (max-width: 768px) {.priceImg img {
+        width: 100%;}
+    }@media only screen and (max-width: 768px){ .priceIc h4 {
+        font-size: 12px;}
+    }@media (max-width: 575px){ .prBodyWrap {
+        padding-top: 20px;}
+    }@media (max-width: 400px) {.priceBody {
+        margin-bottom: 20px;}
+    }@media (max-width: 400px){ .priceBody h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        margin-bottom: 10px;}
+    }@media (max-width: 575px) {.priceBody li {
+        margin-bottom: 9px;}
+    }@media (max-width: 400px) {.priceBody li img {
+        width:8px;}}@media (max-width: 400px) {.priceBody li h5 {
+            font-size: 12px;
+            line-height: 18px;}
+        }@media (max-width: 575px) {.prBtnA .npButton {
+            padding: 12px 16px;
+        }
+        }
+        @media only screen and (max-width: 768px) {.npButton {
+            padding: 8px 16px;
+            font-size: 12px;
+            line-height: 16px;
+        }}

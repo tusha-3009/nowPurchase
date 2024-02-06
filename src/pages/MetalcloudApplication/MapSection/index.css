@@ -124,3 +124,62 @@
     left: 30%;
     top: 85%;
 }
+@media (max-width: 1440px) {.mapRow {
+  align-items: flex-start;
+  justify-content: space-between;
+}}
+@media (max-width: 1440px) {.mapleft {
+  width: calc(60%);}
+}@media only screen and (max-width: 1024px) {.mapleft {
+  padding-right: 0;
+  margin-bottom: 40px;
+}}
+
+@media only screen and (max-width: 1024px){ .mapleft {
+  width: 100%;}
+}@media (max-width: 575px) {.mapleft {
+  margin-bottom: 20px;}
+}@media (max-width: 1440px) {.mapleft .sechead {
+  margin-bottom: 25px;}
+}@media (max-width: 1280px) {.mapSec .sechead {
+  margin-bottom: 30px;}
+}@media (max-width: 575px) {.mapSec .sechead {
+  margin-bottom: 16px;}
+}@media (max-width: 1440px) {.sechead h3,
+.sechead h3 span {
+  font-size: 40px !important;
+  line-height: 1.4;}
+}@media (min-width: 768px) and (max-width: 990px) {.sechead h3,
+.sechead h3 span {
+  font-size: 28px !important;}
+}
+
+@media only screen and (max-width: 1024px) {.sechead h3,
+.sechead h3 span {
+  font-size: 36px !important;}
+}@media only screen and (max-width: 768px) {.sechead h3 {
+  font-size: 28px !important;
+  line-height: 40px;
+}}@media (max-width: 575px) {.mapSec {
+  padding-bottom: 60px !important;
+}}@media (max-width: 1440px) {
+  .eachstate h4 span {
+    font-size: 32px !important;
+  }
+}@media only screen and (max-width: 768px){ .eachstate h4 span {
+  font-size: 20px !important;
+  line-height: 25px;
+}}
+
+@media only screen and (max-width: 768px){ .eachstate h4 {
+  font-size: 20px;
+  line-height: 25px;
+}}
+
+@media (max-width: 1280px) {.stateWrap {
+  margin-bottom: 20px;
+}}@media (max-width: 575px) {
+  .stateWrap {
+    margin-bottom: 16px;
+  }
+}

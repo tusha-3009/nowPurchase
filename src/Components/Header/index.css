@@ -230,4 +230,8 @@ nav ul li a {
 }}@media only screen and (max-width: 1024px) {.navigationWrapNew.slide .btnWrapNew {
   flex: 0 0 100%;
   max-width: 100%;
-}}
+}}.navigationWrapNew {
+  -ms-flex: 0 0 calc(100% - (160px + 25%));
+  flex: 0 0 calc(100% - (160px + 25%));
+  max-width: calc(100% - (160px + 25%));
+}
