@@ -20,7 +20,13 @@ function CarouselCompanyCards() {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, []); 
+  const totalWidth = 24 * 327;
+   useEffect(() => {
+     if (translateValue <= -totalWidth) {
+       setTranslateValue(0);
+     }
+   }, [translateValue, totalWidth]);
   return (
     <>
       <div class="imgBoxWrap imgBoxlider slick-initialized slick-slider">

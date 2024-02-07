@@ -444,7 +444,7 @@ justify-content: flex-end;}
 }@media (max-width: 575px) {.titleText,
 .titleText .skyText {
   font-size: 28px !important;
-  line-height: 40px;
+  line-height: 40px !important; 
 }}
 .mobWrapBtn .mobNavBtnCross {
   opacity: 0;

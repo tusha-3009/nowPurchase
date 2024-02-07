@@ -1,166 +1,163 @@
-.section,.sectionCards {
-    width: 100%;
-    display: flex;
-    transition: 2s;
-    align-items: center;
-    justify-content: center;
-   
-    
+.section,
+.sectionCards {
+  width: 100%;
+  display: flex;
+  transition: 2s;
+  align-items: center;
+  justify-content: center;
 }
 .testSec {
-    position: relative;
-    overflow-x: hidden;
-    background-color: #e8f2f8;
-}.testSec .testSlider {
-    overflow-x: hidden;
-    margin-right: -200px;
-    padding-top: 75px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #e8f2f8;
+}
+.testSec .testSlider {
+  overflow-x: hidden;
+  margin-right: -200px;
+  padding-top: 75px;
 }
 
 .testSec .swiper-slide {
-    transition: 0.4s;
-    opacity: 0.5;
+  transition: 0.4s;
+  opacity: 0.5;
 }
 
 .testSec .swiper-slide:last-child {
-    opacity: 1;
+  opacity: 1;
 }
 
 .testSec .swiper-slide-next,
 .testSec .swiper-slide-active {
-    opacity: 1;
+  opacity: 1;
 }
 .overflowSection {
-    /* height: 200vh; */
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: 2s;
+  /* height: 200vh; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 2s;
 }
 .testSec .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .testSec .swiper-slide {
-    transition: 0.4s;
-    opacity: 0.5;
+  transition: 0.4s;
+  opacity: 0.5;
 }
 
 .keyNumber .eachkey {
-    min-height: 210px;
+  min-height: 210px;
 }
 
 .testSec .swiper-slide:last-child {
-    opacity: 1;
+  opacity: 1;
 }
 
 .testSec .swiper-slide-next,
 .testSec .swiper-slide-active {
-    opacity: 1;
+  opacity: 1;
 }
 .testSecWrap {
-    width: 100%;
+  width: 100%;
 }
 
 .align-items-end {
-   
-    align-items: flex-end !important;
+  align-items: flex-end !important;
 }
 .justify-content-between {
-   
-    justify-content: space-between !important;
+  justify-content: space-between !important;
 }
 .d-flex {
-   
-    display: flex !important;
+  display: flex !important;
 }
 .testmain .titleText {
-    margin: 0;
-}.test-nav {
-    display: flex;
-    align-items: center;
+  margin: 0;
+}
+.test-nav {
+  display: flex;
+  align-items: center;
 }
 .test_arrow {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #d0e4f2;
-        transition: 0.4s;
-        border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0e4f2;
+  transition: 0.4s;
+  border-radius: 8px;
 }
 .test-prev {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .test_arrow img {
-    filter: none;
-    cursor: pointer;
+  filter: none;
+  cursor: pointer;
 }
 
 .test-next {
-    background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
+  background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
 }
 .test-next img {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .test-next img {
-    filter: brightness(0) invert(1) !important;
+  filter: brightness(0) invert(1) !important;
 }
-.section.ltr .testSlider{
-    opacity: 0;
-        animation: from-right-in 0.8s linear forwards;
+.section.ltr .testSlider {
+  opacity: 0;
+  animation: from-right-in 0.8s linear forwards;
 }
-.testSec .testSlider {
-    padding-top: 75px;
-}
+
 @keyframes from-right-in {
-    0% {
-            opacity: 0;
-            transform: translateX(20%);
-        }
-    
-        100% {
-            opacity: 1;
-            transform: translateX(0%);
-        }
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 .swiper-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
 }
 .testSec .swiper-slide {
-    transition: 0.4s;
-    opacity: 0.5;
+  transition: 0.4s;
+  opacity: 0.5;
 }
 .testSec .swiper-slide {
-    transition: 0.4s;
-    opacity: 0.5;
+  transition: 0.4s;
+  opacity: 0.5;
 }
 
 .testSec .swiper-slide:last-child {
-    opacity: 1;
+  opacity: 1;
 }
 
 .testSec .swiper-slide-next,
 .testSec .swiper-slide-active {
-    opacity: 1;
+  opacity: 1;
 }
 .swiper-slide {
-    flex-shrink: 0;
-   
-    height: 100%;
-    position: relative;}
+  flex-shrink: 0;
+
+  height: 100%;
+  position: relative;
+}
 /* }
 .testCard {
     background-color: #fff;
@@ -173,66 +170,66 @@
     justify-content: space-between;
 } */
 .testCard::before {
-    top: -35px;
-    width: 80px;
-    height: 66px;
-    position: absolute;
-        content: "";
-    left: 0;
-        background-image: url(../../../../assets/images/icons/comma.png);
-        background-size: cover;
+  top: -35px;
+  width: 80px;
+  height: 66px;
+  position: absolute;
+  content: "";
+  left: 0;
+  background-image: url(../../../../assets/images/icons/comma.png);
+  background-size: cover;
 }
 .testCard p {
-    font-size: 24px;
-    line-height: 50px;
-    margin-bottom: 48px;
-    font-weight: 500;
-    color: #606060;
-    margin-top: 0;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 48px;
+  font-weight: 500;
+  color: #606060;
+  margin-top: 0;
 }
 .testDetail {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .testIc {
-    display: flex;
+  display: flex;
 }
 .testIc img {
-    border-radius: 8px;
-    background-color: #a1c9e5;
-    margin-right: 20px;
-    height: 80px;
+  border-radius: 8px;
+  background-color: #a1c9e5;
+  margin-right: 20px;
+  height: 80px;
 }
 .testName h4 {
-    margin-top: 0;
-    font-size: 24px;
-    line-height: 40px;
-        font-weight: 700;
-        margin-bottom: 8px;
+  margin-top: 0;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 .testName h5 {
-font-weight: 400;
-    line-height: 30px;
-       font-size: 18px;
-    margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 .testCompany img {
-    height: 65px;
-    width: 100%;
+  height: 65px;
+  width: 100%;
 }
 .testSec .swiper-slide {
-    transition: 0.4s;
-    /* opacity: 0.5; */
+  transition: 0.4s;
+  /* opacity: 0.5; */
 }
 .testSec .swiper-slide-active {
-    opacity: 1;
+  opacity: 1;
 }
 .swiper-slide {
-    flex-shrink: 0;
-  
-    height: 100%;
-    position: relative;
+  flex-shrink: 0;
+
+  height: 100%;
+  position: relative;
 }
 /* .testCard {
     background-color: #fff;
@@ -244,203 +241,390 @@ font-weight: 400;
     flex-direction: column;
     justify-content: space-between;
 } */
-       .sectionCards h3{
-            line-height: 60px;
-                margin-bottom: 8px;
-       } 
+.sectionCards h3 {
+  line-height: 60px;
+  margin-bottom: 8px;
+}
 
+/*responsive*/
+.testSec {
+  position: relative;
+  overflow-x: hidden;
+}
+@media (max-width: 1440px) {
+  .testSec {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1280px) {
+  .testSec {
+    padding-top: 120px;
+  }
+}
 
-       /*responsive*/
-           .testSec {
-               position: relative;
-               overflow-x: hidden;
-           }@media (max-width: 1440px) {.testSec {
-            padding-bottom: 80px;}
-        }@media (max-width: 1280px) {.testSec {
-            padding-top: 120px;
-        }}
-        
-        @media (max-width: 1280px) {.testSec {
-            padding-bottom: 60px;}
-        }@media (max-width: 575px) {.testSec {
-            padding-top: 80px;
-            padding-bottom: 80px;}
-        }@media only screen and (max-width: 1024px) {.overflowSection {
-            height: auto !important;}
-        }@media (max-width: 1600px) {.testmain {
-            margin-bottom: 25px;}
-        }@media only screen and (max-width: 768px) {.testmain {
-            margin-bottom: 40px;}
-        }@media (max-width: 575px) {.testSec .testmain .titleText {
-            margin-bottom: 0 !important;}
-        }@media (max-width: 1366px) and (max-height: 768px){ .titleText,
-        .titleText .skyText,
-        .bannerLeft h2 {
-            line-height: 1.2;}
-        }@media only screen and (max-width: 1024px)
-        {.titleText,
-        .titleText .skyText {
-            font-size: 36px;
-            line-height: 50px;}
-        }@media (max-width: 575px) {.titleText,
-        .titleText .skyText {
-            font-size: 28px !important;
-            line-height: 40px;}
-        }@media only screen and (max-width: 768px){ .test-nav {
-            display: none;}
-        }@media (max-width: 1600px) {.test_arrow {
-            width: 60px;
-            height: 60px;
-        }
-        }
-        .test-prev {
-            margin-right: 20px;
-        }@media (max-width: 1440px) {.testSec .testSlider {
-            padding-top: 35px;}
-        }@media (max-width: 1440px){ .testSec .testSlider {
-            padding-top: 35px;}
-        }@media only screen and (max-width: 768px){ .testSec .testSlider {
-            padding-top: 20px;}
-        }@media (max-width: 1366px) and (max-height: 768px) {.testCard {
-            height: 350px;}
-        }@media (max-width: 1200px) {.testCard {
-            padding: 30px 25px;
-            height: 320px;}
-        }@media only screen and (max-width: 768px) {.testCard {
-            border-radius: 16px;
-            padding: 16px;
-            padding-top: 36px;}
-        }@media (max-width: 1600px) {.testCard::before {
-            top: -35px;
-            width: 80px;
-            height: 66px;}
-        }@media only screen and (max-width: 768px) {.testCard::before {
-            position: absolute;
-            content: "";
-            top: -15px;
-            left: 15px;
-            background-image: url(../../../../assets/images/marketplace/comma.png);
-            width: 36px;
-            height: 30px;}
-        }@media (max-width: 1366px) and (max-height: 768px) {.testCard p {
-            margin-bottom: 25px;
-        }
-        }
-        @media (max-width: 1366px) and (max-height: 768px) {.testCard p {
-            font-size: 18px;
-            line-height: 1.7;}
-        }@media only screen and (max-width: 1024px){ .testCard p {
-            min-height: auto;}
-        }@media only screen and (max-width: 768px) {.testCard p {
-            min-height: auto;
-            font-size: 16px;
-            line-height: 24px;
-            margin-bottom: 20px;
-            font-weight: 400;}
-        }@media (max-width: 575px) {.testCard p {
-            font-size: 16px;}
-        }@media (max-width: 1200px) {.testIc {
-            align-items: center;}
-        }@media only screen and (max-width: 768px) {.testIc {
-            width: 100%;}
-        }@media only screen and (max-width: 768px) {.testIc img {
-            margin-right: 0 !important;
-         }
-        }@media only screen and (max-width: 768px) {.testIc img {
-            width: 60px !important;
-            height: 60px !important;}
-           
-        }@media (max-width: 575px) {.testIc img {
-            width: 40px !important;
-            height: 40px !important;}
-        }@media only screen and (max-width: 768px){ .testIc .testName {
-            
-            margin-left: 10px;}
-        }@media (max-width: 575px) {.testName {
-            width: calc(100% - 40px);
-            margin-left: 8px !important;}
-        }@media (max-width: 1366px) and (max-height: 768px) {.testName h4 {
-            font-size: 20px;
-        }}
-        
-        @media (max-width: 1440px) {.testName h4 {
-            line-height: 1.2;}
-        }@media (max-width: 1200px) {.testName h4 {
-            font-size: 17px;}
-        }@media (max-width: 1200px) {.testName h4,
-        .testName h5 {
-            line-height: 1.2;}
-        }@media only screen and (max-width: 991px) {.testName h4 {
-            line-height: 24px;}
-        }
-        
-        @media only screen and (max-width: 1024px){ .testName h4 {
-          
-            margin-bottom: 0;}
-        }@media only screen and (max-width: 991px) {.testName h4 {
-            line-height: 24px;}
-        }@media only screen and (max-width: 768px) {.testName h4 {
-            margin-bottom: 0;
-            font-size: 16px;
-            line-height: 20px;}
-        }@media (max-width: 575px) {.testName h4 {
-            font-size: 14px;}
-        }@media (max-width: 1366px) and (max-height: 768px) {.testName h5 {
-            font-size: 16px;}
-        }@media (max-width: 1200px) {.testName h5 {
-            font-size: 16px;
-        }}
-        
-        @media (max-width: 1200px) {.testName h4,
-        .testName h5 {
-            line-height: 1.2;}
-        }@media only screen and (max-width: 991px) {.testName h5 {
-            margin-bottom: 0px;
-        }}
-        
-        @media (max-width: 1200px) {.testName h5 {
-            font-size: 16px;}
-        }@media only screen and (max-width: 768px) {.testName h5 {
-            font-size: 12px;
-            line-height: 25px;}
-        }@media (max-width: 575px) {.testName h5 {
-            line-height: 15px;}
-        }@media (max-width: 1440px) {.testCompany {
-            text-align: right;}
-        }@media (max-width: 1200px) {.testCompany {
-            width: 170px;}
-        }@media only screen and (max-width: 768px) {.testCompany {
-            width: 95px;}
-        }@media (max-width: 1920px) {.testCompany img {
-            height: 65px;
-            width: 100%;}
-        }@media (max-width: 1280px) {.testCompany img {
-            height: 53px;
-            width: 80%;}
-        }@media only screen and (max-width: 860px) {.testCompany img {
-            height: 24px;
-            width: 80%;}
-        }@media (max-width: 1600px){ .testCard::before {
-            top: -35px;
-            width: 80px;
-            height: 66px;}
-        }@media only screen and (max-width: 768px) {.testCard::before {
-            position: absolute;
-            content: "";
-            top: -15px;
-            left: 15px;
-            background-image: url(../../../../assets/images/marketplace/comma.png);
-            width: 36px;
-            height: 30px;
-        }}
-                @media (max-width: 1440px){ .testSec {
-                    padding-bottom: 80px;
-                }}@media (max-width: 1280px){ .testSec {
-                    padding-top: 120px;
-                }}
-                                @media only screen and (max-width: 640px) {section {
-                                    padding: 80px 0;
-                                }}@media (max-width: 575px) {.testSec {
-                                    padding-top: 80px;
-                                    padding-bottom: 80px;
-                                }}
+@media (max-width: 1280px) {
+  .testSec {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .testSec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .overflowSection {
+    height: auto !important;
+  }
+}
+@media (max-width: 1600px) {
+  .testmain {
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testmain {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .testSec .testmain .titleText {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .titleText,
+  .titleText .skyText,
+  .bannerLeft h2 {
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .titleText,
+  .titleText .skyText {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .titleText,
+  .titleText .skyText {
+    font-size: 28px !important;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .test-nav {
+    display: none;
+  }
+}
+@media (max-width: 1600px) {
+  .test_arrow {
+    width: 60px;
+    height: 60px;
+  }
+}
+.test-prev {
+  margin-right: 20px;
+}.testSec .testSlider {
+  padding-top: 75px;
+}
+@media (max-width: 1440px) {
+  .testSec .testSlider {
+    padding-top: 35px;
+  }
+}@media (max-width: 1440px){ .testSec .testSlider {
+  padding-top: 35px;
+}}
+@media (max-width: 1440px) {
+  .testSec .testSlider {
+    padding-top: 35px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testSec .testSlider {
+    padding-top: 20px;
+  }
+}@media (max-width: 1366px) and (max-height: 768px) .testCard {
+  height: 370px;
+}
+
+.testCard {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px;
+  position: relative;
+  height: 484px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .testCard {
+    height: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  .testCard {
+    padding: 30px 25px;
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testCard {
+    border-radius: 16px;
+    padding: 16px;
+    padding-top: 36px;
+  }
+}
+@media (max-width: 1600px) {
+  .testCard::before {
+    top: -35px;
+    width: 80px;
+    height: 66px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testCard::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 15px;
+    background-image: url(../../../../assets/images/marketplace/comma.png);
+    width: 36px;
+    height: 30px;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .testCard p {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .testCard p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .testCard p {
+    min-height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testCard p {
+    min-height: auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 575px) {
+  .testCard p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .testIc {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testIc {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testIc img {
+    margin-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testIc img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+@media (max-width: 575px) {
+  .testIc img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testIc .testName {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .testName {
+    width: calc(100% - 40px);
+    margin-left: 8px !important;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .testName h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .testName h4 {
+    line-height: 1.2;
+  }
+}
+@media (max-width: 1200px) {
+  .testName h4 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1200px) {
+  .testName h4,
+  .testName h5 {
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .testName h4 {
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .testName h4 {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .testName h4 {
+    line-height: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testName h4 {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .testName h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+  .testName h5 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .testName h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .testName h4,
+  .testName h5 {
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .testName h5 {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .testName h5 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testName h5 {
+    font-size: 12px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .testName h5 {
+    line-height: 15px;
+  }
+}
+@media (max-width: 1440px) {
+  .testCompany {
+    text-align: right;
+  }
+}
+@media (max-width: 1200px) {
+  .testCompany {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testCompany {
+    width: 95px;
+  }
+}
+@media (max-width: 1920px) {
+  .testCompany img {
+    height: 65px;
+    width: 100%;
+  }
+}
+@media (max-width: 1280px) {
+  .testCompany img {
+    height: 53px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .testCompany img {
+    height: 24px;
+    width: 80%;
+  }
+}
+@media (max-width: 1600px) {
+  .testCard::before {
+    top: -35px;
+    width: 80px;
+    height: 66px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .testCard::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 15px;
+    background-image: url(../../../../assets/images/marketplace/comma.png);
+    width: 36px;
+    height: 30px;
+  }
+}
+@media (max-width: 1440px) {
+  .testSec {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1280px) {
+  .testSec {
+    padding-top: 120px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  section {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 575px) {
+  .testSec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 768px) {.test-nav {
+  display: none;
+}}

@@ -1,21 +1,24 @@
 .eventHead.ltr,
 .tabheadC.ltr {
-    opacity: 0;
-    animation: fade-slide-in-ltr 0.8s linear forwards;
+  opacity: 0;
+  animation: fade-slide-in-ltr 0.8s linear forwards;
 }
 @keyframes fade-slide-in-ltr {
-0% {
-        opacity: 0;
-        transform: translateX(-300px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}@media only screen and (max-width: 768px){ .event2 .titleText {
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .event2 .titleText {
     margin-bottom: 8px;
     font-size: 30px !important;
     font-weight: 700;
     line-height: 48px;
-}}
+  }
+}

@@ -186,7 +186,11 @@
   margin-bottom: 24px;
   padding: 13px 20px;
 }
-}
+}@media (max-width: 575px) {
+  .addr {
+    margin-bottom: 24px;
+    padding: 1px 0px;
+  }}
 @media (max-width: 1200px){ .addr {
   margin-top: 30px;
 }}

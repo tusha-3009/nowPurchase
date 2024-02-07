@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import "../../../../assets/css/swiper.min.css";
 import arrow from "../../../../assets/images/marketplace/test-arrow.png";
@@ -12,13 +12,19 @@ import c4 from "../../../../assets/images/marketplace/company_mp1.png";
 import e4 from "../../../../assets/images/marketplace/employee_mp3.png";
 function CustomerCards() {
   const [transformVal, setTransformVal] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  console.log(screenWidth);
+
   function Prev() {
-    if (transformVal !== 0) 
-    setTransformVal((currValue) => currValue + 675);
+    if (transformVal !== 0) setTransformVal((currValue) => currValue + 675);
   }
   function Next() {
-    if(transformVal!==-1350)
-    setTransformVal((currValue) => currValue - 675);
+    if (transformVal !== -1350) setTransformVal((currValue) => currValue - 675);
   }
 
   return (

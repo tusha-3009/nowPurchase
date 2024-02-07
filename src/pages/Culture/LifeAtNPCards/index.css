@@ -4,10 +4,7 @@
 .testmain {
   margin-bottom: 25px;
 }
-.test-nav {
-  display: flex;
-  align-items: center;
-}
+
 
 .test-prev {
   margin-right: 20px;
@@ -58,9 +55,4 @@
 }
 .testCulture .testCard .cTestImage img {
   background-color: #a1c9e5;
-}
-.testCard p {
-  font-size: 24px;
-  line-height: 50px;
-  margin-bottom: 48px;
 }

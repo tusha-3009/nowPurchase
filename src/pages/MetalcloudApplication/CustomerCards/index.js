@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+// import "./index.css";
 import testArrow from "../../../assets/images/marketplace/test-arrow.png";
 import employee_mc4 from "../../../assets/images/application/employee_mc4.png";
 import company_mc4 from "../../../assets/images/application/company_mc4.png";
