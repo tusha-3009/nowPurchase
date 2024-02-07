@@ -32,7 +32,7 @@ function MeltingProcessMadeReliable() {
                 <div class="bannerRight">
                   <div class="bannerPoly bannerPoly1">
                     <img
-                      loading="lazy"
+                     
                       src={applPoly}
                       alt="" />
                     <video class="video" autoplay muted loop id="hoverVideo">

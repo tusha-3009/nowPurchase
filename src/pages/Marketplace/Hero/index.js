@@ -37,7 +37,7 @@ function Hero() {
             <div className="col-md-5 rightBannerImg">
               <div className="bannerRight">
                 <div className="bannerPoly bannerPoly1">
-                  <img loading="lazy" src={bnrpoly} alt="" />
+                  <img src={bnrpoly} alt="" />
 
                   <video
                     className="video"
