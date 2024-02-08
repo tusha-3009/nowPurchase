@@ -15,9 +15,9 @@ function OfferingsSection() {
         <div className="container">
           <div className="offeringWrap aosAnim ltr">
             <h2 className="titleText">
-              <span className="skyText">Experience</span> our incredibly
+              <span className="skyText">Experience</span> our incredibly{" "} 
               <br />
-              trusted offerings
+               trusted offerings
             </h2>
             <div className="animeSecIndex aosAnim ltr">
               <img loading="lazy" className="bigImg" src={offeringBg} alt="" />

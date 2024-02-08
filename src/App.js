@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes  } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "../src/assets/css/style-responsive.css";
 import "rsuite/dist/rsuite.min.css";
@@ -16,6 +16,7 @@ import TermsConditions from "./Components/Footer/Terms&Conditions";
 import CompanyAnnualReport from "./Components/Footer/CompanyAnnualReport";
 import Csr from "./Components/Footer/SocialCorporateRes";
 function App() {
+  
   return (
     <div className="home-template">
       <BrowserRouter>

@@ -1,81 +1,96 @@
-import React from 'react'
+import React, { useState } from "react";
 import "./index.css";
+import { Modal, InputPicker, Form, Button } from "rsuite";
 
 function GetInTouch() {
+  const [modalOpen, setModalOpen] = useState(true);
+  const handleClose = () => {
+    setModalOpen(false);
+  };
+  const optionsData = [
+    "MarketPlace",
+    "MetalCloud",
+    "Careers",
+    "Requeest Demo",
+    "Others",
+  ].map((items) => ({ label: items, value: items }));
   return (
-    <div id="getInTouchForm" className="getInTouchForm">
-  
-      <div className="getInTouchFormWrap">
-        <h3>Enquiry Form</h3>
-        <div className="formBox">
-          <form className="form" action="#" method="post">
-            <div className="inputBox">
-              <label for="name">
+    <>
+      
+      <Modal open={modalOpen} onClose={handleClose}>
+        <Modal.Header>
+          <Modal.Title>
+            <h3>Enquiry Form</h3>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form fluid>
+            <Form.Group>
+              <Form.ControlLabel for="name">
                 Name <span>*</span>
-              </label>
-              <input
+              </Form.ControlLabel>
+              <Form.Control
+                name="name"
                 type="text"
                 placeholder="Enter your name here"
-                id="name"
-                required
+                Required
               />
-            </div>
-            <div className="inputBox">
-              <label for="phone">
+              {/* <Form.HelpText>Required</Form.HelpText> */}
+            </Form.Group>
+
+            <Form.Group>
+              <Form.ControlLabel for="phone">
                 Contact Number <span>*</span>
-              </label>
-              <input
+              </Form.ControlLabel>
+              <Form.Control
+                name="phone"
                 type="tel"
                 placeholder="Enter your contact number"
-                id="phone"
                 required
               />
-            </div>
-            <div className="inputBox">
-              <label for="entry_purpose">
+            </Form.Group>
+
+            <Form.Group>
+              <Form.ControlLabel for="entry_purpose">
                 Enquiry Purpose <span>*</span>
-              </label>
+              </Form.ControlLabel>
+              {/* <Form.Control
+                name="entry_purpose"
+                componentClass="select"
+                placeholder="Select"
+                required
+              > */}
 
-              <select name="cars" id="cars" required>
-                <option value="MarketPlace">MarketPlace</option>
-                <option value="MetalCloud">MetalCloud</option>
-                <option value="Career">Career</option>
-                <option value="Request Demo" selected>
-                  Request Demo
-                </option>
-                <option value="Others">Others</option>
-              </select>
-            </div>
-            <div className="inputBox">
-              <label for="entry_purpose">Remark</label>
-              <textarea name="" placeholder="Enter your name here"></textarea>
-            </div>
+              <InputPicker data={optionsData} />
+              {/* </Form.Control> */}
+            </Form.Group>
 
-            <div className="inputBox btnBox formBtns">
-              <div className="canecelBtn" id="Form_Cancel">
-                <img loading="lazy" src="assets/images/crossBtnf.png" alt="" />
-                <h5>Cancel</h5>
-              </div>
-              <div className="submitEnq" id="formSubmit">
-                <div className="submitEnq" id="formSubmit">
-                  <button className="submit_button" type="submit" id="submitButton">
-                    <img loading="lazy" src="assets/images/submit.png" alt="" />
-                    Submit Enquiry
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div className="submitMsg" id="offSubmit">
-        <div className="submitIc">
-          <img loading="lazy" src="assets/images/submitIc.png" alt="" />
-        </div>
-        <h4>Enquiry Successfully submitted</h4>
-        <p>Someone from our team will contact you soon</p>
-      </div>
-    </div>
+            <Form.Group>
+              <Form.ControlLabel for="remark">Remark</Form.ControlLabel>
+              <Form.Control
+                name="remark"
+                componentClass="textarea"
+                placeholder="Enter your remark here"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Button appearance="subtle" onClick={handleClose}>
+                Cancel
+              </Button>
+              <Button
+                appearance="primary"
+                onClick={() => {
+                  alert("submitted");
+                }}
+              >
+                Submit Enquiry
+              </Button>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 }
 
