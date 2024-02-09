@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef } from "react";
+import React, {  useRef } from "react";
 import Slider from "react-slick";
 import "./index.css";
 
@@ -48,6 +48,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ quote, name, empImg, title, companyLogo }) => (
+
   <div className="testCard">
     <p>{quote}</p>
     <div className="testDetail">
@@ -144,11 +145,11 @@ const CustomerCards = () => {
               </div>
 
               <Slider ref={sliderRef} {...sliderSettings}>
-               
-                  {testimonials.map((testimonial, index) => (
+                {testimonials.map((testimonial, index) => (
+                  <div className="swiper testSlider">
                     <TestimonialCard key={index} {...testimonial} />
-                  ))}
-         
+                  </div>
+                ))}
               </Slider>
             </div>
           </div>
