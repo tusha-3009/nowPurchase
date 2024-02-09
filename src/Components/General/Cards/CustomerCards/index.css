@@ -20,7 +20,8 @@
 .testSec .swiper-slide {
   transition: 0.4s;
   opacity: 0.5;
-}
+  
+} 
 
 .testSec .swiper-slide:last-child {
   opacity: 1;
@@ -135,13 +136,10 @@
   transition-property: transform;
   box-sizing: content-box;
 }
+
 .testSec .swiper-slide {
   transition: 0.4s;
-  opacity: 0.5;
-}
-.testSec .swiper-slide {
-  transition: 0.4s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .testSec .swiper-slide:last-child {
@@ -230,6 +228,37 @@
 
   height: 100%;
   position: relative;
+}
+@media (max-width:992px) {
+  .swiper-slide {
+  width: 627.114px;
+    margin-right: 50px;
+
+  }
+}@media (min-width:640px) {
+  .swiper-slide {
+    width: 70vw;
+    margin-right: 30px;
+
+  }
+}@media (min-width:360px) {
+  .swiper-slide {
+    width: 70vw;
+    margin-right: 15px;
+
+  }
+}@media (min-width:335px) {
+  .swiper-slide {
+    width: 80vw;
+    margin-right: 10px;
+
+  }
+}@media (max-width:335px) {
+  .swiper-slide {
+    width: 80vw;
+    margin-right: 10px;
+
+  }
 }
 /* .testCard {
     background-color: #fff;
@@ -358,24 +387,24 @@
   height: 484px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;margin-right: 50px;
 }
 @media (max-width: 1366px) and (max-height: 768px) {
   .testCard {
-    height: 350px;
+    height: 350px; margin-right: 0;
   }
 }
 @media (max-width: 1200px) {
   .testCard {
     padding: 30px 25px;
-    height: 320px;
+    height: 320px;margin-right: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
   .testCard {
     border-radius: 16px;
     padding: 16px;
-    padding-top: 36px;
+    padding-top: 36px;margin-right: 0;
   }
 }
 @media (max-width: 1600px) {

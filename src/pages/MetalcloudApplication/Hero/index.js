@@ -21,7 +21,7 @@ function MeltingProcessMadeReliable() {
                     for your raw materials via WhatsApp and tab.
                   </p>
                   <a
-                    href="#getInTouchForm"
+                    href="/getInTouchForm"
                     class="npButton getInTouch"
                     id="MetalCloud_Section1_Landing_EnquireNow">
                     Book Demo

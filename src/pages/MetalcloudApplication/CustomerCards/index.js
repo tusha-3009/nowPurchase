@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import Slider from "react-slick";
 // import "./index.css";
 import testArrow from "../../../assets/images/marketplace/test-arrow.png";
 import employee_mc4 from "../../../assets/images/application/employee_mc4.png";
@@ -10,6 +11,7 @@ import company_mc3 from "../../../assets/images/application/company_mc3.png";
 import employee_mc1 from "../../../assets/images/application/employee_mc1.png";
 import company_mc1 from "../../../assets/images/application/company_mc1.png";
 import Container from "../../../Components/General/Container";
+
 function CustomerCards() {
   return (
     <div className="testSec animated-section section aosAnim ltr" id="sec26">

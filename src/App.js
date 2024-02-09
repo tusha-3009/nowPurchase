@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "../src/assets/css/style-responsive.css";
 import "rsuite/dist/rsuite.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Home from "./Components/Home";
 import Culture from "./pages/Culture";
 import Careers from "./pages/Careers";

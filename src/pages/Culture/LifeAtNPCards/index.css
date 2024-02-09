@@ -1,9 +1,7 @@
 .testCulture .testSlider {
   padding: 75px 0;
 }
-.testmain {
-  margin-bottom: 25px;
-}
+
 
 
 .test-prev {
@@ -55,4 +53,9 @@
 }
 .testCulture .testCard .cTestImage img {
   background-color: #a1c9e5;
+}.teamBoxWrap .slick-list {
+  padding: 0 15px;
 }
+@media only screen and (max-width: 991px) {.teamBoxWrap .slick-list {
+  padding: 0;
+}}

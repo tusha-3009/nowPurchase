@@ -221,7 +221,7 @@ function PlansPricing() {
                   </div>
                   <div className="prBtnA">
                     <a
-                      href="#getInTouchForm"
+                      href="/getInTouchForm"
                       className="npButton getInTouch"
                       id="MetalCloud_Section5_Plans_Lite_BookDemo"
                     >
@@ -444,7 +444,7 @@ function PlansPricing() {
                   </div>
                   <div className="prBtnA">
                     <a
-                      href="#getInTouchForm"
+                      href="/getInTouchForm"
                       className="npButton getInTouch"
                       id="MetalCloud_Section5_Plans_Pro_BookDemo"
                     >

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useRef } from "react";
+import Slider from "react-slick";
 import "./index.css";
-import "../../../../assets/css/swiper.min.css";
+
 import arrow from "../../../../assets/images/marketplace/test-arrow.png";
 import e1 from "../../../../assets/images/marketplace/employee_mp1.png";
 import c1 from "../../../../assets/images/marketplace/company_mp2.png";
@@ -10,15 +11,159 @@ import e3 from "../../../../assets/images/marketplace/employee_mp4.png";
 import c3 from "../../../../assets/images/marketplace/company_mp3.png";
 import c4 from "../../../../assets/images/marketplace/company_mp1.png";
 import e4 from "../../../../assets/images/marketplace/employee_mp3.png";
+const testimonials = [
+  {
+    quote:
+      "Now purchase has been a game-changer for our procurement  process. The platform's efficiency and user-friendly interface have streamlined our purchasing workflow, saving us time and resources. Highly recommended!",
+    name: "Vijay Agarwal",
+    empImg: e1,
+    title: "Director",
+    companyLogo: c1,
+  },
+  {
+    quote:
+      " We've significantly reduced melt time, thanks to the invaluable dilution suggestions. The MetalCloud platform is a game-changer for foundry processes.",
+    name: "Pradeep Bera",
+    empImg: e2,
+    title: "Foundry Head",
+    companyLogo: c2,
+  },
+  {
+    quote:
+      "Thanks to NowPurchase, our journey to success has been nothing short of remarkable. Their customer-centric approach ensured that our goals became their goals. With personalized strategies and unwavering support.",
+    name: "Yogesh Joshi",
+    empImg: e3,
+    title: "CEO",
+    companyLogo: c3,
+  },
+
+  {
+    quote:
+      "Quality, reasonable price, and timely delivery are important for me to work with a vendor. NowPurchase checks all these requirements for me. And they are just a call away whenever I need help.",
+    name: "Sikhar Jaiswal",
+    empImg: e4,
+    title: "Owner",
+    companyLogo: c4,
+  },
+];
+
+const TestimonialCard = ({ quote, name, empImg, title, companyLogo }) => (
+  <div className="testCard">
+    <p>{quote}</p>
+    <div className="testDetail">
+      <div className="testIc">
+        <img src={empImg} alt={`${name}'s employee logo`} />
+        <div className="testName">
+          <h4>{name}</h4>
+          <h5>{title}</h5>
+        </div>
+      </div>
+      <div className="testCompany">
+        <img src={companyLogo} alt={`${name}'s company logo`} />
+      </div>
+    </div>
+  </div>
+);
+
+const CustomerCards = () => {
+  const sliderRef = useRef(null);
+
+  const goToPrevious = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const goToNext = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const sliderSettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+  };
+  
+    if (window.innerWidth > 800) {
+      sliderSettings.slidesToShow = 2;
+    } else {
+      sliderSettings.slidesToShow = 1;
+    }
+
+
+  return (
+    <>
+      <div
+        className="testSec animated-section section sectionCards aosAnim ltr"
+        id="sec16"
+      >
+        <div className="overflowSection">
+          <div className="container">
+            <div className="testSecWrap">
+              <div className="testmain d-flex justify-content-between align-items-end">
+                <h3 class="titleText">
+                  <span className="skyText">Hear</span> what our customers{" "}
+                  <br />
+                  are saying about us!
+                </h3>
+                <div className="test-nav nav-style-one">
+                  <div
+                    className="test_arrow test-prev prev"
+                    id="Home_Section6_Testimonials_ArrowLeft"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Previous slide"
+                    // aria-disabled="false"
+                  >
+                    <img
+                      loading="lazy"
+                      src={arrow}
+                      alt=""
+                      className="prev-button"
+                      onClick={goToPrevious}
+                    />
+                  </div>
+                  <div
+                    className="test_arrow test-next next "
+                    id="Home_Section6_Testimonials_ArrowRight"
+                    tabindex="-1"
+                    role="button"
+                    aria-label="Next slide"
+                    // aria-disabled="true"
+                  >
+                    <img
+                      loading="lazy"
+                      src={arrow}
+                      alt=""
+                      className="next-button"
+                      onClick={goToNext}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Slider ref={sliderRef} {...sliderSettings}>
+               
+                  {testimonials.map((testimonial, index) => (
+                    <TestimonialCard key={index} {...testimonial} />
+                  ))}
+         
+              </Slider>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CustomerCards;
+/*
+
 function CustomerCards() {
   const [transformVal, setTransformVal] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  }, []);
-
-  console.log(screenWidth);
 
   function Prev() {
     if (transformVal !== 0) setTransformVal((currValue) => currValue + 675);
@@ -71,10 +216,7 @@ function CustomerCards() {
                   transitionDuration: "0ms",
                 }}
               >
-                <div
-                  class="swiper-slide "
-                  style={{ width: "627.114px", marginRight: "50px" }}
-                >
+                <div class="swiper-slide ">
                   <div class="testCard">
                     <p>
                       Now purchase has been a game-changer for our procurement
@@ -96,10 +238,7 @@ function CustomerCards() {
                     </div>
                   </div>
                 </div>
-                <div
-                  class="swiper-slide "
-                  style={{ width: "627.114px", marginRight: "50px" }}
-                >
+                <div class="swiper-slide ">
                   <div class="testCard">
                     <p>
                       We've significantly reduced melt time, thanks to the
@@ -120,10 +259,7 @@ function CustomerCards() {
                     </div>
                   </div>
                 </div>
-                <div
-                  class="swiper-slide "
-                  style={{ width: "627.114px", marginRight: "50px" }}
-                >
+                <div class="swiper-slide ">
                   <div class="testCard">
                     <p>
                       Thanks to NowPurchase, our journey to success has been
@@ -145,10 +281,7 @@ function CustomerCards() {
                     </div>
                   </div>
                 </div>
-                <div
-                  class="swiper-slide"
-                  style={{ width: "627.114px", marginRight: "50px" }}
-                >
+                <div class="swiper-slide">
                   <div class="testCard">
                     <p>
                       Quality, reasonable price, and timely delivery are
@@ -180,3 +313,4 @@ function CustomerCards() {
 }
 
 export default CustomerCards;
+*/

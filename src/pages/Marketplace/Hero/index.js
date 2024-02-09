@@ -26,7 +26,7 @@ function Hero() {
                   challenges while maintaining quality
                 </p>
                 <a
-                  href="#getInTouchForm"
+                  href="/getInTouchForm"
                   className="npButton getInTouch"
                   id="MarketPlace_Section1_Landing_EnquireNow"
                 >
