@@ -4,6 +4,10 @@ import { Modal, InputPicker, Form, Button } from "rsuite";
 
 function GetInTouch() {
   const [modalOpen, setModalOpen] = useState(true);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [enquiryPurpose, setEnquiryPurpose] = useState("");
+  const [remarks, setRemarks] = useState("");
   const handleClose = () => {
     setModalOpen(false);
   };
@@ -14,9 +18,86 @@ function GetInTouch() {
     "Requeest Demo",
     "Others",
   ].map((items) => ({ label: items, value: items }));
+
+  const notifyOnSlack = async (channel, message) => {
+    try {
+      const response = await fetch(
+        "https://test-api.nowpurchase.com/api/send_slack/",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            channel: channel,
+            message: message,
+          }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to submit enquiry");
+      }
+
+      return response;
+    } catch (error) {
+      console.error("Fetch error:", error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e) => {
+   
+    // Validate form fields
+    const namePattern = /^[a-zA-Z\s]*$/;
+    const phonePattern = /^\d+$/;
+
+    if (!name || !namePattern.test(name)) {
+      alert(
+        "Please enter a valid name. Only alphabets and spaces are allowed."
+      );
+      return;
+    }
+
+    if (!phone || !phonePattern.test(phone)) {
+      alert("Please enter a valid phone number. Only numbers are allowed.");
+      return;
+    }
+
+    if (!enquiryPurpose) {
+      alert("Please select your enquiry purpose.");
+      return;
+    }
+
+    if (!remarks) {
+      alert("Please enter remarks");
+      return;
+    }
+
+    const payload = {
+      text: `New enquiry:
+        Name: ${name}
+        Contact Number: ${phone}
+        Enquiry Purpose: ${enquiryPurpose}
+        Remarks: ${remarks}`,
+    };
+
+    try {
+      await notifyOnSlack("NP_WEBSITE", payload.text);
+      alert("Enquiry submitted successfully!");
+    } catch (error) {
+      alert("Error submitting enquiry");
+    } finally {
+      // Reset form fields
+      setName("");
+      setPhone("");
+      setEnquiryPurpose("");
+      setRemarks("");
+    }
+  };
+
   return (
     <>
-      
       <Modal open={modalOpen} onClose={handleClose}>
         <Modal.Header>
           <Modal.Title>
@@ -24,7 +105,7 @@ function GetInTouch() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form fluid>
+          <Form fluid onSubmit={ handleSubmit}>
             <Form.Group>
               <Form.ControlLabel for="name">
                 Name <span>*</span>
@@ -33,7 +114,9 @@ function GetInTouch() {
                 name="name"
                 type="text"
                 placeholder="Enter your name here"
-                Required
+                required
+                value={name}
+                onChange={(value) => setName(value)}
               />
               {/* <Form.HelpText>Required</Form.HelpText> */}
             </Form.Group>
@@ -46,6 +129,8 @@ function GetInTouch() {
                 name="phone"
                 type="tel"
                 placeholder="Enter your contact number"
+                value={phone}
+                onChange={(value) => setPhone(value)}
                 required
               />
             </Form.Group>
@@ -61,7 +146,11 @@ function GetInTouch() {
                 required
               > */}
 
-              <InputPicker data={optionsData} />
+              <InputPicker
+                data={optionsData}
+                value={enquiryPurpose}
+                onChange={(value) => setEnquiryPurpose(value)}
+              />
               {/* </Form.Control> */}
             </Form.Group>
 
@@ -71,6 +160,9 @@ function GetInTouch() {
                 name="remark"
                 componentClass="textarea"
                 placeholder="Enter your remark here"
+                value={remarks}
+                required
+                onChange={(value) => setRemarks(value)}
               />
             </Form.Group>
 
@@ -78,12 +170,7 @@ function GetInTouch() {
               <Button appearance="subtle" onClick={handleClose}>
                 Cancel
               </Button>
-              <Button
-                appearance="primary"
-                onClick={() => {
-                  alert("submitted");
-                }}
-              >
+              <Button type="submit" appearance="primary">
                 Submit Enquiry
               </Button>
             </Form.Group>

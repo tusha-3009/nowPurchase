@@ -27,17 +27,17 @@ const testimonials = [
   {
     quote:
       "  My NowPurchase Journey has been exceptional, I have learned a lot and I still learn something new everyday.",
-    name: "Sachin Singh",
+    name: "Harsh Moondra",
     empImg: p3,
-    title: "General Manager-Sales",
+    title: "Assistant Manager-Sales",
   },
 
   {
     quote:
       " I absolutely love the vibe and excitement that comes with my work. It's like having a free pass to try out all sorts of cool things.",
-    name: "Harsh Moondra",
+    name: "Ashish Singh",
     empImg: p4,
-    title: "Assistant Manager-Sales",
+    title: "Finance Manager-Sales",
   },
   {
     quote:
