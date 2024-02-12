@@ -1,61 +1,296 @@
-.testCulture .testSlider {
-  padding: 75px 0;
-}
-
-
-
-.test-prev {
-  margin-right: 20px;
-}
-.test-add {
-  background: #d0e4f2 !important;
-}
-.test-add img {
-  filter: none !important;
-}
-.section.ltr .testSlider {
-  opacity: 0;
-  animation: from-right-in 0.8s linear forwards;
-}
-.testCulture .testSlider {
-  padding: 75px 0;
-}
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  transition-property: transform;
-  box-sizing: content-box;
-}
-.testSec .swiper-slide {
-  transition: 0.4s;
-  opacity: 0.5;
-}
-.swiper-slide {
-  flex-shrink: 0;
-
-  height: 100%;
-  position: relative;
-  transition-property: transform;
-}
-.testCulture .testCard {
-  padding-top: 120px;
-}
-.testCulture .testCard .cTestImage {
+@media (min-width:1440px){.testCulture .testCard1 .cTestImage {
   position: absolute;
   top: -70px;
   border-radius: 16px;
   overflow: hidden;
   height: 160px;
-  width: 160px;
+  width: 160px;margin-right: 50px}
+}@media (min-width:1440px){.testCulture .testCard1 {
+  padding-top: 120px;
 }
-.testCulture .testCard .cTestImage img {
-  background-color: #a1c9e5;
-}.teamBoxWrap .slick-list {
-  padding: 0 15px;
 }
-@media only screen and (max-width: 991px) {.teamBoxWrap .slick-list {
-  padding: 0;
+/*new*/
+.testCard1 p {
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 48px;
+}
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}.testCulture .testSlider {
+  padding: 75px 0;
+}.testCulture .testCard1::before {
+  position: absolute;
+  content: "";
+  top: inherit;
+  bottom: -55px;
+  left: inherit;
+  right: 50px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 120px;
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+.testCard1 {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px;
+  position: relative;
+  height: 484px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;}
+/* 
+.testCulture .testCard1 .cTestImage {
+  position: absolute;
+  top: -70px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 10rem;
+  width: 10rem;
+} */
+.testCard1::before {
+  position: absolute;
+  content: "";
+  top: inherit;
+  bottom: -55px;
+  left: inherit;
+  right: 50px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 120px;
+  height: 100px;
+  transform: rotate(180deg);
+}
+@media (max-width: 1440px){
+   .testSec .testSlider {
+  padding-top: 35px !important;}
+}@media only screen and (max-width: 768px) {
+  .testSec .testSlider {
+    padding: 20px 0 !important;
+  }
+}.testCulture .testCard1::before {
+  position: absolute;
+  content: "";
+  top: inherit;
+  bottom: -55px;
+  left: inherit;
+  right: 50px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 120px;
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 1024px) {.testCulture .testCard1::before {
+  bottom: -52px;
+  right: 30px;
+  transform: scale(0.8) rotate(180deg);}
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {.testCulture .testCard1::before {
+  bottom: -40px;
+  width: 90px;
+  height: 75px;
 }}
+@media only screen and (max-width: 768px) {
+  .testCulture .testCard1::before {
+    right: 20px;
+    bottom: -20px;
+    width: 48px;
+    height: 40px;
+  }
+}@media only screen and (max-width: 768px) {.testCulture .testCard1 .cTestImage img {
+  width: 100% !important;
+}}.testCulture .testCard1::before {
+  position: absolute;
+  content: "";
+  top: inherit;
+  bottom: -55px;
+  left: inherit;
+  right: 50px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 120px;
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 1024px) {.testCulture .testCard1::before {
+  bottom: -52px;
+  right: 30px;
+  transform: scale(0.8) rotate(180deg);
+}
+}
+@media (max-width: 1366px) and (max-height: 768px) {.testCulture .testCard1::before {
+  bottom: -40px;
+  width: 120px;
+  height: 100px;
+  scale: 0.6;
+}}
+
+@media only screen and (max-width: 768px) {.testCulture .testCard1::before {
+  right: -5px;
+  bottom: -49px;
+  width: 120px;
+  height: 100px;
+  scale: 0.4;
+}}
+@media only screen and (max-width: 768px) {.testCard1::before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 15px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 36px;
+  height: 30px;}
+}@media (max-width: 1366px) and (max-height: 768px) { .testCard1 {
+  padding-top: 100px;
+}}
+@media (max-width: 1366px) and (max-height: 768px) {.testCard1 {
+  height: 350px;
+}}
+
+@media (max-width: 1366px) and (max-height: 768px) {.testCard1 {
+  height: 370px;
+}
+}
+.testCard1 {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px;
+  position: relative;
+  height: 484px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testCard1::before {
+  position: absolute;
+  content: "";
+  top: inherit;
+  bottom: -55px;
+  left: inherit;
+  right: 50px;
+  background-image: url(../../../assets/images/marketplace/comma.png);
+  width: 120px;
+  height: 100px;
+  transform: rotate(180deg);
+}@media (max-width: 1366px) and (max-height: 768px) {
+  .testCard1::before {
+    bottom: -40px;
+    width: 90px;
+    height: 75px;
+  }
+}@media only screen and (max-width: 768px) { .testCard1 .cTestImage img {
+  width: 100% !important;
+}}
+
+@media only screen and (max-width: 768px) { .testCard1 .cTestImage {
+  width: 100%;
+}}
+
+@media only screen and (max-width: 768px){ .testCard1 .cTestImage {
+  top: -20px;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 10px;}
+}
+@media (max-width: 1440px) {
+  .testCard1 .cTestImage {
+    position: absolute;
+    top: -45px;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 1366px) and (max-height: 768px) { .testCard1 .cTestImage {
+  width: 120px;
+  height: 120px;
+  top:-35px;
+}}
+
+
+@media (max-width: 1366px) and (max-height: 768px) {.testCard1::before {
+  bottom: -40px;
+  width: 90px;
+  height: 75px;
+}}
+@media only screen and (max-width: 1024px) {
+  .testCard1::before {
+    bottom: -52px;
+    right: 30px;
+    transform: scale(0.8) rotate(180deg);
+  }
+}
+ @media only screen and (max-width: 768px) {
+   .testCard1::before {
+     right: 20px;
+     bottom: -20px;
+     width: 48px;
+     height: 40px;
+   }
+ }@media (max-width: 1366px) and (max-height: 768px) {.testCard1 p {
+  margin-bottom: 25px;
+}}
+
+@media (max-width: 1366px) and (max-height: 768px) {.testCard1 p {
+  font-size: 18px;
+  line-height: 1.7;}
+}@media only screen and (max-width: 1024px) {.testCard1 p {
+  min-height: auto;}
+}@media only screen and (max-width: 768px) {.testCard1 p {
+  min-height: auto;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;}
+}@media (max-width: 575px) {.testCard1 p {
+  font-size: 16px;
+}}.testCard1 {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px;
+  position: relative;
+  height: 484px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;margin-right: 50px;
+}
+@media (max-width: 1366px) and (max-height: 768px) {.testCard1 {
+  height: 350px;}
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {.testCulture .testCard1 {
+  padding-top: 100px;
+}}@media only screen and (max-width: 768px) {
+  .testCulture .testCard1 {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  .testCard1 {
+    padding: 30px 25px;
+    height: 320px;margin-right: 30px;
+  }@media (max-width: 1366px) and (max-height: 768px)  {.testCard1 {
+  padding-top: 100px;}
+}
+}@media only screen and (max-width: 768px) {.testCard1 {
+  padding-top: 50px;
+}}@media only screen and (max-width: 768px) {.testCard1 .cTestImage {
+  top: -20px;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 10px;}
+}@media only screen and (max-width: 768px) {.testCard1 {
+  border-radius: 16px;
+  padding: 16px;
+  padding-top: 50px;margin-right: 10px;
+}}
+.swiper-slide{
+  width: 100%;
+  margin-right: 50px;
+}

@@ -156,7 +156,7 @@
 
 @media only screen and (max-width: 1024px) {.sechead h3,
 .sechead h3 span {
-  font-size: 36px !important;}
+  font-size: 36px }
 }@media only screen and (max-width: 768px) {.sechead h3 {
   font-size: 28px !important;
   line-height: 40px;
@@ -182,4 +182,6 @@
   .stateWrap {
     margin-bottom: 16px;
   }
-}
+}@media only screen and (max-width: 768px){ .sechead h3 span {
+  font-size: 28px !important;
+  line-height: 40px;}}

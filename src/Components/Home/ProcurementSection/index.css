@@ -1,11 +1,11 @@
-.section {
+/* .section {
     width: 100%;
     display: flex;
     transition: 2s;
     align-items: center;
     justify-content: center;
-    /* padding: 120px 0 50px; */
-}
+   
+} */
 .procureSectionWrap {
     padding-top: 130px !important;
     padding-bottom: 120px !important;

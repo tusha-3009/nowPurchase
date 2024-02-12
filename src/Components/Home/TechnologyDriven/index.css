@@ -1,4 +1,4 @@
- .section {
+ /* .section {
   width: 100%;
   display: flex;
   transition: 2s;
@@ -7,7 +7,7 @@
  
 
   padding: 150px 0;
-}
+} */
 .marketbnr {
   padding-top: 190px !important;
 }

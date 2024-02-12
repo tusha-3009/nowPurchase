@@ -1,11 +1,10 @@
-.testSec .section,
-.sectionCards {
+/* .sectionCards {
   width: 100%;
   display: flex;
   transition: 2s;
   align-items: center;
   justify-content: center;
-}
+} */
 .testSec {
   position: relative;
   overflow-x: hidden;
@@ -375,9 +374,9 @@
   .testSec .testSlider {
     padding-top: 20px;
   }
-}@media (max-width: 1366px) and (max-height: 768px) .testCard {
+}@media (max-width: 1366px) and (max-height: 768px) {.testCard {
   height: 370px;
-}
+}}
 
 .testCard {
   background-color: #fff;
@@ -391,7 +390,7 @@
 }
 @media (max-width: 1366px) and (max-height: 768px) {
   .testCard {
-    height: 350px; margin-right: 0;
+    height: 350px; margin-right: 30px;
   }
 }
 @media (max-width: 1200px) {
