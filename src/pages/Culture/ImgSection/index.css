@@ -22,9 +22,7 @@
   flex: 0 0 50%;
   max-width: 50%;
 }
-.teamEachC img {
-  width: 100%;
-}
+
 .lastGal {
   border-radius: 20px;
   flex-direction: column;

@@ -18,7 +18,8 @@
   .event2 .titleText {
     margin-bottom: 8px;
     font-size: 30px !important;
+    line-height: 48px !important;
     font-weight: 700;
-    line-height: 48px;
+  
   }
 }

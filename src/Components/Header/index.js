@@ -25,7 +25,14 @@ const headerTitleJSON = [
   { url: "/application", text: "MetalCloud" },
 ];
 
-function Header() {
+function Header() { 
+  const [isOpen, setIsOpen] = useState(false);
+const [modalOpen, setModalOpen] = useState(false);
+   
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [enquiryPurpose, setEnquiryPurpose] = useState("");
+    const [remarks, setRemarks] = useState("");
   //console.log(window.location.pathname);
   const headerTitle = headerTitleJSON.find(
     ({ url }) => url === window.location.pathname
@@ -35,8 +42,7 @@ function Header() {
       document.title = "NowPurchase || " + headerTitle.text;
     }
   }, [headerTitle]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+ 
   function openMenu() {
     setIsOpen(!isOpen);
   }
@@ -59,6 +65,81 @@ function Header() {
     // console.log(isVisible);
   };
   // console.log(modalOpen);
+
+    const notifyOnSlack = async (channel, message) => {
+      try {
+        const response = await fetch(
+          "https://test-api.nowpurchase.com/api/send_slack/",
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              channel: channel,
+              message: message,
+            }),
+          }
+        );
+        if (!response.ok) {
+          throw new Error("Failed to submit enquiry");
+        }
+
+        return response;
+      } catch (error) {
+        console.error("Fetch error:", error);
+        throw error;
+      }
+    };
+    const handleSubmit = async (e) => {
+      // Validate form fields
+      const namePattern = /^[a-zA-Z\s]*$/;
+      const phonePattern = /^\d+$/;
+
+      if (!name || !namePattern.test(name)) {
+        alert(
+          "Please enter a valid name. Only alphabets and spaces are allowed."
+        );
+        return;
+      }
+
+      if (!phone || !phonePattern.test(phone)) {
+        alert("Please enter a valid phone number. Only numbers are allowed.");
+        return;
+      }
+
+      if (!enquiryPurpose) {
+        alert("Please select your enquiry purpose.");
+        return;
+      }
+
+      if (!remarks) {
+        alert("Please enter remarks");
+        return;
+      }
+
+      const payload = {
+        text: `New enquiry:
+        Name: ${name}
+        Contact Number: ${phone}
+        Enquiry Purpose: ${enquiryPurpose}
+        Remarks: ${remarks}`,
+      };
+
+      try {
+        await notifyOnSlack("NP_WEBSITE", payload.text);
+        alert("Enquiry submitted successfully!");
+      } catch (error) {
+        alert("Error submitting enquiry");
+      } finally {
+        // Reset form fields
+        setName("");
+        setPhone("");
+        setEnquiryPurpose("");
+        setRemarks("");
+      }
+    };
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -68,7 +149,7 @@ function Header() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form fluid>
+          <Form fluid onSubmit={handleSubmit}>
             <Form.Group>
               <Form.ControlLabel for="name">
                 Name <span>*</span>
@@ -78,6 +159,8 @@ function Header() {
                 type="text"
                 placeholder="Enter your name here"
                 Required
+                value={name}
+                onChange={(value) => setName(value)}
               />
               {/* <Form.HelpText>Required</Form.HelpText> */}
             </Form.Group>
@@ -90,6 +173,8 @@ function Header() {
                 name="phone"
                 type="tel"
                 placeholder="Enter your contact number"
+                value={phone}
+                onChange={(value) => setPhone(value)}
                 required
               />
             </Form.Group>
@@ -105,7 +190,11 @@ function Header() {
                 required
               > */}
 
-              <InputPicker data={optionsData} />
+              <InputPicker
+                data={optionsData}
+                value={enquiryPurpose}
+                onChange={(value) => setEnquiryPurpose(value)}
+              />
               {/* </Form.Control> */}
             </Form.Group>
 
@@ -115,6 +204,9 @@ function Header() {
                 name="remark"
                 componentClass="textarea"
                 placeholder="Enter your remark here"
+                value={remarks}
+                required
+                onChange={(value) => setRemarks(value)}
               />
             </Form.Group>
 
@@ -122,12 +214,7 @@ function Header() {
               <Button appearance="subtle" onClick={handleClose}>
                 Cancel
               </Button>
-              <Button
-                appearance="primary"
-                onClick={() => {
-                  alert("submitted");
-                }}
-              >
+              <Button appearance="primary" type="submit">
                 Submit Enquiry
               </Button>
             </Form.Group>
@@ -152,13 +239,10 @@ function Header() {
               </div>
             )}
 
-           
             <div class="btnWrapNew mobBtnWrapNew">
               <ul>
                 <li onClick={() => setModalOpen(true)}>
-                  <a  class="getInTouch">
-                    Get in touch
-                  </a>
+                  <a class="getInTouch">Get in touch</a>
                 </li>
                 <li class="mobWrapBtn" onClick={toggleDrawer}>
                   <a
@@ -192,7 +276,7 @@ function Header() {
                     <nav>
                       <ul>
                         <li>
-                          <a  id="Header_Services">
+                          <a id="Header_Services">
                             Services
                             <span class="toggleBtn">
                               <img loading="lazy" src={ArrowDown} alt="" />
@@ -270,12 +354,8 @@ function Header() {
                   </div>
                   <div class="col-lg-5 btnWrapNew">
                     <ul>
-                      <li onClick={()=>setModalOpen(true)}>
-                        <a
-                         
-                          class="getInTouch"
-                          id="Header_GetInTouch"
-                        >
+                      <li onClick={() => setModalOpen(true)}>
+                        <a class="getInTouch" id="Header_GetInTouch">
                           Get in touch
                         </a>
                       </li>
