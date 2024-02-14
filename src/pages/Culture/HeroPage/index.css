@@ -2,6 +2,13 @@
   .innerBanner {
     padding: 50px 0 50px;
   }
+}.clrboxEach {
+ 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .marketbnr {
   background-color: #e8f2f8;
@@ -230,4 +237,9 @@ flex-wrap: nowrap;
 }}
 @media (max-width: 575px){ .tabTimelineBox {
   display: none;
-}}
+}}.clrboxEach:nth-child(even) {
+  align-items: flex-start;
+}.clrboxEach:nth-child(odd) p {
+  text-align: right;
+  margin-top: 16px;
+}
