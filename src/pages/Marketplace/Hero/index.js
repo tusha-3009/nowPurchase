@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bnrpoly from "../../../assets/images/marketplace/bnrPoly.png";
 import "./index.css";
 import loca from "../../../assets/images/marketplace/loc.png";
 import dummy from "../../../assets/images/dummy.mp4";
 import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
 import Container from "../../../Components/General/Container";
+import { counts } from "../../../constants";
 function Hero() {
+  const [count, setCount] = useState("0");
+
+// const counter=(number)=>{
+// let start = 0;
+// const end = parseInt(number);
+// if (start === end) return;
+
+// let duration = 2;
+// let incrementTime = (duration / end) * 1000;
+
+// let timer = setInterval(() => {
+//   start += 1;
+//  let x=start + number;
+//  return x;
+//   if (start === end) clearInterval(timer);
+// }, incrementTime);
+
+//     }
   return (
     <div
       className="marketbnr serviceSec animated-section section pb-0"
@@ -98,30 +117,15 @@ function Hero() {
                 </div>
 
                 <div className="keyWrap">
-                  <div className="eachkey">
-                    <h4>
-                      <span className="counter">39000</span>+ Tonnes
-                    </h4>
-                    <h6>raw materials delivered</h6>
-                  </div>
-                  <div className="eachkey">
-                    <h4>
-                      <span className="counter">150</span>+ Clients
-                    </h4>
-                    <h6>savoured by our services</h6>
-                  </div>
-                  <div className="eachkey">
-                    <h4>
-                      <span className="counter">100,000</span>+ Orders
-                    </h4>
-                    <h6>received and delivered</h6>
-                  </div>
-                  <div className="eachkey">
-                    <h4>
-                      <span className="counter">98.1</span>% Delivery
-                    </h4>
-                    <h6>success on 1st attempt</h6>
-                  </div>
+                  {counts.map(({ number, text, title }) => (
+                    <div className="eachkey">
+                      <h4>
+                        <span className="counter" >{number}</span>{text}
+                      </h4>
+                      <h6>{title}</h6>
+                    </div>
+                  ))}
+                
                 </div>
               </div>
             </div>

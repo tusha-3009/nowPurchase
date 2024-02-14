@@ -402,4 +402,9 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 800;
+}}@media only screen and (max-width: 768px) {.keyNumber .eachkey h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }}

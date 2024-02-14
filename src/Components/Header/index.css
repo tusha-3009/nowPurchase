@@ -241,3 +241,14 @@ nav ul li a {
   flex: 0 0 calc(100% - (160px + 25%));
   max-width: calc(100% - (160px + 25%));
 }
+@media (max-width: 1440px) {.pageTitleNew li span {
+  font-size: 16px;
+}}@media (max-width: 1365px) {nav ul li .services {
+  font-size: 14px;
+}
+nav ul li .careers {
+  font-size: 14px;
+}
+nav ul li .culture no {
+  font-size: 14px;
+}}

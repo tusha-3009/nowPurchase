@@ -52,7 +52,7 @@ function ImgSection() {
                 <div className="col-md-6">
                   <a
                     className="teamEachC"
-                    href={c1}
+                    href={img1}
                     data-fancybox="gallery"
                   >
                     <img
