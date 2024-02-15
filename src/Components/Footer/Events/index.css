@@ -286,7 +286,7 @@
   flex-direction: row;
 }
 .event1 .tabContBox .mainBox {
-  align-items: center;
+  align-items: flex-start;
 }
 .eventImgM img {
   width: 100%;
