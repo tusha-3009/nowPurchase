@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 import careerBannerNew from "../../../assets/images/career/careerBannerNew.png";
 import clr1 from "../../../assets/images/culture/clr-1.png";
@@ -13,14 +13,14 @@ import carPic from "../../../assets/images/culture/car-1.png";
 import Container from "../../../Components/General/Container";
 function HeroPageCulture() {
   const [scrollY, setScrollY] = useState(0);
-const [matrix, setMatrix] = useState({
-  a: 0.99216,
-  b: -0.12496,
-  c: 0.12496,
-  d: 0.99216,
-  tx: -62.92187,
-  ty: 9.53429,
-});
+  const [matrix, setMatrix] = useState({
+    a: 0.99216,
+    b: -0.12496,
+    c: 0.12496,
+    d: 0.99216,
+    tx: -62.92187,
+    ty: 9.53429,
+  });
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -31,11 +31,8 @@ const [matrix, setMatrix] = useState({
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-
 
   useEffect(() => {
-
     if (scrollY < 600) {
       setMatrix({
         a: 0.99216,
@@ -311,8 +308,6 @@ const [matrix, setMatrix] = useState({
                     transformOrigin: "0px 0px",
                   }}
                 ></image>
-
-          
 
                 <defs>
                   <linearGradient

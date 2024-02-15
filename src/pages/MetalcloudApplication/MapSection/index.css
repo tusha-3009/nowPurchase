@@ -184,4 +184,13 @@
   }
 }@media only screen and (max-width: 768px){ .sechead h3 span {
   font-size: 28px !important;
-  line-height: 40px;}}
+  line-height: 40px;}}.eachPointer {
+    position: absolute;
+    z-index: 3;
+    transition: 0.6s;
+  }
+  
+  .eachPointer:hover {
+    transform: scale(2);
+    z-index: 5;
+  }
