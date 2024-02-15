@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import mapIcon from "../../../assets/images/career/mapIcon.svg";
-import timerIcon from "../../../assets/images/career/timerIcon.svg";
+import calenderIcon from "../../../assets/images/career/calendar-2-line.svg";
 import eventIFEX5 from "../../../assets/images/events/eventIFEX5.png";
 import eventIFEX3 from "../../../assets/images/events/eventIFEX3.png";
 import eventIFEX4 from "../../../assets/images/events/eventIFEX4.png";
@@ -51,7 +51,7 @@ function EventsPage() {
                           </span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>February 2nd - 4th, 2024</span>
                         </li>
                       </ul>
@@ -89,7 +89,7 @@ function EventsPage() {
                           <span>Park Prime Hotel, Kolkata</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>January 13, 2024</span>
                         </li>
                       </ul>
@@ -112,7 +112,7 @@ function EventsPage() {
                       </span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>28th-30th November</span>
                     </li>
                   </ul>
@@ -130,7 +130,7 @@ function EventsPage() {
                       <span>KIIT, Bhubaneswar</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>November 22-24, 2023</span>
                     </li>
                   </ul>
@@ -148,7 +148,7 @@ function EventsPage() {
                       <span>Eco Park, Rajarhat, Kolkata</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>November 6-9, 2023</span>
                     </li>
                   </ul>
@@ -166,7 +166,7 @@ function EventsPage() {
                       <span>Dubai, United Arab Emirates</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>20-21st October 2023</span>
                     </li>
                   </ul>
@@ -203,7 +203,7 @@ function EventsPage() {
                           <span>Hotel Pavillion, Shahupuri, Kolhapur</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>October 13 2023</span>
                         </li>
                       </ul>
@@ -224,7 +224,7 @@ function EventsPage() {
                       <span>Bangkok, Thailand</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>20-23rd September 2023</span>
                     </li>
                   </ul>
@@ -262,7 +262,7 @@ function EventsPage() {
                           <span>Pavillion Hotel, Assembly Road, Kolhapur</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>October 1, 2023</span>
                         </li>
                       </ul>
@@ -300,7 +300,7 @@ function EventsPage() {
                           <span>ITC Royal Bengal, Kolkata</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>April 22, 2023</span>
                         </li>
                       </ul>
@@ -331,7 +331,7 @@ function EventsPage() {
                           <span>Mayfair Lake Resort, Raipur (C.G.), India</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>25 - 26 March, 2023</span>
                         </li>
                       </ul>
@@ -369,7 +369,7 @@ function EventsPage() {
                           <span>India Expo Mart, Greater Noida, India</span>
                         </li>
                         <li>
-                          <img loading="lazy" src={timerIcon} alt="" />
+                          <img loading="lazy" src={calenderIcon} alt="" />
                           <span>February 8–10, 2023</span>
                         </li>
                       </ul>
@@ -402,7 +402,7 @@ function EventsPage() {
                       <span>Codissia Trade Fair Complex, Coimbatore</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>August 22 - 24, 2024</span>
                     </li>
                   </ul>
@@ -428,7 +428,7 @@ function EventsPage() {
                       <span>Kolhapur, India</span>
                     </li>
                     <li>
-                      <img loading="lazy" src={timerIcon} alt="" />
+                      <img loading="lazy" src={calenderIcon} alt="" />
                       <span>Febr/uary (TBD)</span>
                     </li>
                   </ul>

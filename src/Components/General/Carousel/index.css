@@ -17,15 +17,7 @@
   padding: 20px;
 }
 
-.imgBoxWrap .imgBoxEach > div {
-  text-align: center;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  justify-content: center;
-  background: #ffffff;
-}
+
 
 /* .imgBoxWrap .imgBoxEach img {
     padding: 30px 40px;
@@ -152,11 +144,7 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
-.imgBoxWrap.slick-initialized .slick-slide > div {
-  text-align: center;
-  height: 140px;
-  background: #ffffff;
-}
+
 .teamBoxWrap .slick-list {
   padding: 0 0 0 15px;
 }
@@ -175,3 +163,56 @@
   display: table;
   content: '';
 }
+.slick-slider button{
+  display: none !important;
+}
+.imgBoxEach{
+  padding: 20px;
+}
+.imgBoxEach>div {
+  padding: 20px;
+}
+ .imgBoxEach>div {
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: center;
+  background: #ffffff;
+}
+.imgBoxEach img {
+   max-width: 80%;
+ }
+
+
+ @media only screen and (max-width:640px){
+.imgBoxEach img {
+    max-width: 240px;
+    width: auto !important;
+    padding: 10px;
+  }
+ }
+ 
+ @media  (max-width:575px) {
+   .imgBoxEach img {
+     max-width: 200px;
+ }} @media (max-width:420px) {
+   .imgBoxEach img {
+     max-height: 90px;
+     width: auto !important;
+     padding: 10px;
+   }}
+ @media only screen and (max-width:640px){.imgBoxEach>div {
+  flex-direction: column;
+ align-items: center;
+ border-radius: 12px;
+ justify-content: center;
+ margin: 20px ;
+ }}
+ @media (max-width:575px) {
+  .imgBoxEach>div {
+  padding: 40px;
+  height: 100px;
+  margin: 20px 10px;
+ }} 

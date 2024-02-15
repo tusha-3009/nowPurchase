@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import img12 from "../../../assets/images/logo/image_12.png";
 import img13 from "../../../assets/images/logo/image_13.png";
 import img14 from "../../../assets/images/logo/image_14.png";
@@ -9,304 +9,65 @@ import img5 from "../../../assets/images/logo/image_5.png";
 import img7 from "../../../assets/images/logo/image_7.png";
 import img8 from "../../../assets/images/logo/image_8.png";
 import img10 from "../../../assets/images/logo/image_10.png";
-
+import Slider from "react-slick";
 import "./index.css";
+const cards = [img12, img13, img14, img16, img2, img4, img5, img7, img8, img10];
+
+const companyCard = (img) => (
+  <div
+    class="imgBoxEach slick-slide slick-cloned"
+    style={{ width: "327px" }}
+    tabindex="-1"
+    data-slick-index="-4"
+    aria-hidden="true"
+  >
+    <div>
+      <img loading="lazy" src={img} alt="" />
+    </div>
+  </div>
+);
 function CarouselCompanyCards() {
-  const [translateValue, setTranslateValue] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTranslateValue((prevTranslate) => prevTranslate - 327);
-    }, 1000);
+  const sliderRef = useRef(null);
 
-    return () => clearInterval(intervalId);
-  }, []); 
-  const totalWidth = 24 * 327;
    useEffect(() => {
-     if (translateValue <= -totalWidth) {
-       setTranslateValue(0);
-     }
-   }, [translateValue, totalWidth]);
+     const interval = setInterval(() => {
+       sliderRef.current.slickNext();
+     }, 2000); // Adjust autoplay speed here
+     return () => clearInterval(interval);
+   }, []);
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+  if (window.innerWidth < 350) {
+    sliderSettings.slidesToShow = 1;}
+  else if (window.innerWidth < 800) {
+    sliderSettings.slidesToShow = 2;
+  } else if (window.innerWidth < 1100) {
+    sliderSettings.slidesToShow = 3;
+  } else {
+    sliderSettings.slidesToShow = 4;
+  } 
   return (
     <>
-      <div class="imgBoxWrap imgBoxlider slick-initialized slick-slider">
-        <div class="slick-list">
-          <div
-            class="slick-track"
-            style={{
-              opacity: 1,
-              width: "7848px",
-              transform: `translate3d(${translateValue}px, 0px, 0px)`,
-              transition: "transform 1000ms ease 0s",
-            }}
-            // onTransitionEnd={setTranslateValue(0)}
-          >
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="-4"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img12} alt="" />
+      <div className="carousel-container">
+        <Slider ref={sliderRef} {...sliderSettings}>
+          {cards.map((card, index) => (
+            <div key={index} className="swiper testSlider">
+              <div className="imgBoxEach">
+                <div>
+                  <img loading="lazy" src={card} alt="" />
+                </div>
               </div>
             </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="-3"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img13} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="-2"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img14} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="-1"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img16} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="0"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img2} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="1"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img4} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="2"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img5} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="3"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img7} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="4"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img8} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="5"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img10} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="6"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img12} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide"
-              style={{ width: "327px" }}
-              tabindex="0"
-              data-slick-index="7"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img13} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-current slick-active"
-              style={{ width: "327px" }}
-              tabindex="0"
-              data-slick-index="8"
-              aria-hidden="false"
-            >
-              <div>
-                <img loading="lazy" src={img14} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-active"
-              style={{ width: "327px" }}
-              tabindex="0"
-              data-slick-index="9"
-              aria-hidden="false"
-            >
-              <div>
-                <img loading="lazy" src={img16} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned slick-active"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="10"
-              aria-hidden="false"
-            >
-              <div>
-                <img loading="lazy" src={img2} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned slick-active"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="11"
-              aria-hidden="false"
-            >
-              <div>
-                <img loading="lazy" src={img4} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="12"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img5} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="13"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img7} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="14"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img8} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="15"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img10} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="16"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img12} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="17"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img13} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="18"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img14} alt="" />
-              </div>
-            </div>
-            <div
-              class="imgBoxEach slick-slide slick-cloned"
-              style={{ width: "327px" }}
-              tabindex="-1"
-              data-slick-index="19"
-              aria-hidden="true"
-            >
-              <div>
-                <img loading="lazy" src={img16} alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+          ))}
+        </Slider>
       </div>
     </>
   );
