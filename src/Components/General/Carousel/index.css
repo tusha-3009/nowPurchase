@@ -196,7 +196,7 @@
  
  @media  (max-width:575px) {
    .imgBoxEach img {
-     max-width: 200px;
+     max-width: 160px;
  }} @media (max-width:420px) {
    .imgBoxEach img {
      max-height: 90px;
@@ -213,6 +213,7 @@
  @media (max-width:575px) {
   .imgBoxEach>div {
   padding: 40px;
-  height: 100px;
+  height: 90px;
+  width: 150px;
   margin: 20px 10px;
  }} 
