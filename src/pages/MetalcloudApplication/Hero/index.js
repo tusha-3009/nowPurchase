@@ -4,13 +4,13 @@ import marketPlacePic from "../../../assets/images/marketplace/bnrPlay.png"
 import locationLogo from "../../../assets/images/marketplace/loc.png";
 import applPoly from "../../../assets/images/application/applPoly.png";
 import Container from '../../../Components/General/Container';
+import CountUp from "react-countup";
+import { countc } from "../../../constants";
+
+
 function MeltingProcessMadeReliable() {
   return (
-    <div
-      class="marketbnr animated-section section serviceSec pb-0"
-      
-      id="sec21"
-    >
+    <div class="marketbnr animated-section section serviceSec pb-0" id="sec21">
       <div class="overflowSection">
         <Container>
           <div class="row bannerContent aosAnim">
@@ -81,30 +81,18 @@ function MeltingProcessMadeReliable() {
                 </div>
 
                 <div class="keyWrap">
-                  <div class="eachkey">
-                    <h4>
-                      <span class="counter">93</span>% Accurate
-                    </h4>
-                    <h6>Addition/Dilution Suggestion</h6>
-                  </div>
-                  <div class="eachkey">
-                    <h4>
-                      <span class="counter">25</span>% Reduction
-                    </h4>
-                    <h6>in Metallurgical Rejection</h6>
-                  </div>
-                  <div class="eachkey">
-                    <h4>
-                      <span class="counter">10</span>% Reduced
-                    </h4>
-                    <h6>Production Time</h6>
-                  </div>
-                  <div class="eachkey">
-                    <h4>
-                      <span class="counter">6</span>% Minimised
-                    </h4>
-                    <h6>Production Costs</h6>
-                  </div>
+                  {countc.map(({ number, text, title }) => (
+                    <div className="eachkey">
+                      <h4>
+                        <span className="counter">
+                          {" "}
+                          <CountUp end={number} duration={4.5} />
+                        </span>
+                        {text}
+                      </h4>
+                      <h6>{title}</h6>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

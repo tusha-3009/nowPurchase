@@ -13,19 +13,7 @@ import Slider from "react-slick";
 import "./index.css";
 const cards = [img12, img13, img14, img16, img2, img4, img5, img7, img8, img10];
 
-const companyCard = (img) => (
-  <div
-    class="imgBoxEach slick-slide slick-cloned"
-    style={{ width: "327px" }}
-    tabindex="-1"
-    data-slick-index="-4"
-    aria-hidden="true"
-  >
-    <div>
-      <img loading="lazy" src={img} alt="" />
-    </div>
-  </div>
-);
+
 function CarouselCompanyCards() {
 
   const sliderRef = useRef(null);

@@ -6,25 +6,9 @@ import dummy from "../../../assets/images/dummy.mp4";
 import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
 import Container from "../../../Components/General/Container";
 import { counts } from "../../../constants";
+import CountUp from "react-countup";
 function Hero() {
-  const [count, setCount] = useState("0");
 
-// const counter=(number)=>{
-// let start = 0;
-// const end = parseInt(number);
-// if (start === end) return;
-
-// let duration = 2;
-// let incrementTime = (duration / end) * 1000;
-
-// let timer = setInterval(() => {
-//   start += 1;
-//  let x=start + number;
-//  return x;
-//   if (start === end) clearInterval(timer);
-// }, incrementTime);
-
-//     }
   return (
     <div
       className="marketbnr serviceSec animated-section section pb-0"
@@ -80,6 +64,7 @@ function Hero() {
             </div>
           </div>
         </Container>
+
         <div className="addr aosAnim ltr">
           <div className="container">
             <div className="locWrap d-flex align-items-center">
@@ -120,12 +105,15 @@ function Hero() {
                   {counts.map(({ number, text, title }) => (
                     <div className="eachkey">
                       <h4>
-                        <span className="counter" >{number}</span>{text}
+                        <span className="counter">
+                          {" "}
+                          <CountUp end={number} duration={4.5} />
+                        </span>
+                        {text}
                       </h4>
                       <h6>{title}</h6>
                     </div>
                   ))}
-                
                 </div>
               </div>
             </div>
