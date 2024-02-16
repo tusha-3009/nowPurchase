@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./index.css";
 import t1 from "../../../assets/images/career/team1.png";
 import t2 from "../../../assets/images/career/team2.png";
@@ -8,7 +8,46 @@ import t5 from "../../../assets/images/career/team5.png";
 import t6 from "../../../assets/images/career/team6.png";
 import careerBannerImg from "../../../assets/images/career/careerBannerImg.png";
 import Container from "../../../Components/General/Container";
+import Slider from "react-slick";
+const data = [
+  { name: "Debraj Dutta", img: t1, year: "June 2022" },
+  { name: "Rainark Saha", img: t2, year: "October 2022" },
+  { name: "Tanumoy Saha", img: t3, year: "November 2022" },
+  { name: "Debopam Ghosh", img: t4, year: "December 2022" },
+  { name: "Anish Kumar", img: t5, year: "January 2023" },
+  { name: "Arya Vikram Singh", img: t6, year: "February 2023" },
+];
+
 function HeroCareers() {
+  
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      sliderRef.current.slickNext();
+    }, 2000); // Adjust autoplay speed here
+    return () => clearInterval(interval);
+  }, []);
+  const sliderSettings = {
+    dots: false,
+    infinite: false,
+    speed: 1000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: false
+  };
+  if (window.innerWidth < 300) {
+    sliderSettings.slidesToShow = 1;
+  } else if (window.innerWidth < 600) {
+    sliderSettings.slidesToShow = 2;
+  }else if (window.innerWidth < 1100) {
+    sliderSettings.slidesToShow = 3;
+  } 
+  else if (window.innerWidth < 1400) {
+    sliderSettings.slidesToShow = 4;
+  }   else {
+    sliderSettings.slidesToShow = 6;
+  } 
   return (
     <>
       <div className="mainBanner innerBanner marketbnr animated-section section">
@@ -67,153 +106,48 @@ function HeroCareers() {
                 <span className="gradientText skyText"> NowPlayers!</span>
               </h2>
               <div class="teamBoxWrap teamBoxlider aosAnim slick-initialized slick-slider ltr">
-                <div
+                {/* <div
                   class="slick-list draggable"
                   style={{ padding: "0px 15px" }}
-                >
+  >*/}
                   <div
                     class="slick-track"
                     style={{
                       opacity: 1,
-                      width: "1296px",
+                      width: "100%",
                       transform: "translate3d(0px, 0px, 0px)",
                     }}
-                  >
-                    <div
-                      class="imgBoxHolder slick-slide"
-                      style={{ width: "216px" }}
-                      data-slick-index="0"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <span class="yearTitle">June 2022</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t1}
-                            alt=""
-                          />
+                  > 
+                    <Slider ref={sliderRef} {...sliderSettings}>
+                      {data.map((item, index) => (
+                        <div
+                          key={index}
+                          className="imgBoxHolder slick-slide"
+                          // style={{ width: "216px" }}
+                          data-slick-index={index}
+                          aria-hidden={index === 4 ? "false" : "true"}
+                          tabIndex={index === 4 ? "0" : "-1"}
+                        >
+                          <span className="yearTitle">{item.year}</span>
+                          <div className="imgEachBoxx">
+                            <div className="imgBox">
+                              <img
+                                style={{ height: "100%" }}
+                                loading="lazy"
+                                src={item.img}
+                                alt=""
+                              />
+                            </div>
+                            <div className="imgCont">
+                              <p>{item.name}</p>
+                            </div>
+                          </div>
                         </div>
-                        <div class="imgCont">
-                          <p>Debraj Dutta</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="imgBoxHolder slick-slide"
-                      style={{ width: "216px" }}
-                      data-slick-index="1"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <span class="yearTitle">October 2022</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t2}
-                            alt=""
-                          />
-                        </div>
-                        <div class="imgCont">
-                          <p>Rainark Saha</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="imgBoxHolder slick-slide"
-                      style={{ width: "216px" }}
-                      data-slick-index="2"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <span class="yearTitle">November 2022</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t3}
-                            alt=""
-                          />
-                        </div>
-                        <div class="imgCont">
-                          <p>Tanumoy Saha</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="imgBoxHolder slick-slide"
-                      style={{ width: "216px" }}
-                      data-slick-index="3"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <span class="yearTitle">December 2022</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t4}
-                            alt=""
-                          />
-                        </div>
-                        <div class="imgCont">
-                          <p>Debopam Ghosh</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="imgBoxHolder slick-slide slick-current slick-center"
-                      style={{ width: "216px" }}
-                      data-slick-index="4"
-                      aria-hidden="true"
-                      tabindex="0"
-                    >
-                      <span class="yearTitle">January 2023</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t5}
-                            alt=""
-                          />
-                        </div>
-                        <div class="imgCont">
-                          <p>Anish Kumar</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="imgBoxHolder slick-slide"
-                      style={{ width: "216px" }}
-                      data-slick-index="5"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <span class="yearTitle">February 2023</span>
-                      <div class="imgBoxEach">
-                        <div class="imgBox">
-                          <img
-                            style={{ height: "100%" }}
-                            loading="lazy"
-                            src={t6}
-                            alt=""
-                          />
-                        </div>
-                        <div class="imgCont">
-                          <p>Arya Vikram Singh</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      ))}
+                    </Slider>
+                
               </div>
+         </div>
             </div>
           </div>
         </Container>

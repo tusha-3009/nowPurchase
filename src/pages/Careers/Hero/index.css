@@ -119,7 +119,7 @@ width: 100%;
                                     background-position: 0 0;
                                     bottom: -40px;
                                     left: -10px;
-                                }.teamBoxWrap .imgBoxEach {
+                                }.teamBoxWrap .imgEachBoxx {
                                     position: relative;
                                     display: flex;
                                     align-items: center;
@@ -127,7 +127,7 @@ width: 100%;
                                     background: #e8f2f8;
                                     margin-top: 80px;
                                     margin-right: 40px;
-                                }.teamBoxWrap .imgBoxEach:before {
+                                }.teamBoxWrap .imgEachBoxx:before {
                                     width: 40px;
                                     height: 40px;
                                     background: #e8f2f8;
@@ -136,22 +136,22 @@ width: 100%;
                                     position: absolute;
                                         content: "";
                                         border-radius: 50%;
-                                }.teamBoxWrap .imgBoxEach .imgBox {
+                                }.teamBoxWrap .imgEachBoxx .imgBox {
                                     width: 100px;
                                     height: 100px;
-                                }.teamBoxWrap .imgBoxEach .imgCont {
+                                }.teamBoxWrap .imgEachBoxx .imgCont {
                                     width: 120px;
                                     height: 100px;
                                     padding: 8px 12px;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                }.teamBoxWrap .imgBoxEach .imgCont p {
+                                }.teamBoxWrap .imgEachBoxx .imgCont p {
                                     font-weight: 600;
                                     line-height: 28px;
                                     color: #303030;
                                     font-size: 16px;
-                                }.teamBoxWrap .imgBoxEach:after {
+                                }.teamBoxWrap .imgEachBoxx:after {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -213,7 +213,7 @@ width: 100%;
     background-position: 0 0;
     bottom: -40px;
     left: -10px;
-}.teamBoxWrap .imgBoxEach {
+}.teamBoxWrap .imgEachBoxx {
     position: relative;
     display: flex;
     align-items: center;
@@ -221,31 +221,31 @@ width: 100%;
     background: #e8f2f8;
     margin-top: 80px;
     margin-right: 40px;
-}.teamBoxWrap .imgBoxEach:before {
+}.teamBoxWrap .imgEachBoxx:before {
     width: 40px;
     height: 40px;
     background: #e8f2f8;
     left: -15px;
     top: -62px;
-}.teamBoxWrap .imgBoxEach .imgBox {
+}.teamBoxWrap .imgEachBoxx .imgBox {
     width: 100px;
     height: 100px;
-}.teamBoxWrap .imgBoxEach .imgBox img {
+}.teamBoxWrap .imgEachBoxx .imgBox img {
     width: 100%;
 }.slick-slide img {
     display: block;
-}.teamBoxWrap .imgBoxEach .imgCont {
+}.teamBoxWrap .imgEachBoxx .imgCont {
     width: 120px;
     height: 100px;
     padding: 8px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-}.teamBoxWrap .imgBoxEach .imgCont p {
+}.teamBoxWrap .imgEachBoxx .imgCont p {
     font-weight: 600;
     font-size: 16px;
         line-height: 28px;
-}.teamBoxWrap .imgBoxEach:after {
+}.teamBoxWrap .imgEachBoxx:after {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -276,7 +276,7 @@ width: 100%;
     background-position: 0 0;
     bottom: -40px;
     left: -10px;
-}.teamBoxWrap .imgBoxEach {
+}.teamBoxWrap .imgEachBoxx {
     position: relative;
     display: flex;
     align-items: center;
@@ -284,17 +284,17 @@ width: 100%;
     background: #e8f2f8;
     margin-top: 80px;
     margin-right: 40px;
-}.teamBoxWrap .imgBoxEach .imgCont {
+}.teamBoxWrap .imgEachBoxx .imgCont {
     width: 120px;
     height: 100px;
     padding: 8px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-}.teamBoxWrap .imgBoxEach .imgCont p {
+}.teamBoxWrap .imgEachBoxx .imgCont p {
     font-weight: 600;
     font-size: 16px;line-height: 28px;
-}.teamBoxWrap .imgBoxEach:after {
+}.teamBoxWrap .imgEachBoxx:after {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -315,3 +315,73 @@ width: 100%;
 }}@media (max-width: 575px){ .teamSectionWrap {
     padding-bottom: 80px !important;
 }}
+.teamBoxWrap .imgEachBoxx .imgCont {
+    width: 120px;
+    height: 100px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:1440px) {
+    .teamBoxWrap .imgBoxHolder .yearTitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .teamBoxWrap .imgEachBoxx:before {
+        width: 30px;
+        height: 30px;
+        top: -43px;
+    }
+
+    .teamBoxWrap .imgEachBoxx:after {
+        left: -7px;
+        width: 15px;
+        height: 15px;
+        top: -36px;
+    }.teamBoxWrap .imgBoxHolder .yearTitle:after {
+       bottom: -52px;
+}}
+@media only screen and (max-width:991px) {
+.teamBoxWrap .imgEachBoxx .imgBox {
+        width: 40px;
+        height: 42px;
+    } .teamBoxWrap .imgEachBoxx .imgCont {
+         width: calc(100% - 40px);
+         height: 42px;
+     }.teamBoxWrap .imgEachBoxx .imgCont p {
+        font-size: 12px;
+        line-height: 15px;
+    }.teamBoxWrap .imgEachBoxx {
+        margin-right: 20px;
+        margin-top: 60px;
+    }
+        .teamBoxWrap .imgEachBoxx:before {
+            top: -42px;
+            left: 0px;
+            width: 16px;
+            height: 16px;
+        }.imgEachBoxx .imgBoxEach:after {
+             width: 8px;
+             height: 8px;
+             left: 4px;
+             top: -38px;
+         }.teamBoxWrap .imgBoxHolder .yearTitle:after {
+            bottom: -27px;
+            left: 0;
+        }.teamBoxWrap .imgEachBoxx:after {
+            left: 3px;
+            width: 9px;
+            height: 9px;
+            top: -39px;
+        }
+}
+
+@media (max-width:575px) {
+    .teamBoxWrap .imgBoxHolder .yearTitle {
+            font-size: 10px;
+            line-height: 13px;
+        }
+       
+        }

@@ -11,138 +11,180 @@ import tabTimeline from "../../../assets/images/culture/tabTimeline.jpg";
 import mobTimeline from "../../../assets/images/culture/mobTimeline.jpg";
 import carPic from "../../../assets/images/culture/car-1.png";
 import Container from "../../../Components/General/Container";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import AOS from "aos";
+import "../../../../src/assets/css/aos.css";
 function HeroPageCulture() {
-  const [scrollY, setScrollY] = useState(0);
-  const [matrix, setMatrix] = useState({
-    a: 0.99216,
-    b: -0.12496,
-    c: 0.12496,
-    d: 0.99216,
-    tx: -62.92187,
-    ty: 9.53429,
+
+
+useEffect(() => {
+ 
+  AOS.init({
+    duration: 1200,
   });
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // Register GSAP plugins
+  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-  useEffect(() => {
-    if (scrollY < 600) {
-      setMatrix({
-        a: 0.99216,
-        b: -0.12496,
-        c: 0.12496,
-        d: 0.99216,
-        tx: -62.92187,
-        ty: 9.53429,
-      });
-    } else if (scrollY >= 600 && scrollY < 700) {
-      setMatrix({
-        a: 0.99081,
-        b: -0.13523,
-        c: 0.13523,
-        d: 0.99081,
-        tx: -31.84863,
-        ty: 6.00762,
-      });
-    } else if (scrollY >= 700 && scrollY < 800) {
-      setMatrix({
-        a: 0.99918,
-        b: -0.04052,
-        c: 0.04052,
-        d: 0.99918,
-        tx: 172.29105,
-        ty: -20.39808,
-      });
-    } else if (scrollY >= 800 && scrollY < 900) {
-      setMatrix({
-        a: 0.251636,
-        b: 0.97631,
-        c: -0.9931,
-        d: 0.21636,
-        tx: 439.84834,
-        ty: 12.55805,
-      });
-    } else if (scrollY >= 900 && scrollY < 1000) {
-      setMatrix({
-        a: -0.69886,
-        b: 0.71526,
-        c: -0.71526,
-        d: -0.69886,
-        tx: 381.24702,
-        ty: 210.5465,
-      });
-    } else if (scrollY >= 1000 && scrollY < 1100) {
-      setMatrix({
-        a: 0.60876,
-        b: 0.79335,
-        c: -0.79335,
-        d: 0.60876,
-        tx: 305.38491,
-        ty: 340.76333,
-      });
-    } else if (scrollY >= 1100 && scrollY < 1200) {
-      setMatrix({
-        a: 0.98023,
-        b: 0.19788,
-        c: -0.19788,
-        d: 0.98023,
-        tx: 444.59701,
-        ty: 426.59716,
-      });
-    } else if (scrollY >= 1200 && scrollY < 1300) {
-      setMatrix({
-        a: 0.00526,
-        b: 0.99999,
-        c: -0.99999,
-        d: -0.00526,
-        tx: 670.45153,
-        ty: 547.42305,
-      });
-    } else if (scrollY >= 1300 && scrollY < 1400) {
-      setMatrix({
-        a: -0.79019,
-        b: 0.61287,
-        c: -0.61287,
-        d: -0.61287,
-        tx: 584.39696,
-        ty: 755.02359,
-      });
-    } else if (scrollY >= 1400 && scrollY < 1500) {
-      setMatrix({
-        a: 0.84668,
-        b: 0.53211,
-        c: -0.53211,
-        d: 0.84668,
-        tx: 415.63194,
-        ty: 849.76787,
-      });
-    } else if (scrollY >= 1500 && scrollY < 1600) {
-      setMatrix({
-        a: 0.99874,
-        b: 0.05013,
-        c: -0.05013,
-        d: 0.99874,
-        tx: 583.86961,
-        ty: 919.21181,
-      });
-    } else if (scrollY >= 1600) {
-      setMatrix({
-        a: 0.94032,
-        b: -0.3403,
-        c: 0.3403,
-        d: 0.94032,
-        tx: 692.83504,
-        ty: 934.55263,
-      });
-    }
-  }, [scrollY]);
+  // GSAP Animation
+  const main = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#svg",
+        scrub: true,
+        start: "top top",
+        end: "bottom center",
+      },
+    })
+    .to("#target", {
+      duration: 25,
+      motionPath: {
+        path: "#mainPath",
+        align: "#mainPath",
+        alignOrigin: [0.6, 0.6],
+        autoRotate: true,
+      },
+    });
+
+  // Cleanup function for useEffect
+  return () => {
+    main.kill();
+  };
+}, []);
+
+  // const [scrollY, setScrollY] = useState(0);
+  // const [matrix, setMatrix] = useState({
+  //   a: 0.99216,
+  //   b: -0.12496,
+  //   c: 0.12496,
+  //   d: 0.99216,
+  //   tx: -62.92187,
+  //   ty: 9.53429,
+  // });
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   if (scrollY < 600) {
+  //     setMatrix({
+  //       a: 0.99216,
+  //       b: -0.12496,
+  //       c: 0.12496,
+  //       d: 0.99216,
+  //       tx: -62.92187,
+  //       ty: 9.53429,
+  //     });
+  //   } else if (scrollY >= 600 && scrollY < 700) {
+  //     setMatrix({
+  //       a: 0.99081,
+  //       b: -0.13523,
+  //       c: 0.13523,
+  //       d: 0.99081,
+  //       tx: -31.84863,
+  //       ty: 6.00762,
+  //     });
+  //   } else if (scrollY >= 700 && scrollY < 800) {
+  //     setMatrix({
+  //       a: 0.99918,
+  //       b: -0.04052,
+  //       c: 0.04052,
+  //       d: 0.99918,
+  //       tx: 172.29105,
+  //       ty: -20.39808,
+  //     });
+  //   } else if (scrollY >= 800 && scrollY < 900) {
+  //     setMatrix({
+  //       a: 0.251636,
+  //       b: 0.97631,
+  //       c: -0.9931,
+  //       d: 0.21636,
+  //       tx: 439.84834,
+  //       ty: 12.55805,
+  //     });
+  //   } else if (scrollY >= 900 && scrollY < 1000) {
+  //     setMatrix({
+  //       a: -0.69886,
+  //       b: 0.71526,
+  //       c: -0.71526,
+  //       d: -0.69886,
+  //       tx: 381.24702,
+  //       ty: 210.5465,
+  //     });
+  //   } else if (scrollY >= 1000 && scrollY < 1100) {
+  //     setMatrix({
+  //       a: 0.60876,
+  //       b: 0.79335,
+  //       c: -0.79335,
+  //       d: 0.60876,
+  //       tx: 305.38491,
+  //       ty: 340.76333,
+  //     });
+  //   } else if (scrollY >= 1100 && scrollY < 1200) {
+  //     setMatrix({
+  //       a: 0.98023,
+  //       b: 0.19788,
+  //       c: -0.19788,
+  //       d: 0.98023,
+  //       tx: 444.59701,
+  //       ty: 426.59716,
+  //     });
+  //   } else if (scrollY >= 1200 && scrollY < 1300) {
+  //     setMatrix({
+  //       a: 0.00526,
+  //       b: 0.99999,
+  //       c: -0.99999,
+  //       d: -0.00526,
+  //       tx: 670.45153,
+  //       ty: 547.42305,
+  //     });
+  //   } else if (scrollY >= 1300 && scrollY < 1400) {
+  //     setMatrix({
+  //       a: -0.79019,
+  //       b: 0.61287,
+  //       c: -0.61287,
+  //       d: -0.61287,
+  //       tx: 584.39696,
+  //       ty: 755.02359,
+  //     });
+  //   } else if (scrollY >= 1400 && scrollY < 1500) {
+  //     setMatrix({
+  //       a: 0.84668,
+  //       b: 0.53211,
+  //       c: -0.53211,
+  //       d: 0.84668,
+  //       tx: 415.63194,
+  //       ty: 849.76787,
+  //     });
+  //   } else if (scrollY >= 1500 && scrollY < 1600) {
+  //     setMatrix({
+  //       a: 0.99874,
+  //       b: 0.05013,
+  //       c: -0.05013,
+  //       d: 0.99874,
+  //       tx: 583.86961,
+  //       ty: 919.21181,
+  //     });
+  //   } else if (scrollY >= 1600) {
+  //     setMatrix({
+  //       a: 0.94032,
+  //       b: -0.3403,
+  //       c: 0.3403,
+  //       d: 0.94032,
+  //       tx: 692.83504,
+  //       ty: 934.55263,
+  //     });
+  //   }
+  // }, [scrollY]);
 
   return (
     <div
@@ -276,7 +318,7 @@ function HeroPageCulture() {
                   />
 
                   <path
-                    className="theLine"
+                    class="theLine"
                     id="mainPath"
                     d="M2 38.4482C83.3907 28.1974 380.421 -20.5514 413.485 52.963C446.549 126.477 303.302 223.831 288.861 257.316C274.419 290.802 266.338 327.662 302.737 395.224C348.235 479.678 473.386 472.663 473.386 472.663C473.386 472.663 544.128 465.345 615.515 558.472C681.531 644.593 547.788 736.688 479.923 789.184C439.269 816.368 378.234 880.542 459.334 919.769C540.434 958.997 700.136 971.046 762.529 948.466"
                     stroke="#606060"
@@ -303,10 +345,10 @@ function HeroPageCulture() {
                   height="46"
                   href={carPic}
                   data-svg-origin="60.800000000000004 36.800000000000004"
-                  style={{
-                    transform: `matrix(${matrix.a}, ${matrix.b}, ${matrix.c}, ${matrix.d}, ${matrix.tx}, ${matrix.ty})`,
-                    transformOrigin: "0px 0px",
-                  }}
+                  // style={{
+                  //   transform: `matrix(${matrix.a}, ${matrix.b}, ${matrix.c}, ${matrix.d}, ${matrix.tx}, ${matrix.ty})`,
+                  //   transformOrigin: "0px 0px",
+                  // }}
                 ></image>
 
                 <defs>

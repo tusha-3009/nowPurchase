@@ -403,7 +403,7 @@
   .testCard {
     border-radius: 16px;
     padding: 16px;
-    padding-top: 36px;margin-right: 0;
+    padding-top: 36px;margin-right: 10px;
   }
 }
 @media (max-width: 1600px) {
