@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./index.css"
 import sol1 from "../../../assets/images/marketplace/sol-1.png";
 import sol2 from "../../../assets/images/marketplace/sol-2.png";
@@ -10,15 +10,47 @@ import sol7 from "../../../assets/images/marketplace/sol-7.png";
 import sol8 from "../../../assets/images/marketplace/sol-8.png";
 import Container from '../../../Components/General/Container';
 function OneStopSolutions() {
+   const aosRef = useRef(null);
+
+   useEffect(() => {
+     const observer = new IntersectionObserver(
+       (entries) => {
+         entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+             entry.target.classList.add("ltr");
+             // entry.target.classList.remove("ltr-out");
+           } else {
+             // entry.target.classList.add("ltr-out");
+             // entry.target.classList.remove("ltr");
+           }
+         });
+       },
+       {
+         threshold: 0.3,
+         // rootMargin: "-10px",
+       }
+     );
+
+     if (aosRef.current) {
+       observer.observe(aosRef.current);
+     }
+
+     // Clean up the observer on component unmount
+     return () => {
+       if (aosRef.current) {
+         observer.unobserve(aosRef.current);
+       }
+     };
+   }, []);
   return (
-    <div
-      className="solutionSec animated-section section aosAnim ltr"
+    <div ref={aosRef}
+      className="solutionSec animated-section section aosAnim "
       id="sec36"
     >
       <div className="scrollSection">
         <Container>
           <div className="solutionHead d-flex align-items-center justify-content-between">
-            <div className="sechead keyHead mb-8 aosAnim ltr">
+            <div  className="sechead keyHead mb-8 aosAnim ">
               <h3>
                 <span>One-stop solution</span> for all
                 <br />
@@ -31,7 +63,7 @@ function OneStopSolutions() {
             </div>
             <a
               href="/getInTouchForm"
-              className="npButton getInTouch aosAnim ltr"
+              className="npButton getInTouch aosAnim "
             >
               Enquire Now
             </a>

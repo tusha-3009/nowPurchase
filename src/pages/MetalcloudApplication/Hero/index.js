@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./index.css";
 import marketPlacePic from "../../../assets/images/marketplace/bnrPlay.png"
 import locationLogo from "../../../assets/images/marketplace/loc.png";
@@ -9,6 +9,39 @@ import { countc } from "../../../constants";
 
 
 function MeltingProcessMadeReliable() {
+    useEffect(() => {
+      const aosElements = document.querySelectorAll(".aosAnim");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("ltr");
+              // entry.target.classList.remove("ltr-out");
+            } else {
+              // entry.target.classList.add("ltr-out");
+              // entry.target.classList.remove("ltr");
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+          // rootMargin: "-10px",
+        }
+      );
+
+      aosElements.forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Clean up the observer on component unmount
+      return () => {
+        aosElements.forEach((el) => {
+          observer.unobserve(el);
+        });
+      };
+    }, []);
+
   return (
     <div class="marketbnr animated-section section serviceSec pb-0" id="sec21">
       <div class="overflowSection">

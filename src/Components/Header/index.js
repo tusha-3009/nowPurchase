@@ -26,7 +26,7 @@ const headerTitleJSON = [
 ];
 
 function Header() { 
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 const [modalOpen, setModalOpen] = useState(false);
    
     const [name, setName] = useState("");
@@ -211,7 +211,7 @@ const [modalOpen, setModalOpen] = useState(false);
             </Form.Group>
 
             <Form.Group>
-              <Button appearance="subtle" onClick={handleClose}>
+              <Button appearance="subtle" onClick={handleClose} >
                 Cancel
               </Button>
               <Button appearance="primary" type="submit">

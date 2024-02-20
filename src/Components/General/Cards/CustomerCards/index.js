@@ -1,4 +1,4 @@
-import React, {  useRef } from "react";
+import React, {  useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "./index.css";
 
@@ -67,6 +67,38 @@ const TestimonialCard = ({ quote, name, empImg, title, companyLogo }) => (
 );
 
 const CustomerCards = () => {
+ const aosRef = useRef(null);
+
+ useEffect(() => {
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   if (aosRef.current) {
+     observer.observe(aosRef.current);
+   }
+
+   // Clean up the observer on component unmount
+   return () => {
+     if (aosRef.current) {
+       observer.unobserve(aosRef.current);
+     }
+   };
+ }, []);
   const sliderRef = useRef(null);
 
   const goToPrevious = () => {
@@ -96,7 +128,8 @@ const CustomerCards = () => {
   return (
     <>
       <div
-        className="testSec animated-section section sectionCards aosAnim ltr"
+      ref={aosRef}
+        className="testSec animated-section section  aosAnim sectionCards"
         id="sec16"
       >
         <div className="overflowSection">

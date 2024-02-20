@@ -54,3 +54,7 @@
 .lastEachteam {
   position: relative;
 }
+.glimpsRowWrap.ltr{
+    opacity: 0;
+    animation: up 0.8s linear forwards;
+  }

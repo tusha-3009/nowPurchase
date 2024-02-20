@@ -1,19 +1,51 @@
-import React from 'react'
-import "./index.css"
-import media1 from "../../../assets/images/home/media/media3.png"
+import React, { useEffect } from "react";
+import "./index.css";
+import media1 from "../../../assets/images/home/media/media3.png";
 import media2 from "../../../assets/images/home/media/media1.png";
 import media3 from "../../../assets/images/home/media/media2.png";
 import media4 from "../../../assets/images/home/media/media4.png";
 function MediaCards() {
+  useEffect(() => {
+    const aosElements = document.querySelectorAll(".aosAnim");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
+
+    aosElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Clean up the observer on component unmount
+    return () => {
+      aosElements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
   return (
     <div
-      className="mediaSectionWrap animated-section section aosAnim ltr"
+      className="mediaSectionWrap animated-section section aosAnim "
       id="sec17"
     >
       <div className="scrollSection">
         <div className="container">
           <div className="mediaRow">
-            <h2 className="titleText" style={{lineHeight:"1.2"}}>
+            <h2 className="titleText" style={{ lineHeight: "1.2" }}>
               Our <span className="skyText">Media</span> Moments!
             </h2>
             <div className="mediaWrap mediaSlider">
@@ -40,11 +72,7 @@ function MediaCards() {
               </div>
               <div className="eachMediaBox">
                 <figure>
-                  <img
-                    loading="lazy"
-                    src={media2}
-                    alt=""
-                  />
+                  <img loading="lazy" src={media2} alt="" />
                 </figure>
                 <div className="mediaText">
                   <p>
@@ -66,11 +94,7 @@ function MediaCards() {
 
               <div className="eachMediaBox">
                 <figure>
-                  <img
-                    loading="lazy"
-                    src={media3}
-                    alt=""
-                  />
+                  <img loading="lazy" src={media3} alt="" />
                 </figure>
                 <div className="mediaText">
                   <p>
@@ -92,11 +116,7 @@ function MediaCards() {
 
               <div className="eachMediaBox">
                 <figure>
-                  <img
-                    loading="lazy"
-                    src={media4}
-                    alt=""
-                  />
+                  <img loading="lazy" src={media4} alt="" />
                 </figure>
                 <div className="mediaText">
                   <p>
@@ -123,4 +143,4 @@ function MediaCards() {
   );
 }
 
-export default MediaCards
+export default MediaCards;

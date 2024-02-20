@@ -77,4 +77,18 @@
 }@media only screen and (max-width: 768px) {.mngDetails h5 {
   font-size: 12px;
   line-height: 23px;
-}}
+}} .cManagement.aosAnim.ltr{
+   opacity: 0;
+   animation: from-right-in 0.8s linear forwards;
+ }
+ @keyframes from-right-in {
+  0% {
+      opacity: 0;
+      transform: translateX(20%);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+ }

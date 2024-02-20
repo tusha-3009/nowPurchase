@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./index.css";
 import "../../assets/css/style-responsive.css";
 import wa from "../../assets/images/icons/social-icons/social_wa.png";
@@ -11,11 +11,48 @@ import ti from "../../assets/images/icons/footer_tiger.png";
 
 import Container from "../General/Container";
 function Footer() {
+  const aosRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
+
+    if (aosRef.current) {
+      observer.observe(aosRef.current);
+    }
+
+    // Clean up the observer on component unmount
+    return () => {
+      if (aosRef.current) {
+        observer.unobserve(aosRef.current);
+      }
+    };
+  },[]);
+
   return (
-    <footer className="footerSection animated-section sectionf" id="">
-      <Container>
+    <footer
+      ref={aosRef}
+      className="footerSection animated-section sectionf"
+      id=""
+    >
+      <div class="container">
         <div className="row">
-          <div className="col-lg-8 footerBlock footerBlockLeft aosAnim ltr">
+          <div className="col-lg-8 footerBlock footerBlockLeft aosAnim">
             <h2 className="footerTitleText">
               For every reason that got you here, <br />
               <strong>Let’s Connect!</strong>
@@ -110,7 +147,10 @@ function Footer() {
             </div>
           </div>
 
-          <div className="col-lg-4 footerBlock footerBlockRight aosAnim ltr">
+          <div
+            ref={aosRef}
+            className="col-lg-4 footerBlock footerBlockRight aosAnim"
+          >
             <div className="footerLinkList">
               <ul className="noList">
                 <li>
@@ -180,7 +220,7 @@ function Footer() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

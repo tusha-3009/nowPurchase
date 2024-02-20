@@ -12,15 +12,15 @@ function FoundersSection() {
       <div className="scrollSection1">
         <Container>
           <div
-            className="sechead aosAnim keyHead aos-init ltr aos-animate"
-            data-aos="fade-right"
+            className="sechead aosAnim keyHead "
+            
           >
             <h3>
               Behind the <span>Magic,</span> <br />
               People Making it Happen
             </h3>
           </div>
-          <div className="cManagement aosAnim d-flex justify-content-between align-items-start ltr">
+          <div className="cManagement aosAnim d-flex justify-content-between align-items-start">
             <div className="eachCM">
               <div className="mImageWrap">
                 <img loading="lazy" src={mng1} alt="" />

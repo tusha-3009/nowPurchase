@@ -17,42 +17,72 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import AOS from "aos";
 import "../../../../src/assets/css/aos.css";
 function HeroPageCulture() {
+  useEffect(() => {
+    const aosElements = document.querySelectorAll(".aosAnim");
 
-
-useEffect(() => {
- 
-  AOS.init({
-    duration: 1200,
-  });
-
-  // Register GSAP plugins
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
-  // GSAP Animation
-  const main = gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: "#svg",
-        scrub: true,
-        start: "top top",
-        end: "bottom center",
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
       },
-    })
-    .to("#target", {
-      duration: 25,
-      motionPath: {
-        path: "#mainPath",
-        align: "#mainPath",
-        alignOrigin: [0.6, 0.6],
-        autoRotate: true,
-      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
+
+    aosElements.forEach((el) => {
+      observer.observe(el);
     });
 
-  // Cleanup function for useEffect
-  return () => {
-    main.kill();
-  };
-}, []);
+    // Clean up the observer on component unmount
+    return () => {
+      aosElements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+
+    // Register GSAP plugins
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+    // GSAP Animation
+    const main = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#svg",
+          scrub: true,
+          start: "top top",
+          end: "bottom center",
+        },
+      })
+      .to("#target", {
+        duration: 25,
+        motionPath: {
+          path: "#mainPath",
+          align: "#mainPath",
+          alignOrigin: [0.6, 0.6],
+          autoRotate: true,
+        },
+      });
+
+    // Cleanup function for useEffect
+    return () => {
+      main.kill();
+    };
+  }, []);
 
   // const [scrollY, setScrollY] = useState(0);
   // const [matrix, setMatrix] = useState({

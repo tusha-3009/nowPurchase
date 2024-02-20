@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./index.css"
 import trans1 from "../../../assets/images/marketplace/trans-1.png"
 import trans2 from "../../../assets/images/marketplace/trans-2.png";
@@ -7,17 +7,49 @@ import Container from '../../../Components/General/Container';
 import MarketTabImage from "../../../assets/images/marketplace/marketTabImage.jpg"
 import marketMobImage from "../../../assets/images/marketplace/marketMobImage.jpg"
 function TransformingIdeas() {
+   const aosRef = useRef(null);
+
+   useEffect(() => {
+     const observer = new IntersectionObserver(
+       (entries) => {
+         entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+             entry.target.classList.add("ltr");
+             // entry.target.classList.remove("ltr-out");
+           } else {
+             // entry.target.classList.add("ltr-out");
+             // entry.target.classList.remove("ltr");
+           }
+         });
+       },
+       {
+         threshold: 0.3,
+         // rootMargin: "-10px",
+       }
+     );
+
+     if (aosRef.current) {
+       observer.observe(aosRef.current);
+     }
+
+     // Clean up the observer on component unmount
+     return () => {
+       if (aosRef.current) {
+         observer.unobserve(aosRef.current);
+       }
+     };
+   }, []);
   return (
     <div className="ideaSec animated-section section pb-0" id="sec35">
       <div className="scrollSection">
         <Container>
-          <div className="sechead keyHead aosAnim ltr">
+          <div ref={aosRef} className="sechead keyHead aosAnim">
             <h3>
               <span>Transforming</span> ideas <br />
               into reality
             </h3>
           </div>
-          <div className="trustanimeWrap aosAnim ltr">
+          <div ref={aosRef} className="trustanimeWrap aosAnim">
             <div className="mainCircleBg trMain">
               <img loading="lazy" src={logoWh} alt="" />
             </div>
@@ -151,7 +183,7 @@ function TransformingIdeas() {
               </svg>
               <svg
                 width="772"
-                className="ellipse ellipse2 aosAnim ltr"
+                className="ellipse ellipse2 aosAnim"
                 height="574"
                 viewBox="0 0 772 574"
                 fill="none"

@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Home from "./Components/Home";
 import Culture from "./pages/Culture";
 import Careers from "./pages/Careers";
-
 import Marketplace from "./pages/Marketplace";
 import MetalcloudApplication from "./pages/MetalcloudApplication";
 import GetInTouch from "./pages/GetInTouch";
@@ -18,7 +17,6 @@ import TermsConditions from "./Components/Footer/Terms&Conditions";
 import CompanyAnnualReport from "./Components/Footer/CompanyAnnualReport";
 import Csr from "./Components/Footer/SocialCorporateRes";
 function App() {
-  
   return (
     <div className="home-template">
       <BrowserRouter>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import TechnologyDriven from "./TechnologyDriven";
 import ProcurementSection from "./ProcurementSection";
@@ -10,6 +10,7 @@ import InvestorSection from "./InvestorSection";
 import AccoladesAssociations from "./AccoladesAssociations";
 
 function Home() {
+  
   return (
     <>
       <TechnologyDriven />

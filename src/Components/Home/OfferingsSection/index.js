@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./index.css"
 import offeringBg from "../../../assets/images/home/offeringBg.png";
 import logo_wh from  "../../../assets/images/logo_wh.png";
@@ -6,20 +6,54 @@ import play_vector from  "../../../assets/images/icons/play_vector.png";
 import ellipse_25 from "../../../assets/images/home/ellipse_25.png";
 import ellipse_26 from "../../../assets/images/home/ellipse_26.png";
 function OfferingsSection() {
+  
+ const aosRef = useRef(null);
+
+ useEffect(() => {
+
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   if (aosRef.current) {
+     observer.observe(aosRef.current);
+   }
+
+   // Clean up the observer on component unmount
+   return () => {
+     if (aosRef.current) {
+       observer.unobserve(aosRef.current);
+     }
+   };
+ }, []);
   return (
     <div
+      ref={aosRef}
       className="offeringSectionWrap pb-0 animated-section  section"
-      id="sec14" 
+      id="sec14"
     >
       <div className="scrollSection">
         <div className="container">
-          <div className="offeringWrap aosAnim ltr">
+          <div className="offeringWrap aosAnim ">
             <h2 className="titleText">
-              <span className="skyText">Experience</span> our incredibly{" "} 
-              <br />
-               trusted offerings
+              <span className="skyText">Experience</span> our incredibly <br />
+              trusted offerings
             </h2>
-            <div className="animeSecIndex aosAnim ltr">
+            <div className="animeSecIndex aosAnim ">
               <img loading="lazy" className="bigImg" src={offeringBg} alt="" />
               <div className="mainCircleBg">
                 <img

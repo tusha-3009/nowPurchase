@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./index.css"
 import media5 from "../../../assets/images/home/media/media5.png";
 import media6 from "../../../assets/images/home/media/media6.png";
@@ -6,8 +6,41 @@ import media7 from "../../../assets/images/home/media/media7.png";
 import media8 from "../../../assets/images/home/media/media8.png";
 
 function AccoladesAssociations() {
+    useEffect(() => {
+      const aosElements = document.querySelectorAll(".aosAnim");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("ltr");
+              // entry.target.classList.remove("ltr-out");
+            } else {
+              // entry.target.classList.add("ltr-out");
+              // entry.target.classList.remove("ltr");
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        
+        }
+      );
+
+      aosElements.forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Clean up the observer on component unmount
+      return () => {
+        aosElements.forEach((el) => {
+          observer.unobserve(el);
+        });
+      };
+    }, []);
   return (
-    <section
+    <div
+   
       class="mediaSectionWrap mediaSectionWrapA animated-section section aosAnim"
       id="sec17"
     >
@@ -18,7 +51,7 @@ function AccoladesAssociations() {
               Our <span class="skyText">Accolades</span> & <br />{" "}
               <span class="skyText">Associations</span>
             </h2>
-            <div class="mediaWrap mediaSlider">
+            <div class="mediaWrap mediaSlider ">
               <div class="eachMediaBoxAcc">
                 <figure>
                   <img loading="lazy" src={media5} alt="" />
@@ -78,7 +111,7 @@ function AccoladesAssociations() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

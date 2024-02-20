@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./index.css"
 function ExploreSection() {
+  const exploreRef = useRef(null);
   return (
     <div
+      ref={exploreRef}
       className="exploreSectionWrap animated-section section"
       id="jobOpening"
     >

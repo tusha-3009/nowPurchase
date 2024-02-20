@@ -7,15 +7,15 @@ import Price2 from "../../../assets/images/application/price-2.png";
 import Container from '../../../Components/General/Container';
 function PlansPricing() {
   return (
-    <div className="priceSec animated-section section aosAnim ltr" id="sec25">
+    <div className="priceSec animated-section section aosAnim " id="sec25">
       <div className="overflowSection">
         <Container>
-          <div className="sechead keyHead aosAnim ltr">
+          <div className="sechead keyHead aosAnim ">
             <h3>
               <span className="gradientText skyText">Plans</span> &amp; Pricing
             </h3>
           </div>
-          <div className="row priceSecWrap aosAnim ltr">
+          <div className="row priceSecWrap aosAnim ">
             <div className="col-md-6 pricewrapHolder">
               <div className="pricewrap">
                 <div className="priceHead d-flex justify-content-between align-items-center">

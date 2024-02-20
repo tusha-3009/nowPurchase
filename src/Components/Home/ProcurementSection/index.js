@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./index.css"
 import procureImg_1 from "../../../assets/images/icons/procureImg_1.png";
 import procureImg_2 from "../../../assets/images/icons/procureImg_2.png";
@@ -10,17 +10,50 @@ import procureImg_7 from "../../../assets/images/icons/procureImg_7.png";
 import procureImg_8 from "../../../assets/images/icons/procureImg_8.png";
 
 function ProcurementSection() {
+
+ const aosRef = useRef(null);
+
+ useEffect(() => {
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   if (aosRef.current) {
+     observer.observe(aosRef.current);
+   }
+
+   // Clean up the observer on component unmount
+   return () => {
+     if (aosRef.current) {
+       observer.unobserve(aosRef.current);
+     }
+   };
+ }, []);
   return (
-    <div className="procureSectionWrap animated-section section">
+    <section ref={aosRef} className="procureSectionWrap animated-section section">
       <div className="overflowSection">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12 aosAnim ltr">
+            <div className="col-lg-12 aosAnim">
               <h2 className="titleText">
                 Your <span className="skyText">Reliable</span> <br />
                 Procurement Partner
               </h2>
-              <div className="eachBoxWrap aosAnim ltr">
+              <div className="eachBoxWrap aosAnim">
                 <div className="eachBox">
                   <img loading="lazy" src={procureImg_1} alt="" />
                   <h4>
@@ -114,7 +147,7 @@ function ProcurementSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

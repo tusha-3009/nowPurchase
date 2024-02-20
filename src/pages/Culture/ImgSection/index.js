@@ -38,8 +38,7 @@ function ImgSection() {
       <div className="scrollSection1">
         <Container>
           <div
-            className="sechead aosAnim keyHead aos-init ltr aos-animate"
-            data-aos="fade-right"
+            className="sechead aosAnim keyHead"
           >
             <h3>
               <span>Glimpses </span> into our <br />
@@ -47,7 +46,7 @@ function ImgSection() {
             </h3>
           </div>
           <Fancybox>
-            <div className="glimpsRowWrap aosAnim ltr">
+            <div className="glimpsRowWrap aosAnim">
               <div className="row">
                 <div className="col-md-6">
                   <a

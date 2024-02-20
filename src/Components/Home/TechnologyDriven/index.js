@@ -1,18 +1,56 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./index.css";
 import Container from "../../General/Container";
 import TechnologyPic from "../../../assets/images/home/bannerImg.svg";
 
 import CarouselCompanyCards from "../../General/Carousel";
 function TechnologyDriven() {
+  
+ const aosRef = useRef(null);
+
+ useEffect(() => {
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   if (aosRef.current) {
+     observer.observe(aosRef.current);
+   }
+
+   // Clean up the observer on component unmount
+   return () => {
+     if (aosRef.current) {
+       observer.unobserve(aosRef.current);
+     }
+   };
+ }, []);
+
+
+
+
   return (
     <div
+    ref={aosRef}
       className="mainBanner homebnr marketbnr 
   animated-section section pb-0"
     >
       <div className="overflowSection">
         <Container>
-          <div className="row bannerContent ltr aosAnim">
+          <div ref={aosRef} className="row bannerContent ltr aosAnim">
             <div class="col-md-6 leftBannerCont">
               <div class="bannerLeft">
                 <h2 className="titleText">
@@ -43,17 +81,15 @@ function TechnologyDriven() {
             </div>
           </div>
         </Container>
-        <div className="businessSectionWrap triangleTopLeftBg">
+        <div ref={aosRef} className="businessSectionWrap triangleTopLeftBg">
           <Container>
             <div className="row">
-              <div className="col-lg-12 aosAnim ltr">
+              <div className="col-lg-12 aosAnim ">
                 <h2 class="titleText">
-                
-                  <span class="skyText">Loved </span>by businesses 
-                  <br />
-                   {" "}everywhere
+                  <span class="skyText">Loved </span>by businesses
+                  <br /> everywhere
                 </h2>
-              <CarouselCompanyCards/>
+                <CarouselCompanyCards />
               </div>
             </div>
           </Container>

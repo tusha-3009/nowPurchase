@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Hero from "./Hero";
 import TrustedProvenSolutions from "./TrustedProvenSol";
 import TransformingIdeas from "./TransformingIdeas";
@@ -7,6 +7,7 @@ import CustomerCards from "../../Components/General/Cards/CustomerCards";
 import Certificate from "./Certificate";
 
 function Marketplace() {
+ 
   return (
     <>
       <Hero />

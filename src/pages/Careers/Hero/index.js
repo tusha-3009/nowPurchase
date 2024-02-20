@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./index.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import t1 from "../../../assets/images/career/team1.png";
 import t2 from "../../../assets/images/career/team2.png";
 import t3 from "../../../assets/images/career/team3.png";
@@ -9,6 +11,7 @@ import t6 from "../../../assets/images/career/team6.png";
 import careerBannerImg from "../../../assets/images/career/careerBannerImg.png";
 import Container from "../../../Components/General/Container";
 import Slider from "react-slick";
+import AOS from "aos";
 const data = [
   { name: "Debraj Dutta", img: t1, year: "June 2022" },
   { name: "Rainark Saha", img: t2, year: "October 2022" },
@@ -20,6 +23,40 @@ const data = [
 
 function HeroCareers() {
   
+ useEffect(() => {
+   const aosElements = document.querySelectorAll(".aosAnim");
+
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   aosElements.forEach((el) => {
+     observer.observe(el);
+   });
+
+   // Clean up the observer on component unmount
+   return () => {
+     aosElements.forEach((el) => {
+       observer.unobserve(el);
+     });
+   };
+ }, []);
+
+
   const sliderRef = useRef(null);
 
   useEffect(() => {

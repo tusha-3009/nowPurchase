@@ -170,4 +170,18 @@ font-size: 20px;
     line-height: 26px;}
 }@media (max-width: 1440px) {.cultureSectionWrap .contBox ul li strong {
     font-size: 16px !important;
-}}
+}}.section.ltr .contBox{
+        opacity: 0;
+            animation: from-right-in 0.8s linear forwards;
+}
+@keyframes from-right-in {
+    0% {
+            opacity: 0;
+            transform: translateX(20%);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+}

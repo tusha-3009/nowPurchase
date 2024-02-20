@@ -821,7 +821,7 @@ p:last-child {
 
 @media (max-width: 575px) {
   .footerSection .footerLinkList {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
   }
 }
 
@@ -928,3 +928,10 @@ p:last-child {
     flex: 0 0 33.3333%;
   }
 }
+@media (max-width: 575px) {.footerSection .socialShare ul li {
+ 
+  text-align: left;
+  width: 27%;
+  /* max-width: 94px; */
+  margin-bottom: 0;
+}}

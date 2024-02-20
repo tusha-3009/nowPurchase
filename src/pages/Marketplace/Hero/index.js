@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import bnrpoly from "../../../assets/images/marketplace/bnrPoly.png";
 import "./index.css";
 import loca from "../../../assets/images/marketplace/loc.png";
@@ -7,7 +7,71 @@ import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
 import Container from "../../../Components/General/Container";
 import { counts } from "../../../constants";
 import CountUp from "react-countup";
+
 function Hero() {
+ const aosRef = useRef(null);
+
+ useEffect(() => {
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   if (aosRef.current) {
+     observer.observe(aosRef.current);
+   }
+
+   // Clean up the observer on component unmount
+   return () => {
+     if (aosRef.current) {
+       observer.unobserve(aosRef.current);
+     }
+   };
+ }, []);  useEffect(() => {
+   const aosElements = document.querySelectorAll(".aosAnim");
+
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("ltr");
+           // entry.target.classList.remove("ltr-out");
+         } else {
+           // entry.target.classList.add("ltr-out");
+           // entry.target.classList.remove("ltr");
+         }
+       });
+     },
+     {
+       threshold: 0.3,
+       // rootMargin: "-10px",
+     }
+   );
+
+   aosElements.forEach((el) => {
+     observer.observe(el);
+   });
+
+   // Clean up the observer on component unmount
+   return () => {
+     aosElements.forEach((el) => {
+       observer.unobserve(el);
+     });
+   };
+ }, []);
 
   return (
     <div
@@ -15,8 +79,8 @@ function Hero() {
       id="sec31"
     >
       <div className="overflowSection">
-        <Container>
-          <div className="row bannerContent aosAnim ltr">
+<div class="container">
+          <div ref={aosRef} className="row bannerContent aosAnim ">
             <div className="col-md-7 leftBannerCont">
               <div className="bannerLeft">
                 <h2 className="titleText">
@@ -63,9 +127,9 @@ function Hero() {
               </div>
             </div>
           </div>
-        </Container>
+        </div>
 
-        <div className="addr aosAnim ltr">
+        <div ref={aosRef} className="addr aosAnim">
           <div className="container">
             <div className="locWrap d-flex align-items-center">
               <div className="locIcon">
@@ -92,8 +156,8 @@ function Hero() {
         <section className="keyNumber triangleTopLeftBg" id="">
           <Container>
             <div className="row">
-              <div className="col-lg-12 aosAnim ltr">
-                <div className="sechead keyHead aosAnim ltr">
+              <div ref={aosRef} className="col-lg-12 aosAnim">
+                <div className="sechead keyHead aosAnim ">
                   <h3>
                     <span>Our success</span> is a reflection
                     <br />

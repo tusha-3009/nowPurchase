@@ -93,7 +93,7 @@ const CustomerCards = () => {
   return (
     <>
       <div
-        className="testSec animated-section section sectionCards aosAnim ltr"
+        className="testSec animated-section section sectionCards aosAnim "
         id="sec16"
       >
         <div className="overflowSection">
