@@ -110,7 +110,7 @@ function HeroPageCulture() {
                   href="https://nowpurchase.notion.site/nowpurchase/Join-us-NowPurchase-bb37eb8f73444aef96bfd48b626bbbad"
                   id="Culture_Section1_Landing_SeeJobOpenings"
                   target="_blank"
-                  className="npButton"
+                  className="npButton joblink"
                 >
                   See Job Openings
                 </a>

@@ -39,6 +39,9 @@
   bottom: -80px;
   right: 3%;
 }
+.joblink:visited{
+  color: white;
+}
 @media (max-width:1600px) {
   .culture01 {
       top: -50px;

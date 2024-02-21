@@ -104,10 +104,10 @@ function HeroCareers() {
                   </h2>
                   <p>
                     Join our mission-driven organisation that values
-                    <br /> creativity,
-                    <br />
+                  creativity,<br/>
+                  
                     fun, and innovation. Help us shape the future of metal
-                    <br />
+                
                     manufacturing and procurement in our country.
                   </p>
                   <div className="newDiv">#NowPurchaseCareers</div>

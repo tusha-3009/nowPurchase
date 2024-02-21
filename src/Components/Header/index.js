@@ -39,8 +39,10 @@ const [modalOpen, setModalOpen] = useState(false);
   );
   useEffect(() => {
     if (headerTitle?.text) {
-      document.title = "NowPurchase || " + headerTitle.text;
+      document.title = "NowPurchase || " + headerTitle.text ;
     }
+    else
+document.title = "NowPurchase || Home";
   }, [headerTitle]);
  
   function openMenu() {

@@ -23,9 +23,9 @@ function Disclaimer() {const reference = useRef(null);
                 <p>
                   We created this page with utmost respect for our employees’
                   comfort and individual visions of
-                  <br /> an ideal company. Any similarities to your dream
+                  an ideal company. Any similarities to your dream
                   organisation are purely co-incidental. Let's build
-                  <br /> a world where creativity thrives, bringing inspiration,
+                   a world where creativity thrives, bringing inspiration,
                   innovation, and diversity to our lives.
                 </p>
                 <a

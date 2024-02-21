@@ -54,9 +54,19 @@ p {
   line-height: 38px;
   color: #606060;
 }
-@media (max-width:1600px) {p
+/* @media (max-width:1600px) {p
   {font-size: 16px;
-}}
+}} */
+@media (max-width: 1440px) {
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+@media (max-height: 705px){ p {
+  font-size: 14px;}
+}
+
 .trust {
   padding-bottom: 90px;
 }
