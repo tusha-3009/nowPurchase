@@ -31,11 +31,7 @@
     }
 }
 
-.mediaTextAcc strong {
-    font-size: 14px;
-    line-height: 38px;
-
-}.mediaSectionWrap .mediaWrap {
+.mediaSectionWrap .mediaWrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
