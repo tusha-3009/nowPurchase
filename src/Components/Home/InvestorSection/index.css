@@ -58,20 +58,22 @@ list-style: none;
 .investorWrap ul li:not(:last-child) {
     margin-bottom: 20px;
 }
-.investorWrap ul li figure {
-    width: 377px;
-    height: 160px;
-}
+
 .investorWrap ul li figure {
     background-color: #fff;
     border-radius: 20px;
     margin: 0;
-   
+    width: 475px;
+        height: 204px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px 60px;
-}
+}@media (max-width:1600px)
+{.investorWrap ul li figure {
+    width: 377px;
+    height: 160px;
+}}
 .investorWrap ul li figure img {
     width: 100%;
 }

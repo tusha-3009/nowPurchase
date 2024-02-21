@@ -193,4 +193,21 @@
   .eachPointer:hover {
     transform: scale(2);
     z-index: 5;
+  }@media (max-width: 575px) {.mapSec p {
+    font-size: 12px;
+    line-height: 23px;
+  }}@media (max-width: 575px) p {
+    font-size: 16px;
+    line-height: 26px;
   }
+  
+  @media (max-width: 1365px) p {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 1440px) p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  

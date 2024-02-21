@@ -48,29 +48,47 @@
   }
 }
 
-.col-lg-8 {
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 .footerSection .footerTitleText {
-  font-size: 35px;
+  
   line-height: 90px;
   font-weight: 500;
   color: #fff;
   line-height: 90px;
   margin-bottom: 130px;
-}
 
-.footerSection .footerTitleText strong {
-  font-size: 55px;
+
+font-size: 40px;
+
+}.footerSection .footerTitleText strong {
+  font-size: 62px;
   font-weight: 700;
   color: #fff;
-}
+}.sechead h3,.sechead h3 span {
+  font-size: 64px !important;
+  font-weight: 400;
+  line-height: 84px;
+}.sechead h3 span {font-weight: 700;}
+@media (max-width: 1600px) {.footerSection .footerTitleText {
+  font-size: 35px;}.footerSection .footerTitleText strong {
+    font-size: 55px;
+    font-weight: 700;
+    color: #fff;
+  }.sechead h3 {
+    font-size: 50px !important;
+    font-weight: 400;
+    line-height: 74px;
+  }
+    .sechead h3 span {font-weight: 700;
+    font-size: 50px !important;
+   
+      line-height: 74px;}
+}@media (max-width: 1440px){ .sechead h3,
+.sechead h3 span {
+  font-size: 40px !important;
+  line-height: 1.4;
+}}
+
+
 
 .footerSection .footerTitleText {
   font-weight: 500;
@@ -656,7 +674,7 @@ p:last-child {
 
 @media only screen and (max-width: 991px) {
   .footerSection .socialShare ul li a {
-    /* display: inline-block; */
+    display: inline-block; 
   }
 }
 
@@ -669,8 +687,12 @@ p:last-child {
 @media (max-width: 575px) {
   .footerSection .socialShare ul li a figure {
     margin-bottom: 0;
-  }
-}
+  }{
+      .footerSection .socialShare ul li a figure figcaption {
+        font-size: 12px;
+        line-height: 12px;
+      }
+}}
 /* 
 .footerSection .socialShare ul li a figure img {
   display: inline-block;
@@ -703,7 +725,9 @@ p:last-child {
   .footerSection .socialShare ul li:not(:last-child) {
     margin-right: 0;
   }
-}
+}@media (max-width: 575px){ .footerSection .socialShare ul li:nth-child(2) {
+  padding-left: 16px;
+}}
 
 .footerSection .socialShare ul li a figure figcaption {
   display: block;
@@ -934,4 +958,10 @@ p:last-child {
   width: 27%;
   /* max-width: 94px; */
   margin-bottom: 0;
+}}@media (max-width: 1280px) {.footerSection {
+  height: 500px;padding: 60px 0 40px;
+}}@media (max-width: 1200px) {.footerSection {
+  height: auto;
+}}@media only screen and (max-width: 768px) {.footerSection {
+  padding: 80px 0 50px;
 }}

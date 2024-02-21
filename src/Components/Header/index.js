@@ -210,11 +210,22 @@ const [modalOpen, setModalOpen] = useState(false);
               />
             </Form.Group>
 
-            <Form.Group>
-              <Button appearance="subtle" onClick={handleClose} >
+            <Form.Group style={{ float: "right" }}>
+              <Button
+                appearance="subtle"
+                onClick={handleClose}
+                style={{ marginRight: "20px" }}
+              >
                 Cancel
               </Button>
-              <Button appearance="primary" type="submit">
+              <Button
+                appearance="primary"
+                type="submit"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);",
+                }}
+              >
                 Submit Enquiry
               </Button>
             </Form.Group>
@@ -242,7 +253,9 @@ const [modalOpen, setModalOpen] = useState(false);
             <div class="btnWrapNew mobBtnWrapNew">
               <ul>
                 <li onClick={() => setModalOpen(true)}>
-                  <a class="getInTouch">Get in touch</a>
+                  <a href="#getInTouchForm" class="getInTouch">
+                    Get in touch
+                  </a>
                 </li>
                 <li class="mobWrapBtn" onClick={toggleDrawer}>
                   <a
@@ -276,7 +289,7 @@ const [modalOpen, setModalOpen] = useState(false);
                     <nav>
                       <ul>
                         <li>
-                          <a id="Header_Services">
+                          <a href="#" id="Header_Services">
                             Services
                             <span class="toggleBtn">
                               <img loading="lazy" src={ArrowDown} alt="" />
@@ -355,7 +368,11 @@ const [modalOpen, setModalOpen] = useState(false);
                   <div class="col-lg-5 btnWrapNew">
                     <ul>
                       <li onClick={() => setModalOpen(true)}>
-                        <a class="getInTouch" id="Header_GetInTouch">
+                        <a
+                          href="#getInTouchForm"
+                          class="getInTouch"
+                          id="Header_GetInTouch"
+                        >
                           Get in touch
                         </a>
                       </li>
@@ -415,7 +432,9 @@ const [modalOpen, setModalOpen] = useState(false);
                 <div class="col-lg-5 btnWrapNew">
                   <ul>
                     <li onClick={() => setModalOpen(true)}>
-                      <a class="getInTouch">Get in touch</a>
+                      <a href="#getInTouchForm" class="getInTouch">
+                        Get in touch
+                      </a>
                     </li>
                     <li>
                       <a

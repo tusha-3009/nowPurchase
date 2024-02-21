@@ -22,15 +22,20 @@
     justify-content: space-between;
 }
 .cultureSectionWrap .imgBox {
-    width: 672px;
-}
-
-.cultureSectionWrap .contBox {
-width: calc(100% - 672px);
-    padding-left: 35px;
+    width: 800px;
+}.cultureSectionWrap .contBox {
+    width: calc(100% - 800px);
+    padding-left: 80px;
     border-radius: 10px;
     margin-left: -70px;
 }
+@media (max-width: 1600px){
+.cultureSectionWrap .contBox {
+width: calc(100% - 772px);
+    padding-left: 35px;
+    border-radius: 10px;
+    margin-left: -70px;
+}}
 .section.ltr .contBox h2 {
     opacity: 1;
     animation: none;
@@ -51,12 +56,12 @@ ul.noList {
     padding: 0;
     list-style: none;
 }
-.cultureSectionWrap .contBox ul li:not(:last-child) {
-    margin-bottom: 24px;
-}
+
 .cultureSectionWrap .contBox ul li {
     display: flex;
     align-items: center;
+}.cultureSectionWrap .contBox ul li:not(:last-child) {
+    margin-bottom: 30px;
 }
 .cultureSectionWrap .contBox ul li img {
     margin-right: 15px;
@@ -137,7 +142,14 @@ font-size: 20px;
     height: auto !important;}
 }@media only screen and (max-width: 1100px) {.cultureSectionWrap .cultureRow {
     flex-direction: column-reverse;}
-}@media (max-width: 1366px) and (max-height: 768px){ .cultureSectionWrap .imgBox {
+}
+
+@media (max-width: 1600px) {.cultureSectionWrap .imgBox {
+    width: 772px;}
+}@media (max-width: 1440px) {.cultureSectionWrap .imgBox {
+    width: 600px;
+}}
+@media (max-width: 1366px) and (max-height: 768px){ .cultureSectionWrap .imgBox {
     width: 522px;}
 }@media only screen and (max-width: 1100px) {.cultureSectionWrap .imgBox {
     width: 100%;
@@ -145,12 +157,23 @@ font-size: 20px;
     margin: 0 0 25px;
 }}@media (max-width: 1280px) {.cultureSectionWrap .contBox {
     margin-top: 0;}
-}@media (max-width: 1366px) and (max-height: 768px) {.cultureSectionWrap .contBox {
-    width: calc(100% - 522px);}
-}@media (max-width: 1440px) {.cultureSectionWrap .contBox {
+}
+@media (max-width: 1440px) {.cultureSectionWrap .contBox {
     padding-left: 50px;}
    
-}@media only screen and (max-width: 1100px) {.cultureSectionWrap .contBox {
+}
+@media (max-width: 1440px) {.cultureSectionWrap .contBox {
+    padding-left: 50px;
+    width: calc(100% - 600px);}}
+    @media (max-width: 1366px) and (max-height: 768px) {.cultureSectionWrap .contBox {
+    width: calc(100% - 522px);}
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    .cultureSectionWrap .contBox {
+        width: calc(100% - 522px);}
+    }
+    @media only screen and (max-width: 1100px) {.cultureSectionWrap .contBox {
     padding-left: 0;
     margin-left: 0;
     margin-top: 1.5rem;

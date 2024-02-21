@@ -2,7 +2,75 @@
   .innerBanner {
     padding: 50px 0 50px;
   }
-}.clrboxEach {
+}
+
+
+.culture01 {
+  top: -50px;
+  left: 60px;
+}
+
+
+.culture02 {
+  top: -30px;
+  right: 24%;
+}
+
+
+.culture03 {
+  top: 29%;
+  left: 18%;
+}
+
+
+.culture04 {
+  top: 38%;
+  right: 12%;
+}
+
+
+.culture05 {
+  top: 70%;
+  left: 25%;
+}
+
+
+.culture06 {
+  bottom: -80px;
+  right: 3%;
+}
+@media (max-width:1600px) {
+  .culture01 {
+      top: -50px;
+      left: 0px;
+    }
+  
+    .culture02 {
+      top: -20px;
+      right: 21%;
+    }
+  
+    .culture03 {
+      top: 29%;
+      left: 16%;
+    }
+  
+    .culture04 {
+      top: 48%;
+      right: 10%;
+    }
+  
+    .culture05 {
+      top: 74%;
+    }
+  
+    .culture06 {
+      bottom: -220px;
+      right: 0;
+    }
+  
+}
+.clrboxEach {
  
   position: absolute;
   display: flex;
@@ -20,7 +88,10 @@
   font-size: 64px;
   font-weight: 700;
   color: #1579be;
-}
+}@media (max-width: 1440px) {.bannerLeft h2 span.skyText {
+  font-size: 40px;
+  line-height: 1.5;
+}}
 .bannerLeft h2 {
   line-height: 84px;
   font-size: 64px;
@@ -32,9 +103,12 @@
 }
 @media (max-width: 1600px) {
   .marketbnr {
-    padding-top: 90px !important;
+    padding-top: 90px ;
   }
 }
+@media (max-width: 1440px){ .marketbnr {
+  padding-top: 160px;
+}}
 @media (max-width: 1280px) {
   .marketbnr {
     padding-bottom: 0;
@@ -219,6 +293,7 @@
   font-weight: 600;
   line-height: 30px;
   color: #1579be;
+  margin-bottom: 8px;
 }
 
 .tabTimelineBox,
@@ -237,13 +312,17 @@
 }
 
 .clrboxEach {
-  /* width: 320px; */
+  width: 320px; 
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-}
+}@media (max-width: 1440px){ .clrboxEach {
+  width: 270px;
+}}@media (max-width: 1280px){ .clrboxEach {
+  width: 240px;
+}}
 /*.culture01 {
                         top: -50px;
                         left: 60px;

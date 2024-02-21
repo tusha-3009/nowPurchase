@@ -80,12 +80,22 @@
     width: 100%;
 }.mediaSectionWrapA .titleText {
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 60px;
     margin: 0 0 30px;
-    line-height: 60px;
+    line-height:1.5;
     font-weight: 400;
     color: #303030;
-}@media (max-width:1365px){
+}
+
+@media (max-width:1600px) {.mediaSectionWrapA .titleText {
+    font-size: 50px;
+}}@media (max-width:1440px) {
+    .mediaSectionWrapA .titleText {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:1365px){
 .eachMediaBoxAcc {
         width: calc(50% - 20px);
         margin-bottom: 20px;

@@ -27,11 +27,11 @@
   animation: fade-slide-in-ltr 0.8s linear forwards;
 }
 .sechead h3 {
-  font-size: 50px !important;
+  font-size: 50px ;
   line-height: 74px;
   font-weight: 400;
 }.sechead h3 span {
-  font-size: 50px !important;
+  font-size: 50px ;
   line-height: 74px;
       font-weight: 700;
         color: #1579be;
@@ -269,7 +269,7 @@ svg {
   
     70% {
       opacity: 0;
-      transform: translate(0, 0);
+      transform: translate(0,0);
     }
   
     100% {

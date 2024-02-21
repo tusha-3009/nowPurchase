@@ -8,6 +8,12 @@
 
   padding: 150px 0;
 } */
+
+.mainBanner {
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  padding-top: 225px !important;
+}
 .bannerLeft h2 span.skyText {
   font-size: 64px;
   font-weight: 700;
@@ -15,7 +21,7 @@
   line-height: 74px;
 }
 .marketbnr {
-  padding-top: 190px !important;
+  padding-top: 190px ;
 }
 .marketbnr {
   background-color: #e8f2f8;
@@ -138,15 +144,24 @@ p:last-child {
 img {
   vertical-align: middle;
   border-style: none;
-}
-.triangleTopLeftBg {
-
-  padding-top: 270px;
-  padding-bottom: 120px;
+}.triangleTopLeftBg {
   width: 100%;
   position: relative;
   background-color: #d0e4f2;
+  padding-top: 380px;
+  padding-bottom: 200px;
 }
+@media (max-width:1600px) {
+  .triangleTopLeftBg {
+  
+      padding-top: 270px;
+      padding-bottom: 120px;
+      width: 100%;
+      position: relative;
+      background-color: #d0e4f2;
+    }
+}
+
 .col-lg-12 {
   /* flex: 0 0 100%;
   max-width: 100%; */
@@ -161,10 +176,12 @@ h2 .titleText {
 }
 .titleText {
   line-height: 1.2;
-}
-.titleText .skyText {
+}.titleText .skyText {
+  font-size: 60px;
+}@media (max-width:1600px)
+{.titleText .skyText {
   font-size: 50px;
-}
+}}
 
 .triangleTopLeftBg:before {
   top: -1px;
@@ -255,7 +272,7 @@ h2 .titleText {
 }@media (max-width: 1600px) {.titleText {
   font-size: 50px;
   margin: 0 0 35px;}
-}@media (max-width: 1440px) {.titleText,
+}@media (max-width: 1440px) {.titleText,.titleText .skyText
  {
   font-size: 40px;
   line-height: 1.5;}
@@ -267,7 +284,7 @@ h2 .titleText {
   font-size: 40px;
   line-height: 65px;}
 }@media only screen and (max-width: 1024px) {.bannerLeft h2,
-.titleText,
+.titleText,.titleText .skyText
 {
   font-size: 36px;
   line-height: 50px;}
@@ -280,4 +297,7 @@ h2 .titleText {
 }}@media only screen and (max-width: 768px) {.triangleTopLeftBg {
   padding-top: 110px;
  }
+}@media only screen and (max-width: 1024px) {.bannerLeft h2 {
+  font-size: 40px !important;
+line-height: 50px;}
 }

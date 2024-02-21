@@ -15,12 +15,12 @@
 }
 .pb-0,
 .py-0 {
-  padding-bottom: 0 ;
+  padding-bottom: 0 !important;
 }
 
 .offeringSectionWrap .scrollSection {
   width: 100%;
-    height: calc(100vh - 62px);
+    
   position: relative;
   overflow: hidden;
   transition: 2s;
@@ -52,12 +52,19 @@
   }
 }
 .titleText {
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 400;
-  font-size: 50px;
-  margin: 0 0 35px;
+  font-size: 60px;
+  margin: 0 0 50px;
   color: #303030;
-}
+}@media (max-width: 1600px) {.titleText {
+  font-size: 50px;
+  margin:0 0 35px;}}@media (max-width: 1440px) {
+    .titleText {
+      font-size: 40px;
+     line-height: 1.2;
+    }
+  }
 .offeringWrap .bigImg {
   bottom: -50px;
   width: calc(100% - 200px);
@@ -85,10 +92,9 @@
 }
 .offeringWrap .bigImg {
   position: relative;
-
+  width: 100%;
   margin: 0 auto;
-  bottom: -50px;
-  width: calc(100% - 200px);
+  bottom: 0px;
   left: 0;
   right: 0;
   transform-origin: bottom center;
@@ -449,8 +455,26 @@ figcaption {
       opacity: 1;
       transform: scale(1);
     }
-}
-.mainCircleBg {
+}.mainCircleBg {width: 400px;
+height: 400px;
+margin: auto;
+position: absolute;
+border-radius: 50%;
+left: 0;
+right: 0;
+bottom: -80px;width: 400px;
+  height: 400px;
+  margin: auto;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  background: radial-gradient(84.01% 84.01% at 68.01% 26.93%, #288cd1 30.87%, #0571bc 93.75%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;}
+@media (max-width: 1600px){.mainCircleBg {
   width: 300px;
   height: 300px;
   bottom: -100px;
@@ -465,7 +489,7 @@ figcaption {
                 align-items: flex-start;
                 justify-content: center;
           right: 0;
-}
+}}
 .mainCircleBg img {
   display: inline-block;
   margin: 34% 0 0;
@@ -506,8 +530,8 @@ figcaption {
 }}
 @media (max-width: 1600px) {.mainCircleBg {
   width: 300px;
-  height: 300px;}
-  bottom: 10px;
+  height: 300px;bottom: 10px;}
+ 
 }@media (max-width: 1600px) and (max-height: 900px) {.mainCircleBg {
   bottom: -100px;}
 }@media (max-width: 1366px) and (max-height: 768px){ .mainCircleBg {

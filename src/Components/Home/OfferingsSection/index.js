@@ -118,13 +118,7 @@ function OfferingsSection() {
                 </div>
               </div>
             </div>
-            <div className="animeIndexImg">
-              <img
-                loading="lazy"
-                src="assets/images/home/animeIndex.jpg"
-                alt=""
-              />
-            </div>
+         
           </div>
         </div>
       </div>

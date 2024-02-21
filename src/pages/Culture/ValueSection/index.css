@@ -1,6 +1,8 @@
 /* responsive*/.trBox {
     margin-bottom: 80px;
     width: calc(25% - 30px);
+}.trust {
+    padding-bottom: 200px;
 }
 @media (max-width: 1600px){ .trust {
     padding-bottom: 90px;}

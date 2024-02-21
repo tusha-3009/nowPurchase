@@ -39,6 +39,10 @@
     margin-bottom: 60px;
     font-size: 28px;
     font-weight: 500;
+}
+@media (max-width: 1440px) {.bannerLeft .newDiv {
+    font-size: 22px;
+    margin-bottom: 40px;}
 }.bannerLeft h2 {
     line-height: 84px;
     font-size: 64px;

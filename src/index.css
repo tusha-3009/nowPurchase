@@ -168,11 +168,62 @@ li {
    margin: 0 0 35px;
    color: #303030;
  }
-
+.section{
+  padding: 200px 0;
+}
 @media (max-width: 1600px){ .section {
   padding: 150px 0 !important; }
 }@media (max-width: 1365px) {.section {
   padding: 80px 0 !important;}
 }@media only screen and (max-width: 640px) {.section {
   padding: 80px 0 !important;
+}}p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 38px;
+  color: #606060;
+}
+@media (max-width: 1600px) {
+  .titleText .skyText {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1440px){ .titleText,
+.titleText .skyText {
+  font-size: 40px;
+  line-height: 1.5;
 }}
+@media (max-width: 1366px) and (max-height: 768px) {
+
+  .titleText,
+  .titleText .skyText,
+  .bannerLeft h2 {
+    line-height: 1.2;
+  }
+}
+
+
+
+
+
+@media (max-width: 1600px) {.titleText {
+  font-size: 50px;
+  margin: 0 0 35px;
+}}@media (max-width: 1600px) and (max-height: 900px) {
+  .titleText {
+    line-height: 1.2;
+  }
+}@media (max-width: 1440px) {
+
+  .titleText,
+  .titleText .skyText {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+}@media (max-width: 1366px) and (max-height: 768px) {
+
+  .titleText,
+  .titleText .skyText,
+  .bannerLeft h2 {
+    line-height: 1.2;
+  }}

@@ -41,11 +41,18 @@
 }
 .mediaSectionWrap .titleText {
   margin-bottom: 30px;
-  font-size: 50px;
+  font-size: 60px;
   margin: 0 0 30px;
   line-height: 50px;
   font-weight: 400;
   color: #303030;
+}
+@media (max-width:1600px) {
+  .mediaSectionWrap .titleText {
+      font-size: 50px;
+}}
+@media (max-width: 1440px) {.mediaSectionWrap .titleText {
+  font-size: 40px;}
 }
 .mediaSectionWrap .mediaWrap {
   display: flex;
@@ -89,7 +96,7 @@ figure {
   height: 340px;
 }
 .knowMoreBtn.gradientBtn {
-  font-size: 20px !important;
+  font-size: 28px ;
 }
 .knowMoreBtn.gradientBtn {
   background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
@@ -125,10 +132,19 @@ figure {
   padding: 25px 20px;
 }
 .mediaText p {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 38px;
   color: #606060;
+}
+
+@media (max-width:1600px) {
+.mediaText p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px;
+    color: #606060;
+  }
 }
 /*responsive*/
 @media (max-width: 1365px){ .mediaSectionWrap .mediaWrap .eachMediaBox {

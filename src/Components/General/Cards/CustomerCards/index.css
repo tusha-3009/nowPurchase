@@ -82,8 +82,8 @@
   align-items: center;
 }
 .test_arrow {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
 
   display: flex;
@@ -92,6 +92,11 @@
   background-color: #d0e4f2;
   transition: 0.4s;
   border-radius: 8px;
+}
+@media (max-width:1600px) {
+  .test_arrow {
+      width: 60px;
+      height: 60px;}
 }
 .test-prev {
   margin-right: 20px;
@@ -272,7 +277,26 @@
 .sectionCards h3 {
   line-height: 60px;
   margin-bottom: 8px;
+}.sectionCards h3 {
+  font-size: 64px ;
+  font-weight: 400;
+  line-height: 84px;
 }
+@media (max-width: 1600px){ .sectionCards h3{
+  font-size: 50px;
+  line-height: 1.2;
+}}
+@media (max-width: 1440px) {.sectionCards h3,
+.sectionCards h3.skyText {
+  font-size: 40px;
+  line-height: 1.5;}
+}@media (max-width: 1366px) and (max-height: 768px) {.sectionCards h3,
+.sectionCards h3 .skyText,
+ {
+  line-height: 1.2;
+}}
+
+
 
 /*responsive*/
 .testSec {
@@ -305,6 +329,13 @@
   .overflowSection {
     height: auto !important;
   }
+}
+
+
+
+
+.testmain {
+  margin-bottom: 115px;
 }
 @media (max-width: 1600px) {
   .testmain {
