@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./index.css";
-import ExploreSection from "../ExploreSection";
+
 import disclaimerImg from "../../../assets/images/career/disclaimerImg.png";
-function Disclaimer({ exploreRef }) {
+function Disclaimer() {const reference = useRef(null);
   const handleClick = () => {
-    // Scroll to ExploreSection when link is clicked
-    if (exploreRef.current) {
-      exploreRef.current.scrollIntoView({ behavior: "smooth" });
+    // alert("hey");
+
+    if (reference && reference.current) {
+      reference.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -30,7 +31,7 @@ function Disclaimer({ exploreRef }) {
                 <a
                   href="#jobOpening"
                   onClick={handleClick}
-                  target="_blank"
+                  // target="_blank"
                   className="npButton"
                   id="Careers_Section4_Disclaimer_SeeJobOpenings"
                 >

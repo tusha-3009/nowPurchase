@@ -93,7 +93,7 @@ nav ul li .careers {
   line-height: 24px;
   display: inline-block;
   background: linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);
-}
+}.btnWrapNew a.getInTouch:hover {background: linear-gradient(180deg, #1579BE 0%, rgba(21, 121, 190, 0.6) 100%);}
 .btnWrapNew a {
   display: block;
   text-align: center;

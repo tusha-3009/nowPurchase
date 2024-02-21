@@ -1,10 +1,9 @@
-import React, { useRef } from 'react'
-import "./index.css"
-function ExploreSection() {
-  const exploreRef = useRef(null);
+import React, { forwardRef, useRef } from "react";
+import "./index.css";
+const ExploreSection = forwardRef((props, ref) => {
   return (
     <div
-      ref={exploreRef}
+      ref={ref}
       className="exploreSectionWrap animated-section section"
       id="jobOpening"
     >
@@ -29,6 +28,6 @@ function ExploreSection() {
       </div>
     </div>
   );
-}
+});
 
-export default ExploreSection
+export default ExploreSection;

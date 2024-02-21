@@ -128,7 +128,7 @@ const CustomerCards = () => {
   return (
     <>
       <div
-      ref={aosRef}
+        ref={aosRef}
         className="testSec animated-section section  aosAnim sectionCards"
         id="sec16"
       >
@@ -149,13 +149,14 @@ const CustomerCards = () => {
                     role="button"
                     aria-label="Previous slide"
                     // aria-disabled="false"
+                    onClick={goToPrevious}
+                    style={{ userSelect: "none" }}
                   >
                     <img
                       loading="lazy"
                       src={arrow}
                       alt=""
                       className="prev-button"
-                      onClick={goToPrevious}
                     />
                   </div>
                   <div
@@ -165,13 +166,14 @@ const CustomerCards = () => {
                     role="button"
                     aria-label="Next slide"
                     // aria-disabled="true"
+                    onClick={goToNext}
+                    style={{ userSelect: "none" }}
                   >
                     <img
                       loading="lazy"
                       src={arrow}
                       alt=""
                       className="next-button"
-                      onClick={goToNext}
                     />
                   </div>
                 </div>

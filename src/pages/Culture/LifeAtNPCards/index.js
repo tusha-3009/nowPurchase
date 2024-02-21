@@ -119,6 +119,7 @@ const LifeAtNPCards = () => {
                     tabindex="-1"
                     role="button"
                     onClick={goToPrevious}
+                    style={{ userSelect: "none" }}
                   >
                     <img loading="lazy" src={arrow} alt="" />
                   </div>
@@ -128,6 +129,7 @@ const LifeAtNPCards = () => {
                     tabindex="0"
                     role="button"
                     onClick={goToNext}
+                    style={{ userSelect: "none" }}
                   >
                     <img loading="lazy" src={arrow} alt="" />
                   </div>
@@ -137,11 +139,10 @@ const LifeAtNPCards = () => {
               <Slider ref={sliderRef} {...sliderSettings}>
                 {testimonials.map((testimonial, index) => (
                   <div className="swiper testSlider">
-                    <div className="swiper-slide" >
+                    <div className="swiper-slide">
                       <TestimonialCard key={index} {...testimonial} />
                     </div>
                   </div>
-           
                 ))}
               </Slider>
             </div>

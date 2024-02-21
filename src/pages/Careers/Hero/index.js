@@ -22,40 +22,46 @@ const data = [
 ];
 
 function HeroCareers() {
-  
- useEffect(() => {
-   const aosElements = document.querySelectorAll(".aosAnim");
+  const reference = useRef(null);
+  const handleClick = () => {
+    // alert("hey");
 
-   const observer = new IntersectionObserver(
-     (entries) => {
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add("ltr");
-           // entry.target.classList.remove("ltr-out");
-         } else {
-           // entry.target.classList.add("ltr-out");
-           // entry.target.classList.remove("ltr");
-         }
-       });
-     },
-     {
-       threshold: 0.3,
-       // rootMargin: "-10px",
-     }
-   );
+    if (reference && reference.current) {
+      reference.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  useEffect(() => {
+    const aosElements = document.querySelectorAll(".aosAnim");
 
-   aosElements.forEach((el) => {
-     observer.observe(el);
-   });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
 
-   // Clean up the observer on component unmount
-   return () => {
-     aosElements.forEach((el) => {
-       observer.unobserve(el);
-     });
-   };
- }, []);
+    aosElements.forEach((el) => {
+      observer.observe(el);
+    });
 
+    // Clean up the observer on component unmount
+    return () => {
+      aosElements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
 
   const sliderRef = useRef(null);
 
@@ -71,20 +77,19 @@ function HeroCareers() {
     speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: false,
   };
   if (window.innerWidth < 300) {
     sliderSettings.slidesToShow = 1;
   } else if (window.innerWidth < 600) {
     sliderSettings.slidesToShow = 2;
-  }else if (window.innerWidth < 1100) {
+  } else if (window.innerWidth < 1100) {
     sliderSettings.slidesToShow = 3;
-  } 
-  else if (window.innerWidth < 1400) {
+  } else if (window.innerWidth < 1400) {
     sliderSettings.slidesToShow = 4;
-  }   else {
+  } else {
     sliderSettings.slidesToShow = 6;
-  } 
+  }
   return (
     <>
       <div className="mainBanner innerBanner marketbnr animated-section section">
@@ -108,8 +113,8 @@ function HeroCareers() {
                   <div className="newDiv">#NowPurchaseCareers</div>
 
                   <a
-                    href="#jobOpening"
-                    target="_blank"
+                      href="#jobOpening"
+                    onClick={handleClick}
                     className="npButton"
                     id="Careers_Section1_Landing_SeeJobOpenings"
                   >
@@ -147,44 +152,43 @@ function HeroCareers() {
                   class="slick-list draggable"
                   style={{ padding: "0px 15px" }}
   >*/}
-                  <div
-                    class="slick-track"
-                    style={{
-                      opacity: 1,
-                      width: "100%",
-                      transform: "translate3d(0px, 0px, 0px)",
-                    }}
-                  > 
-                    <Slider ref={sliderRef} {...sliderSettings}>
-                      {data.map((item, index) => (
-                        <div
-                          key={index}
-                          className="imgBoxHolder slick-slide"
-                          // style={{ width: "216px" }}
-                          data-slick-index={index}
-                          aria-hidden={index === 4 ? "false" : "true"}
-                          tabIndex={index === 4 ? "0" : "-1"}
-                        >
-                          <span className="yearTitle">{item.year}</span>
-                          <div className="imgEachBoxx">
-                            <div className="imgBox">
-                              <img
-                                style={{ height: "100%" }}
-                                loading="lazy"
-                                src={item.img}
-                                alt=""
-                              />
-                            </div>
-                            <div className="imgCont">
-                              <p>{item.name}</p>
-                            </div>
+                <div
+                  class="slick-track"
+                  style={{
+                    opacity: 1,
+                    width: "100%",
+                    transform: "translate3d(0px, 0px, 0px)",
+                  }}
+                >
+                  <Slider ref={sliderRef} {...sliderSettings}>
+                    {data.map((item, index) => (
+                      <div
+                        key={index}
+                        className="imgBoxHolder slick-slide"
+                        // style={{ width: "216px" }}
+                        data-slick-index={index}
+                        aria-hidden={index === 4 ? "false" : "true"}
+                        tabIndex={index === 4 ? "0" : "-1"}
+                      >
+                        <span className="yearTitle">{item.year}</span>
+                        <div className="imgEachBoxx">
+                          <div className="imgBox">
+                            <img
+                              style={{ height: "100%" }}
+                              loading="lazy"
+                              src={item.img}
+                              alt=""
+                            />
+                          </div>
+                          <div className="imgCont">
+                            <p>{item.name}</p>
                           </div>
                         </div>
-                      ))}
-                    </Slider>
-                
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
               </div>
-         </div>
             </div>
           </div>
         </Container>

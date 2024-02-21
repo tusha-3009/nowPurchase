@@ -113,13 +113,14 @@ const CustomerCards = () => {
                     role="button"
                     aria-label="Previous slide"
                     // aria-disabled="false"
+                    style={{ userSelect: "none" }}
+                    onClick={goToPrevious}
                   >
                     <img
                       loading="lazy"
                       src={arrow}
                       alt=""
                       className="prev-button"
-                      onClick={goToPrevious}
                     />
                   </div>
                   <div
@@ -129,13 +130,14 @@ const CustomerCards = () => {
                     role="button"
                     aria-label="Next slide"
                     // aria-disabled="true"
+                    onClick={goToNext}
+                    style={{ userSelect: "none" }}
                   >
                     <img
                       loading="lazy"
                       src={arrow}
                       alt=""
                       className="next-button"
-                      onClick={goToNext}
                     />
                   </div>
                 </div>
