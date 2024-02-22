@@ -12,7 +12,16 @@
   padding-top: 160px !important;
 }}@media (max-width: 1280px) {.mainBanner {
   padding-top: 170px !important;
-}}@media only screen and (max-width: 768px) {.homebnr.marketbnr {
+}}
+@media only screen and (max-width: 768px){ .innerBanner {
+  padding: 120px 0 !important;
+}}@media only screen and (max-width: 768px){ .marketbnr {
+  padding: 50px 0;
+  padding-bottom: 0;
+  display: block;
+  padding-top: 120px !important;
+}}
+@media only screen and (max-width: 768px) {.homebnr.marketbnr {
   padding-top: 160px !important;
 }}
 .overflowSection {
@@ -460,7 +469,13 @@
   font-size: 24px;
   line-height: 32px;
 }}
-
+.eachkey h4,
+.eachkey h4 span {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 8px;
+}
 @media (max-width: 1600px) {.keyNumber .eachkey h4, .keyNumber .eachkey h4 span{
   font-size: 32px;margin-bottom: 8px;
   font-weight: 700;
@@ -478,16 +493,7 @@
   line-height: 20px;
   font-weight: 800;
   margin-bottom: 8px;
-}}.eachkey h4,.eachkey h4 span {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 50px;
-  margin-bottom: 8px;
-}@media (max-width: 1600px) {.keyNumber .eachkey h4 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;margin-bottom: 8px;
-}} 
+}}
 
  .bannerPoly1:hover .video {
    opacity: 1;

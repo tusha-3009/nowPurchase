@@ -141,7 +141,12 @@ figure {
 @media (max-height: 705px){ .mediaText p {
   font-size: 14px;
 }}
-
+@media (max-width: 575px) {
+  .mediaText p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 /* @media (max-width:1600px) {p
   {font-size: 16px;
 }} */

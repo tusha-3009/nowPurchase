@@ -17,7 +17,13 @@
 .mapleft {
     width: calc(100% - 760px);
     padding-right: 30px;
-}
+}@media (max-width: 1440px) {.section.ltr .mapleft {
+  width: calc(60%);}
+}@media only screen and (max-width: 1024px){.section.ltr .mapleft {
+  width: 100%;
+}}
+
+
 .mapSec.aosAnim h3 {
   opacity: 1;
   animation: none;

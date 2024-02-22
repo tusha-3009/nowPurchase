@@ -88,8 +88,11 @@ font-size: 40px;
   line-height: 1.4;
 }}
 
-
-
+@media only screen and (max-width: 768px) {.sechead h3,.sechead h3 span {
+  font-size: 28px !important;
+  line-height: 40px;
+}
+}
 .footerSection .footerTitleText {
   font-weight: 500;
   color: #fff;

@@ -29,8 +29,8 @@
 }@media (max-width: 1200px) {.disclaimerWrap .founderContBox {
     padding: 40px;}
 }@media only screen and (max-width: 991px) {.disclaimerWrap .founderContBox {
-    margin-bottom: 20px;}
-    height: auto;
+    margin-bottom: 20px;
+    height: auto;}
 }@media (max-width: 575px) {.disclaimerWrap .founderContBox {
     padding: 16px;}
 }@media (max-width: 575px) {.founderContBox .titleText {

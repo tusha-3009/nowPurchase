@@ -10,6 +10,27 @@ background-color: #add8e6;
 
 }
 
+
+
+
+
+@media (max-width: 1600px){ .procureSectionWrap {
+    padding-bottom: 70px;
+}}@media (max-width: 1440px) {
+    .procureSectionWrap {
+        padding-top: 90px !important;
+    }
+}@media (max-width: 1280px) {
+    .procureSectionWrap {
+        padding-top: 80px !important;
+        padding-bottom: 60px !important;
+    }
+}@media (max-width: 575px) {
+    .procureSectionWrap {
+        padding-bottom: 60px !important;
+    }
+}
+
 .procureSectionWrap .eachBoxWrap {
     display: flex;
     flex-wrap: wrap;

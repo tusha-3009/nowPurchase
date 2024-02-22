@@ -104,7 +104,7 @@ function HeroCareers() {
                   </h2>
                   <p>
                     Join our mission-driven organisation that values
-                  creativity,<br/>
+                  creativity, <br/>
                   
                     fun, and innovation. Help us shape the future of metal
                 

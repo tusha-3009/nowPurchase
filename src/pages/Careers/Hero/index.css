@@ -43,7 +43,13 @@
 @media (max-width: 1440px) {.bannerLeft .newDiv {
     font-size: 22px;
     margin-bottom: 40px;}
-}.bannerLeft h2 {
+}
+@media (max-width: 575px) {.bannerLeft .newDiv {
+    font-size: 16px;
+}}@media only screen and (max-width: 991px) {.bannerLeft .newDiv {
+    margin-bottom: 30px;
+}}
+.bannerLeft h2 {
     line-height: 84px;
     font-size: 64px;
     font-weight: 400;
