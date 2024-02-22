@@ -84,7 +84,7 @@
 }
 
 @media (max-width:1600px) {.mediaSectionWrapA .titleText {
-    font-size: 50px;
+    font-size: 50px;line-height: 1.2;
 }}@media (max-width:1440px) {
     .mediaSectionWrapA .titleText {
         font-size: 40px;
@@ -108,5 +108,23 @@
      height: auto;
      overflow-y: visible;
  }}
+.mediaTextAcc p
+ {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38px;
+    color: #606060;
+}@media (max-width: 1440px) {
+.mediaTextAcc p,
+    .mediaTextAcc p strong{
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
 
- 
+
+ @media (max-height: 705px) {
+     .mediaTextAcc p,.mediaTextAcc p strong {
+         font-size: 14px;
+     }
+ }

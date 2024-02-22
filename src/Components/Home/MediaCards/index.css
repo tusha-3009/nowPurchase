@@ -138,12 +138,9 @@ figure {
   color: #606060;
 }
 
-p {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 38px;
-  color: #606060;
-}
+@media (max-height: 705px){ .mediaText p {
+  font-size: 14px;
+}}
 
 /* @media (max-width:1600px) {p
   {font-size: 16px;

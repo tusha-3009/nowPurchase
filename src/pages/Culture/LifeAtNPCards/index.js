@@ -8,6 +8,7 @@ import p4 from "../../../assets/images/people/File13.png";
 import p5 from "../../../assets/images/people/people_6.png";
 import Container from "../../../Components/General/Container";
 import Slider from "react-slick";
+import { shuffleArray } from "../../../Components/utils/utils";
 const testimonials = [
   {
     quote:
@@ -137,7 +138,7 @@ const LifeAtNPCards = () => {
               </div>
 
               <Slider ref={sliderRef} {...sliderSettings}>
-                {testimonials.map((testimonial, index) => (
+                {shuffleArray(testimonials).map((testimonial, index) => (
                   <div className="swiper testSlider">
                     <div className="swiper-slide">
                       <TestimonialCard key={index} {...testimonial} />

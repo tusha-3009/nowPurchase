@@ -10,6 +10,7 @@ import privilegePic7 from "../../../assets/images/career/icons/priviImg_7.png";
 import privilegePic8 from "../../../assets/images/career/icons/priviImg_8.png";
 import privilegePic9 from "../../../assets/images/career/icons/priviImg_9.png";
 function PrivilegeCards() {
+  
   return (
     <div className="privilegeSectionWrap procureSectionWrap animated-section section">
       <div className="container">

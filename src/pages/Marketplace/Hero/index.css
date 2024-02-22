@@ -487,4 +487,8 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;margin-bottom: 8px;
-}}
+}} 
+
+ .bannerPoly1:hover .video {
+   opacity: 1;
+ }

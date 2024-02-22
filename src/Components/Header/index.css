@@ -253,3 +253,22 @@ nav ul li .careers {
 nav ul li .culture  {
   font-size: 14px;
 }}
+.modalSelectPicker > div >div >div >span{
+  font-size: 18px !important;
+  line-height: 22px !important;
+  
+  
+}.rs-form-fluid .rs-form-control-wrapper>.rs-input{
+  font-size: 18px !important;
+    line-height: 30px !important;
+}
+.rs-picker-default .rs-picker-toggle.rs-btn
+{ padding: 7px 11px !important;}
+.rs-stack .rs-stack-item{
+  line-height: 30px;
+}.rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-indicator .rs-picker-caret-icon{
+ top: 12px;
+}.rs-form-vertical .rs-form-group .rs-form-control-label {
+  
+  font-weight: 500;
+}

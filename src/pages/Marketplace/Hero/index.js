@@ -5,166 +5,180 @@ import loca from "../../../assets/images/marketplace/loc.png";
 import dummy from "../../../assets/images/dummy.mp4";
 import bnrPlay from "../../../assets/images/marketplace/bnrPlay.png";
 import Container from "../../../Components/General/Container";
-import { counts } from "../../../constants";
+import { counts } from "../../../Components/constants";
 import CountUp from "react-countup";
-import { Modal, InputPicker, Form, Button } from "rsuite";
+import { Modal, SelectPicker, Form, Button } from "rsuite";
 function Hero() {
- const aosRef = useRef(null);
+  const aosRef = useRef(null);
 
-const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-const [name, setName] = useState("");
-const [phone, setPhone] = useState("");
-const [enquiryPurpose, setEnquiryPurpose] = useState("");
-const [remarks, setRemarks] = useState("");
- const handleClose = () => {
-   setModalOpen(false);
- }; 
-   const optionsData = [
-     "MarketPlace",
-     "MetalCloud",
-     "Careers",
-     "Requeest Demo",
-     "Others",
-   ].map((items) => ({ label: items, value: items }));
- 
- const notifyOnSlack = async (channel, message) => {
-   try {
-     const response = await fetch(
-       "https://test-api.nowpurchase.com/api/send_slack/",
-       {
-         method: "POST",
-         headers: {
-           Accept: "application/json",
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify({
-           channel: channel,
-           message: message,
-         }),
-       }
-     );
-     if (!response.ok) {
-       throw new Error("Failed to submit enquiry");
-     }
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [enquiryPurpose, setEnquiryPurpose] = useState("");
+  const [remarks, setRemarks] = useState("");
+  const videoRef = React.createRef();
+  const handleClose = () => {
+    setModalOpen(false);
+  };
+  const optionsData = [
+    "MarketPlace",
+    "MetalCloud",
+    "Careers",
+    "Requeest Demo",
+    "Others",
+  ].map((items) => ({ label: items, value: items }));
 
-     return response;
-   } catch (error) {
-     console.error("Fetch error:", error);
-     throw error;
-   }
- };
- const handleSubmit = async (e) => {
-   // Validate form fields
-   const namePattern = /^[a-zA-Z\s]*$/;
-   const phonePattern = /^\d+$/;
+  const notifyOnSlack = async (channel, message) => {
+    try {
+      const response = await fetch(
+        "https://test-api.nowpurchase.com/api/send_slack/",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            channel: channel,
+            message: message,
+          }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to submit enquiry");
+      }
 
-   if (!name || !namePattern.test(name)) {
-     alert("Please enter a valid name. Only alphabets and spaces are allowed.");
-     return;
-   }
+      return response;
+    } catch (error) {
+      console.error("Fetch error:", error);
+      throw error;
+    }
+  };
+  const handleSubmit = async (e) => {
+    // Validate form fields
+    const namePattern = /^[a-zA-Z\s]*$/;
+    const phonePattern = /^\d+$/;
 
-   if (!phone || !phonePattern.test(phone)) {
-     alert("Please enter a valid phone number. Only numbers are allowed.");
-     return;
-   }
+    if (!name || !namePattern.test(name)) {
+      alert(
+        "Please enter a valid name. Only alphabets and spaces are allowed."
+      );
+      return;
+    }
 
-   if (!enquiryPurpose) {
-     alert("Please select your enquiry purpose.");
-     return;
-   }
+    if (!phone || !phonePattern.test(phone)) {
+      alert("Please enter a valid phone number. Only numbers are allowed.");
+      return;
+    }
 
-   if (!remarks) {
-     alert("Please enter remarks");
-     return;
-   }
+    if (!enquiryPurpose) {
+      alert("Please select your enquiry purpose.");
+      return;
+    }
 
-   const payload = {
-     text: `New enquiry:
+    if (!remarks) {
+      alert("Please enter remarks");
+      return;
+    }
+
+    const payload = {
+      text: `New enquiry:
         Name: ${name}
         Contact Number: ${phone}
         Enquiry Purpose: ${enquiryPurpose}
         Remarks: ${remarks}`,
-   };
+    };
 
-   try {
-     await notifyOnSlack("NP_WEBSITE", payload.text);
-     alert("Enquiry submitted successfully!");
-   } catch (error) {
-     alert("Error submitting enquiry");
-   } finally {
-     // Reset form fields
-     setName("");
-     setPhone("");
-     setEnquiryPurpose("");
-     setRemarks("");
-   }
- };
- useEffect(() => {
-   const observer = new IntersectionObserver(
-     (entries) => {
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add("ltr");
-           // entry.target.classList.remove("ltr-out");
-         } else {
-           // entry.target.classList.add("ltr-out");
-           // entry.target.classList.remove("ltr");
-         }
-       });
-     },
-     {
-       threshold: 0.3,
-       // rootMargin: "-10px",
-     }
-   );
+    try {
+      await notifyOnSlack("NP_WEBSITE", payload.text);
+      alert("Enquiry submitted successfully!");
+    } catch (error) {
+      alert("Error submitting enquiry");
+    } finally {
+      // Reset form fields
+      setName("");
+      setPhone("");
+      setEnquiryPurpose("");
+      setRemarks("");
+    }
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
 
-   if (aosRef.current) {
-     observer.observe(aosRef.current);
-   }
+    if (aosRef.current) {
+      observer.observe(aosRef.current);
+    }
 
-   // Clean up the observer on component unmount
-   return () => {
-     if (aosRef.current) {
-       observer.unobserve(aosRef.current);
-     }
-   };
- }, []);  useEffect(() => {
-   const aosElements = document.querySelectorAll(".aosAnim");
+    // Clean up the observer on component unmount
+    return () => {
+      if (aosRef.current) {
+        observer.unobserve(aosRef.current);
+      }
+    };
+  }, []);
+  useEffect(() => {
+    const aosElements = document.querySelectorAll(".aosAnim");
 
-   const observer = new IntersectionObserver(
-     (entries) => {
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add("ltr");
-           // entry.target.classList.remove("ltr-out");
-         } else {
-           // entry.target.classList.add("ltr-out");
-           // entry.target.classList.remove("ltr");
-         }
-       });
-     },
-     {
-       threshold: 0.3,
-       // rootMargin: "-10px",
-     }
-   );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ltr");
+            // entry.target.classList.remove("ltr-out");
+          } else {
+            // entry.target.classList.add("ltr-out");
+            // entry.target.classList.remove("ltr");
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        // rootMargin: "-10px",
+      }
+    );
 
-   aosElements.forEach((el) => {
-     observer.observe(el);
-   });
+    aosElements.forEach((el) => {
+      observer.observe(el);
+    });
 
-   // Clean up the observer on component unmount
-   return () => {
-     aosElements.forEach((el) => {
-       observer.unobserve(el);
-     });
-   };
- }, []);
+    // Clean up the observer on component unmount
+    return () => {
+      aosElements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
 
+  const handleHover = () => {
+    videoRef.current.play();
+  };
+
+  const handleHoverOut = () => {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+  };
+  const handleVideoEnded = () => {
+    videoRef.current.play();
+  };
   return (
     <>
-      {" "}
       <Modal open={modalOpen} onClose={handleClose}>
         <Modal.Header>
           <Modal.Title>
@@ -213,10 +227,13 @@ const [remarks, setRemarks] = useState("");
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important" }}
               />
               {/* </Form.Control> */}
             </Form.Group>
@@ -278,7 +295,7 @@ const [remarks, setRemarks] = useState("");
                     href="#getInTouchForm"
                     className="npButton getInTouch"
                     id="MarketPlace_Section1_Landing_EnquireNow"
-                    style={{color:"white"}}
+                    style={{ color: "white" }}
                   >
                     Enquire Now
                   </a>
@@ -291,9 +308,13 @@ const [remarks, setRemarks] = useState("");
 
                     <video
                       className="video"
-                      autoplay=""
-                      muted=""
+                      autoPlay
+                      muted
                       loop=""
+                      ref={videoRef}
+                      onMouseEnter={handleHover}
+                      onMouseLeave={handleHoverOut}
+                      onEnded={handleVideoEnded}
                       id="hoverVideo"
                     >
                       <source src={dummy} type="video/mp4" />
@@ -353,8 +374,7 @@ const [remarks, setRemarks] = useState("");
                       <div className="eachkey">
                         <h4>
                           <span className="counter">
-                            {" "}
-                            <CountUp end={number} duration={4.5} />
+                            <CountUp end={number} duration={8} />
                           </span>
                           {text}
                         </h4>

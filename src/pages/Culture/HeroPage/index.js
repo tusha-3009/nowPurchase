@@ -65,7 +65,7 @@ function HeroPageCulture() {
         scrollTrigger: {
           trigger: "#svg",
           scrub: true,
-          start: "top-=500 top",
+          start: "top-=300 top",
           end: "bottom center",
         },
       })

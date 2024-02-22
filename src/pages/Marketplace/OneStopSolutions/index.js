@@ -9,7 +9,7 @@ import sol6 from "../../../assets/images/marketplace/sol-6.png";
 import sol7 from "../../../assets/images/marketplace/sol-7.png";
 import sol8 from "../../../assets/images/marketplace/sol-8.png";
 import Container from "../../../Components/General/Container";
-import { Modal, InputPicker, Form, Button } from "rsuite";
+import { Modal, SelectPicker, Form, Button } from "rsuite";
 function OneStopSolutions() {
   const aosRef = useRef(null);
  const [modalOpen, setModalOpen] = useState(false);
@@ -133,7 +133,6 @@ function OneStopSolutions() {
   }, []);
   return (
     <>
-      {" "}
       <Modal open={modalOpen} onClose={handleClose}>
         <Modal.Header>
           <Modal.Title>
@@ -182,10 +181,13 @@ function OneStopSolutions() {
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important" }}
               />
               {/* </Form.Control> */}
             </Form.Group>

@@ -5,9 +5,9 @@ import locationLogo from "../../../assets/images/marketplace/loc.png";
 import applPoly from "../../../assets/images/application/applPoly.png";
 import Container from "../../../Components/General/Container";
 import CountUp from "react-countup";
-import { countc } from "../../../constants";
-import { Modal, InputPicker, Form, Button } from "rsuite";
-
+import { countc } from "../../../Components/constants";
+import { Modal, SelectPicker, Form, Button } from "rsuite";
+import dummy1 from "../../../assets/images/application/dummy.mp4";
 function MeltingProcessMadeReliable() {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -15,6 +15,7 @@ function MeltingProcessMadeReliable() {
   const [phone, setPhone] = useState("");
   const [enquiryPurpose, setEnquiryPurpose] = useState("");
   const [remarks, setRemarks] = useState("");
+  const videoRef = React.createRef();
   const handleClose = () => {
     setModalOpen(false);
   };
@@ -132,7 +133,17 @@ function MeltingProcessMadeReliable() {
       });
     };
   }, []);
+  const handleHover = () => {
+    videoRef.current.play();
+  };
 
+  const handleHoverOut = () => {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+  };
+  const handleVideoEnded = () => {
+    videoRef.current.play();
+  };
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -183,10 +194,13 @@ function MeltingProcessMadeReliable() {
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important" }}
               />
               {/* </Form.Control> */}
             </Form.Group>
@@ -255,11 +269,18 @@ function MeltingProcessMadeReliable() {
                 <div class="bannerRight">
                   <div class="bannerPoly bannerPoly1">
                     <img src={applPoly} alt="" />
-                    <video class="video" autoplay muted loop id="hoverVideo">
-                      <source
-                        src="assets/images/application/dummy.mp4"
-                        type="video/mp4"
-                      />
+                    <video
+                      className="video"
+                      autoPlay
+                      muted
+                      loop=""
+                      ref={videoRef}
+                      onMouseEnter={handleHover}
+                      onMouseLeave={handleHoverOut}
+                      onEnded={handleVideoEnded}
+                      id="hoverVideo"
+                    >
+                      <source src={dummy1} type="video/mp4" />
                     </video>
                     <a
                       href="https://www.youtube.com/embed/664mYn1fjQs"
@@ -306,7 +327,7 @@ function MeltingProcessMadeReliable() {
                         <h4>
                           <span className="counter">
                             {" "}
-                            <CountUp end={number} duration={4.5} />
+                            <CountUp end={number} duration={8} />
                           </span>
                           {text}
                         </h4>

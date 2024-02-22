@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-import { Modal, InputPicker, Form, Button } from "rsuite";
+import { Modal, SelectPicker, Form, Button } from "rsuite";
 
 function GetInTouch() {
   const [modalOpen, setModalOpen] = useState(true);
@@ -105,7 +105,7 @@ function GetInTouch() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form fluid onSubmit={ handleSubmit}>
+          <Form fluid onSubmit={handleSubmit}>
             <Form.Group>
               <Form.ControlLabel for="name">
                 Name <span>*</span>
@@ -114,7 +114,7 @@ function GetInTouch() {
                 name="name"
                 type="text"
                 placeholder="Enter your name here"
-                required
+                Required
                 value={name}
                 onChange={(value) => setName(value)}
               />
@@ -146,10 +146,13 @@ function GetInTouch() {
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important" }}
               />
               {/* </Form.Control> */}
             </Form.Group>
@@ -166,11 +169,22 @@ function GetInTouch() {
               />
             </Form.Group>
 
-            <Form.Group>
-              <Button appearance="subtle" onClick={handleClose}>
+            <Form.Group style={{ float: "right" }}>
+              <Button
+                appearance="subtle"
+                onClick={handleClose}
+                style={{ marginRight: "20px" }}
+              >
                 Cancel
               </Button>
-              <Button type="submit" appearance="primary">
+              <Button
+                appearance="primary"
+                type="submit"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #1579be 0%, rgba(21, 121, 190, 0.6) 100%);",
+                }}
+              >
                 Submit Enquiry
               </Button>
             </Form.Group>

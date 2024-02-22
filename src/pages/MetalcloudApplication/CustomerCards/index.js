@@ -2,50 +2,8 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 // import "./index.css";
 import arrow from "../../../assets/images/marketplace/test-arrow.png";
-import employee_1 from "../../../assets/images/application/employee_mc4.png";
-import company_1 from "../../../assets/images/application/company_mc4.png";
-import employee_2 from "../../../assets/images/application/employee_mc3.png";
-import company_2 from "../../../assets/images/application/company_mc2.png";
-import employee_3 from "../../../assets/images/application/employee_mc2.png";
-import company_3 from "../../../assets/images/application/company_mc3.png";
-import employee_4 from "../../../assets/images/application/employee_mc1.png";
-import company_4 from "../../../assets/images/application/company_mc1.png";
-
-const testimonials = [
-  {
-    quote:
-      "The MetalCloud is fantastic! Its user-friendly interface, instant data delivery to our phones, and insightful data presentation have all helped  make our work easier.",
-    name: "Pankaj Phukan",
-    empImg: employee_1,
-    title: "MR Representative",
-    companyLogo: company_1,
-  },
-  {
-    quote:
-      "MetalCloud has been a valuable addition! The automation,ChargeMix suggestions, and real-time WhatsApp integration have boosted efficiency and team collaboration. Truly outstanding.",
-    name: "The Kolhapur Metals",
-    empImg: employee_2,
-    title: "MR Representative",
-    companyLogo: company_2,
-  },
-  {
-    quote:
-      "We've significantly reduced melt time, thanks to the invaluable dilution suggestions. The MetalCloud platform is a game-changer for foundry processes.",
-    name: "Pradeep Bera",
-    empImg: employee_3,
-    title: "Foundry Head",
-    companyLogo: company_3,
-  },
-
-  {
-    quote:
-      " MetalCloud has truly transformed our operations! With 100% accurate chemistry corrections and valuable insights, it's been a real game-changer. Highly recommended!",
-    name: "Prasad Mantri",
-    empImg: employee_4,
-    title: "Managing Director",
-    companyLogo: company_4,
-  },
-];
+import { testimonialsMC } from "../../../Components/constants";
+import { shuffleArray } from "../../../Components/utils/utils";
 
 const TestimonialCard = ({ quote, name, empImg, title, companyLogo }) => (
   <div className="testCard">
@@ -144,7 +102,7 @@ const CustomerCards = () => {
               </div>
 
               <Slider ref={sliderRef} {...sliderSettings}>
-                {testimonials.map((testimonial, index) => (
+                {shuffleArray(testimonialsMC).map((testimonial, index) => (
                   <div className="swiper testSlider">
                     <TestimonialCard key={index} {...testimonial} />
                   </div>

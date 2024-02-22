@@ -5,7 +5,7 @@ import crossImg from "../../../assets/images/application/list-2.png";
 import Price1 from "../../../assets/images/application/price-1.png";
 import Price2 from "../../../assets/images/application/price-2.png";
 import Container from "../../../Components/General/Container";
-import { Modal, InputPicker, Form, Button } from "rsuite";
+import { Modal, SelectPicker, Form, Button } from "rsuite";
 function PlansPricing() {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -148,10 +148,13 @@ function PlansPricing() {
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important" }}
               />
               {/* </Form.Control> */}
             </Form.Group>

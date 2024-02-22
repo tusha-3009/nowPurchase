@@ -10,7 +10,7 @@ import menuPic2 from "../../assets/images/home/menuItem2.png";
 // import crossBtn from "../../assets/images/crossBtnf.png";
 // import submitBtn from "../../assets/images/submit.png";
 
-import { Modal, InputPicker, Form, Button } from "rsuite";
+import { Modal, InputPicker, Form, Button, SelectPicker } from "rsuite";
 
 const headerTitleJSON = [
   { url: "/careers", text: "Career" },
@@ -25,26 +25,24 @@ const headerTitleJSON = [
   { url: "/application", text: "MetalCloud" },
 ];
 
-function Header() { 
-const [isOpen, setIsOpen] = useState(false);
-const [modalOpen, setModalOpen] = useState(false);
-   
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [enquiryPurpose, setEnquiryPurpose] = useState("");
-    const [remarks, setRemarks] = useState("");
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [enquiryPurpose, setEnquiryPurpose] = useState("");
+  const [remarks, setRemarks] = useState("");
   //console.log(window.location.pathname);
   const headerTitle = headerTitleJSON.find(
     ({ url }) => url === window.location.pathname
   );
   useEffect(() => {
     if (headerTitle?.text) {
-      document.title = "NowPurchase || " + headerTitle.text ;
-    }
-    else
-document.title = "NowPurchase || Home";
+      document.title = "NowPurchase || " + headerTitle.text;
+    } else document.title = "NowPurchase || Home";
   }, [headerTitle]);
- 
+
   function openMenu() {
     setIsOpen(!isOpen);
   }
@@ -68,80 +66,80 @@ document.title = "NowPurchase || Home";
   };
   // console.log(modalOpen);
 
-    const notifyOnSlack = async (channel, message) => {
-      try {
-        const response = await fetch(
-          "https://test-api.nowpurchase.com/api/send_slack/",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              channel: channel,
-              message: message,
-            }),
-          }
-        );
-        if (!response.ok) {
-          throw new Error("Failed to submit enquiry");
+  const notifyOnSlack = async (channel, message) => {
+    try {
+      const response = await fetch(
+        "https://test-api.nowpurchase.com/api/send_slack/",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            channel: channel,
+            message: message,
+          }),
         }
-
-        return response;
-      } catch (error) {
-        console.error("Fetch error:", error);
-        throw error;
-      }
-    };
-    const handleSubmit = async (e) => {
-      // Validate form fields
-      const namePattern = /^[a-zA-Z\s]*$/;
-      const phonePattern = /^\d+$/;
-
-      if (!name || !namePattern.test(name)) {
-        alert(
-          "Please enter a valid name. Only alphabets and spaces are allowed."
-        );
-        return;
+      );
+      if (!response.ok) {
+        throw new Error("Failed to submit enquiry");
       }
 
-      if (!phone || !phonePattern.test(phone)) {
-        alert("Please enter a valid phone number. Only numbers are allowed.");
-        return;
-      }
+      return response;
+    } catch (error) {
+      console.error("Fetch error:", error);
+      throw error;
+    }
+  };
+  const handleSubmit = async (e) => {
+    // Validate form fields
+    const namePattern = /^[a-zA-Z\s]*$/;
+    const phonePattern = /^\d+$/;
 
-      if (!enquiryPurpose) {
-        alert("Please select your enquiry purpose.");
-        return;
-      }
+    if (!name || !namePattern.test(name)) {
+      alert(
+        "Please enter a valid name. Only alphabets and spaces are allowed."
+      );
+      return;
+    }
 
-      if (!remarks) {
-        alert("Please enter remarks");
-        return;
-      }
+    if (!phone || !phonePattern.test(phone)) {
+      alert("Please enter a valid phone number. Only numbers are allowed.");
+      return;
+    }
 
-      const payload = {
-        text: `New enquiry:
+    if (!enquiryPurpose) {
+      alert("Please select your enquiry purpose.");
+      return;
+    }
+
+    if (!remarks) {
+      alert("Please enter remarks");
+      return;
+    }
+
+    const payload = {
+      text: `New enquiry:
         Name: ${name}
         Contact Number: ${phone}
         Enquiry Purpose: ${enquiryPurpose}
         Remarks: ${remarks}`,
-      };
-
-      try {
-        await notifyOnSlack("NP_WEBSITE", payload.text);
-        alert("Enquiry submitted successfully!");
-      } catch (error) {
-        alert("Error submitting enquiry");
-      } finally {
-        // Reset form fields
-        setName("");
-        setPhone("");
-        setEnquiryPurpose("");
-        setRemarks("");
-      }
     };
+
+    try {
+      await notifyOnSlack("NP_WEBSITE", payload.text);
+      alert("Enquiry submitted successfully!");
+    } catch (error) {
+      alert("Error submitting enquiry");
+    } finally {
+      // Reset form fields
+      setName("");
+      setPhone("");
+      setEnquiryPurpose("");
+      setRemarks("");
+    }
+  };
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -192,10 +190,13 @@ document.title = "NowPurchase || Home";
                 required
               > */}
 
-              <InputPicker
+              <SelectPicker
                 data={optionsData}
                 value={enquiryPurpose}
+                searchable={false}
+                className="modalSelectPicker"
                 onChange={(value) => setEnquiryPurpose(value)}
+                style={{ display: "flex", lineHeight: "22px !important", }}
               />
               {/* </Form.Control> */}
             </Form.Group>

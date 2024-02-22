@@ -36,7 +36,7 @@ function    AddressSection() {
                     <h4>Kolhapur Address</h4>
                     <p>
                       Biz Hero India Pvt Ltd. – (NowPurchase)Plot no.12, Beside
-                      Jafrani weight br/idge,M.I.D.C shiroli, Kolhapur – 416122
+                      Jafrani weight bridge,M.I.D.C shiroli, Kolhapur – 416122
                     </p>
                   </div>
                 </div>
