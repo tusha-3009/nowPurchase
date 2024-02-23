@@ -62,8 +62,8 @@ transform-origin: center top 0;
 }@media (max-width: 1600px){ .megaMenuNew ul li .figCont p {
   font-size: 20px;
   line-height: 28px;
-}.megaMenuNew ul li .figCont p strong {font-size: 20px;
-  line-height: 28px;}}
+}.megaMenuNew ul li .figCont p strong {font-size: inherit;
+  line-height: inherit;}}
 @media (max-width:1900px){.megaMenuNew ul li {
     display: flex;
     align-items: center;
@@ -475,7 +475,7 @@ justify-content: flex-end;}
   margin: 0 0 20px;}
 }@media (max-width: 575px) {.titleText,
 .titleText .skyText {
-  font-size: 30px !important;
+  font-size: 28px !important;
   line-height: 40px !important; 
 } 
    .bannerLeft h2 {

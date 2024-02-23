@@ -20,10 +20,29 @@
   padding-bottom: 0;
   display: block;
   padding-top: 120px !important;
-}}
-@media only screen and (max-width: 768px) {.homebnr.marketbnr {
-  padding-top: 160px !important;
-}}
+}}.homebnr.marketbnr {
+  padding-top: 325px !important;}
+    @media (max-width:1600px) {
+      .homebnr.marketbnr {
+        padding-top: 190px !important;
+      }
+    }@media (max-width: 1440px) {
+  .homebnr.marketbnr {
+        padding-top: 160px !important;
+      }
+    }
+    
+   @media (max-width: 1280px){ .mainBanner {
+      padding-top: 170px !important;
+    }}@media only screen and (max-width: 768px){ .innerBanner {
+      padding-top: 120px !important;padding-bottom: 50px !important;
+    }}
+    @media only screen and (max-width: 768px) {
+      .homebnr.marketbnr {
+        padding-top: 160px !important;
+      }
+    }
+
 .overflowSection {
   /* height: 200vh; */
   display: flex;
@@ -56,6 +75,10 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+}.col-md-7 {
+  flex: 0 0 100%;
+  max-width: 100%;
+
 }
 .bannerLeft h2 {
   font-size: 50px ;
@@ -243,6 +266,10 @@
     width: 100px;
     height: 100px;
   }
+}@media only screen and (max-width: 768px) { .bannerPoly a {
+  padding: 24px;
+  width: 72px;
+  height: 72px;}
 }
 .bannerPoly1 a {
   transform: translate(-50%, -50%) rotate(20deg) !important;
@@ -497,4 +524,22 @@
 
  .bannerPoly1:hover .video {
    opacity: 1;
- }
+ }@media only screen and (max-width: 768px) {.addr {
+  position: relative;
+}}
+
+@media only screen and (max-width: 768px) {.addr {
+  margin-bottom: 24px;
+  padding: 13px 20px;
+}}@media (max-width: 1200px){ .addr {
+  margin-top: 30px;
+}}
+@media (max-width:768px) {
+  .addr2{
+    display: none;
+  }
+}@media (min-width:769px) {
+  .addr1 {
+    display: none;
+  }
+}

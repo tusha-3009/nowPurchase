@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import "../../assets/css/style-responsive.css";
 import wa from "../../assets/images/icons/social-icons/social_wa.png";
@@ -11,6 +11,7 @@ import ti from "../../assets/images/icons/footer_tiger.png";
 
 import Container from "../General/Container";
 function Footer() {
+  const [showList, setShowList] = useState(false);
   const aosRef = useRef(null);
 
   useEffect(() => {
@@ -42,7 +43,7 @@ function Footer() {
         observer.unobserve(aosRef.current);
       }
     };
-  },[]);
+  }, []);
 
   return (
     <footer
@@ -198,9 +199,15 @@ function Footer() {
               <p className="dippText">DIPP No. : DIPP36503</p>
               <p className="designText">
                 Website designed by{" "}
-                <span className="teamHover">NowPurchase Team</span>
+                <span
+                  className="teamHover"
+                  onMouseEnter={() => setShowList(true)}
+                  onMouseLeave={() => setShowList(false)}
+                >
+                  NowPurchase Team
+                </span>
               </p>
-              <div className="ul">
+              <div className={`ul ${showList ? "showUl" : ""}`}>
                 <ul>
                   <li>Umang Singh - Project Lead &amp; UX Designer</li>
                   <li>Debasmita Dutta - UX Designer</li>

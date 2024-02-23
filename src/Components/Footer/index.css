@@ -618,7 +618,11 @@ p:last-child {
     margin-right: 0;
   }
 }
-
+@media only screen and (max-width: 768px) {
+  .footerSection .socialShare ul li:not(:last-child) {
+    padding: 0;
+  }
+}
 @media (max-width: 575px) {
   .footerSection .socialShare ul li:not(:last-child) {
     padding: 15px 0;
@@ -968,3 +972,7 @@ p:last-child {
 }}@media only screen and (max-width: 768px) {.footerSection {
   padding: 80px 0 50px;
 }}
+.ul.showUl {
+    opacity: 1;
+    transform: scaleY(1);
+  }

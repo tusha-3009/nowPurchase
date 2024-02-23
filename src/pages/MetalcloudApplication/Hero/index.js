@@ -133,17 +133,25 @@ function MeltingProcessMadeReliable() {
       });
     };
   }, []);
+
   const handleHover = () => {
-    videoRef.current.play();
+    videoRef.current.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
   };
 
   const handleHoverOut = () => {
     videoRef.current.pause();
     videoRef.current.currentTime = 0;
   };
+
   const handleVideoEnded = () => {
-    videoRef.current.play();
+    videoRef.current.currentTime = 0;
+    videoRef.current.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
   };
+
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -254,6 +262,20 @@ function MeltingProcessMadeReliable() {
                     ChargeMix, real-time heat analytics, and pricing dashboard
                     for your raw materials via WhatsApp and tab.
                   </p>
+                  <div class="addr aosAnim addr1">
+                  
+                      <div class="locWrap d-flex align-items-center">
+                        <div class="locIcon">
+                          <img loading="lazy" src={locationLogo} alt="" />
+                        </div>
+                        <div class="locAddr d-flex align-items-center">
+                          <div class="eachLoc">
+                            <h4>All India</h4>
+                          </div>
+                        </div>
+                      </div>
+                 
+                  </div>
                   <a
                     onClick={() => setModalOpen(true)}
                     style={{ color: "white" }}
@@ -295,7 +317,7 @@ function MeltingProcessMadeReliable() {
               </div>
             </div>
           </Container>
-          <div class="addr aosAnim">
+          <div class="addr aosAnim addr2">
             <Container>
               <div class="locWrap d-flex align-items-center">
                 <div class="locIcon">

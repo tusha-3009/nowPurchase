@@ -11,9 +11,6 @@
     }.priceHead {
         padding-bottom: 40px;
         border-bottom: 2px solid #eeeeee;
-    }.align-items-center {
- 
-        align-items: center !important;
     }.ic-1 {
         background-color: rgba(150, 54, 225, 0.16);
     }

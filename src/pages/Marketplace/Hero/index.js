@@ -167,16 +167,27 @@ function Hero() {
   }, []);
 
   const handleHover = () => {
-    videoRef.current.play();
+    videoRef.current.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
   };
 
   const handleHoverOut = () => {
     videoRef.current.pause();
     videoRef.current.currentTime = 0;
   };
+
   const handleVideoEnded = () => {
-    videoRef.current.play();
+    videoRef.current.currentTime = 0;
+    videoRef.current.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
   };
+
+
+
+
+  
   return (
     <>
       <Modal open={modalOpen} onClose={handleClose}>
@@ -290,6 +301,31 @@ function Hero() {
                     ensuring your manufacturing process can adapt to supply
                     chain challenges while maintaining quality
                   </p>
+
+                  <div ref={aosRef} className="addr aosAnim addr1">
+                 
+                      <div className="locWrap d-flex align-items-center">
+                        <div className="locIcon">
+                          <img loading="lazy" src={loca} alt="" />
+                        </div>
+                        <div className="locAddr d-flex align-items-center">
+                          <div className="eachLoc">
+                            <h4>West Bengal</h4>
+                          </div>
+                          <div className="eachLoc">
+                            <h4>Maharastra</h4>
+                          </div>
+                          <div className="eachLoc">
+                            <h4>Karnataka</h4>
+                          </div>
+                          <div className="eachLoc">
+                            <h4>Jharkhand</h4>
+                       
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   <a
                     onClick={() => setModalOpen(true)}
                     href="#getInTouchForm"
@@ -333,7 +369,7 @@ function Hero() {
             </div>
           </div>
 
-          <div ref={aosRef} className="addr aosAnim">
+          <div ref={aosRef} className="addr aosAnim addr2">
             <div className="container">
               <div className="locWrap d-flex align-items-center">
                 <div className="locIcon">

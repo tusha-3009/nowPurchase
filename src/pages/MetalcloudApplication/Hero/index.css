@@ -1,3 +1,13 @@
 .bannerPoly1:hover .video {
     opacity: 1;
+}@media (max-width:768px) {
+    .addr2 {
+        display: none;
+    }
+}
+
+@media (min-width:769px) {
+    .addr1 {
+        display: none;
+    }
 }

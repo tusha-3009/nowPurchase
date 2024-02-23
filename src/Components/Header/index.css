@@ -43,7 +43,7 @@
   margin-right: 40px;
 }
 nav ul li .services {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 25px;
   color: #606060;
@@ -51,7 +51,7 @@ nav ul li .services {
   cursor: pointer;
 }
 nav ul li .culture {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 25px;
   color: #606060;
@@ -60,13 +60,35 @@ nav ul li .culture {
   display: flex;
 }
 nav ul li .careers {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 25px;
   color: #606060;
   text-transform: capitalize;
   cursor: pointer;
   display: flex;
+}
+@media (max-width:1600px) {
+  nav ul li .services {
+      font-size: 18px;}
+             nav ul li .culture{
+               font-size: 18px;
+             }
+                            nav ul li .careers {
+                              font-size: 18px;
+                            }
+}@media (max-width:1440px) {
+  nav ul li .services {
+    font-size: 14px;
+  }
+
+  nav ul li .culture {
+    font-size: 14px;
+  }
+
+  nav ul li .careers {
+    font-size: 14px;
+  }
 }
 .toggleBtn {
   display: inline-block;
@@ -97,10 +119,10 @@ nav ul li .careers {
 .btnWrapNew a {
   display: block;
   text-align: center;
-}
-.btnWrapNew a.getInTouch {
+}@media (max-width:1600px)
+{.btnWrapNew a.getInTouch {
   font-size: 16px;
-}
+}}
 .btnWrapNew a.gotoApp {
   font-size: 14px;
 }
@@ -121,10 +143,10 @@ nav ul li .careers {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
-}
-.btnWrapNew a.gotoApp {
+}@media (max-width:1600px)
+{.btnWrapNew a.gotoApp {
   font-size: 14px;
-}
+}}
 .btnWrapNew a.gotoApp .gotoTopPart span {
   display: block;
   font-size: 12px;

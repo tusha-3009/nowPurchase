@@ -94,7 +94,15 @@ figure {
 }
 .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
   height: 340px;
-}
+}@media (max-width: 1600px) {
+  .mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+    height: 300px;
+  }
+}@media (max-width: 1440px) {.mediaSectionWrap .mediaWrap .eachMediaBox .mediaText {
+  height: 190px;
+}}
+
+
 .knowMoreBtn.gradientBtn {
   font-size: 28px ;
 }
@@ -136,7 +144,10 @@ figure {
   font-weight: 500;
   line-height: 38px;
   color: #606060;
-}
+}@media (max-width: 1440px) {.mediaText p {
+  font-size: 18px;
+  line-height: 1.4;
+}}
 
 @media (max-height: 705px){ .mediaText p {
   font-size: 14px;

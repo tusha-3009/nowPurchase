@@ -11,7 +11,7 @@
   background-color: #e8f2f8;
   position: relative;
   overflow: hidden;
-      padding-top: 120px;
+      padding-top: 120px !important;
 }
 .pb-0,
 .py-0 {
@@ -58,11 +58,14 @@
   margin: 0 0 50px;
   color: #303030;
 }@media (max-width: 1600px) {.titleText {
-  font-size: 50px;line-height: 1.2;
-  margin:0 0 35px;}}@media (max-width: 1440px) {
+  font-size: 50px;
+  margin:0 0 35px;}}
+    @media (max-width: 1600px) and (max-height: 900px) {.titleText {
+      line-height: 1.2;}
+    }@media (max-width: 1440px) {
     .titleText {
       font-size: 40px;
-     line-height: 1.2;
+   
     }
   }
 .offeringWrap .bigImg {
@@ -639,14 +642,14 @@ bottom: -80px;width: 400px;
 
 
 @media (max-width: 1440px) {.offeringSectionWrap {
-  padding-top: 90px;}
+  padding-top: 90px !important;}
 }@media (max-width: 1280px) {.offeringSectionWrap {
-  padding-top: 60px;}
+  padding-top: 60px !important;}
 }
 @media only screen and (max-width: 1024px) {.offeringSectionWrap {
   padding-bottom: 0 !important;}
 }@media (max-width: 575px) {.offeringSectionWrap {
-  padding-top: 80px;}
+  padding-top: 80px !important;}
 }@media (max-width: 1366px) and (max-height: 768px){ .offeringSectionWrap .figContBox .knowMoreBtn {
   padding: 10px 40px 10px 70px;
   margin-left: -60px;

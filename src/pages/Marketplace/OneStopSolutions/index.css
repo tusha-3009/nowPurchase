@@ -1,5 +1,5 @@
 .solutionSec {
-  padding-top: 120px;
+  padding-top: 120px !important;
 }
 .solutionSec .scrollSection {
   /* height: 150vh; */
@@ -12,7 +12,22 @@
 }
 .solutionHead {
   margin-bottom: 44px;
-}
+}@media (max-width: 1440px) {
+  .solutionSec {
+    padding-bottom: 50px !important;
+  }
+}@media (max-width: 1280px) {
+  .solutionSec {
+    padding-top: 120px;
+    padding-bottom: 20px !important;
+  }
+}@media only screen and (max-width: 768px) {.solutionSec {
+  padding-top: 80px !important;
+  padding-bottom: 50px !important;
+}}
+
+
+
 .align-items-center {
   align-items: center !important;
 }
@@ -160,7 +175,7 @@
   width: 80px;
   height: 80px;
   padding: 25px;}
-}@media only screen and (max-width: 768px) {.serviceSecMobile .bannerPoly1 a {
+}@media only screen and (max-width: 768px) { .bannerPoly1 a {
   padding: 24px;
   width: 72px;
   height: 72px;}
@@ -249,4 +264,17 @@
     font-size: 28px !important;
     line-height: 40px !important;
   }
-}
+}@media only screen and (max-width: 768px) {.addr {
+  position: relative;
+}}@media (max-width: 1440px){ .bannerRight {
+  top: 0;
+}}
+
+@media (max-width: 1200px) {.solutionHead {
+  flex-direction: column;
+  align-items: start !important;}
+}@media only screen and (max-width: 768px) {.solutionHead {
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin-bottom: 40px;
+}}
